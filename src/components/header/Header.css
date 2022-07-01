@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    margin: 30px auto auto;
+    max-width: 800px;
+    padding-left: 25px;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 35px;
+    padding-left: 20px;
+}
+
+.text .position {
+    color: gray;
+    padding-top: 10px;
+}
