@@ -2,4 +2,6 @@
 
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 30px auto auto;
+    max-width: 900px;
 }

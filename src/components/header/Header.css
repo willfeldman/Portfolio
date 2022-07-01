@@ -2,8 +2,6 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    margin: 30px auto auto;
-    max-width: 800px;
     padding-left: 25px;
 }
 
@@ -11,7 +9,7 @@
     border-radius: 50%;
 }
 
-.text {
+.text .name, .text .position {
     font-size: 35px;
     padding-left: 20px;
 }
