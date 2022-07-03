@@ -1,4 +1,4 @@
-import './ExperienceCard.css';
+import './ExperienceCard.scss';
 
 function ExperienceCard() {
   return (

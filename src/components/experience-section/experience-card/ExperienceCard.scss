@@ -1,5 +1,8 @@
+$card-accent: #0081d4;
+$card-border: #707070;
+
 .card {
-    border: 1px solid #707070;
+    border: 1px solid $card-border;
     border-radius: 10px;
     padding: 30px;
     margin-left: 0;
@@ -19,7 +22,7 @@
 .position h1 {
     font-size: 22px;
     font-weight: 700;
-    color: #0081d4;
+    color: $card-accent;
 }
 
 .details .company {
@@ -30,7 +33,7 @@
 .details .location {
     font-size: 10px;
     font-weight: 700;
-    background-color: #0081d4;
+    background-color: $card-accent;
     color: white;
     padding: 1px 4px;
     margin: 3px;
@@ -48,17 +51,17 @@
 }
 
 .action .moreButton {
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 20px;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 15px;
     background-color: white;
-    border: 1px solid #707070;
+    border: 1px solid $card-border;
     margin-top: 15px;
 }
 
 .action .moreButton:hover {
-    background-color: #0281d4;
+    background-color: $card-accent;
     border: 1px solid white;
     color: white;
     cursor: pointer;
