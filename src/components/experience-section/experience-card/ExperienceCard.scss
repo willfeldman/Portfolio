@@ -9,13 +9,13 @@ $card-border: #707070;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 225px;
+    width: 275px;
     line-height: 1.5;
 }
 
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 1090px) {
     .card {
-        width: auto;
+        width: 100vw;
     }
 }
 
@@ -38,6 +38,7 @@ $card-border: #707070;
     padding: 1px 4px;
     margin: 3px;
     border-radius: 4px;
+    display: inline-block;
 }
 
 .description .text {
@@ -61,8 +62,7 @@ $card-border: #707070;
 }
 
 .action .moreButton:hover {
-    background-color: $card-accent;
-    border: 1px solid white;
-    color: white;
     cursor: pointer;
+    transition: all .1s ease-in-out;
+    transform: scale(1.05) perspective(1px);
 }

@@ -1,22 +1,22 @@
 import './ExperienceCard.scss';
 
-function ExperienceCard() {
+function ExperienceCard(props) {
   return (
     <div className='card'>
         <div className='header'>
             <div className='position'>
-                <h1>Product Manager</h1>
+                <h1>{props.position}</h1>
             </div>
             <div className='details'>
-                <span className='company'>Blueport</span> <span className='location'>Boston, MA</span>
+                <span className='company'>{props.company}</span> <span className='location'>{props.location}</span>
             </div>
         </div>
         <div className='description'>
             <div className='text'>
-                <p>Led a web performance focused 4-person scrum team in daily standups and sprint planning. Regularly met and communicated with several internal and external…</p>
+                <p>{props.description[0]}...</p>
             </div>
             <div className='dates'>
-                <p>Jan 2022 - Present</p>
+                <p>{props.dates}</p>
             </div>
         </div>
         <div className='action'>
