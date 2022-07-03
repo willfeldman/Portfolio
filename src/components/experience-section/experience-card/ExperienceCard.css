@@ -1,13 +1,19 @@
 .card {
-    border: 1px solid black;
+    border: 1px solid #707070;
     border-radius: 10px;
     padding: 30px;
-    max-width: 290px;
     margin-left: 0;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    line-height: 1.6;
+    width: 225px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 940px) {
+    .card {
+        width: auto;
+    }
 }
 
 .position h1 {
@@ -39,4 +45,21 @@
 
 .description .dates {
     font-size: 12px;
+}
+
+.action .moreButton {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid #707070;
+    margin-top: 15px;
+}
+
+.action .moreButton:hover {
+    background-color: #0281d4;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
 }

@@ -2,15 +2,16 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    padding-left: 25px;
 }
 
 .profile img {
     border-radius: 50%;
+    width: 65px;
+    height: auto;
 }
 
 .text .name, .text .position {
-    font-size: 35px;
+    font-size: 25px;
     padding-left: 20px;
 }
 

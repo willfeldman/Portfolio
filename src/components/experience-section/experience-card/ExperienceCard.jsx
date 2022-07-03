@@ -19,6 +19,9 @@ function ExperienceCard() {
                 <p>Jan 2022 - Present</p>
             </div>
         </div>
+        <div className='action'>
+            <button className='moreButton'>Details</button>
+        </div>
     </div>
   );
 }

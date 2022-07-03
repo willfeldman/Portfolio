@@ -1,3 +1,7 @@
+.experience-section {
+    margin-top: 40px;
+}
+
 .experience-section .cards {
     display: flex;
     flex-wrap: wrap;
@@ -7,4 +11,5 @@
     font-size: 25px;
     color: #004d8f;
     font-weight: 800;
+    margin-bottom: 10px;
 }

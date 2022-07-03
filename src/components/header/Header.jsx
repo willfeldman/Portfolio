@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className='container'>
         <div className='profile'>
-            <img src="https://willfeldman.com/img/profile.jpg" alt="profile picture" width="85" height="85" />
+            <img src="https://willfeldman.com/img/profile.jpg" alt="profile picture"/>
         </div>
         <div className='text'>
             <h1 className='name'>Will Feldman</h1>
