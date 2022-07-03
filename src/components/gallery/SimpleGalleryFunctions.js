@@ -14,9 +14,9 @@ async function createImageData() {
   var loopNum = await getNumFiles("src/components/gallery/gallery-images");
   var galleryData = [];
   for (let i = 1; i < loopNum; i++) {
-    var imgDims = await getImageDimensions(`src/components/gallery/gallery-images/${i}.jpg`);
+    var imgDims = await getImageDimensions(`src/components/gallery/gallery-images/${i}.webp`);
     var object = {
-        URL: `https://willfeldman.com/img/ig/${i}.jpg`,
+        URL: `https://willfeldman.com/img/ig/${i}.webp`,
         width: imgDims.width,
         height: imgDims.height
     };
@@ -29,7 +29,7 @@ getNumFiles("src/components/gallery/gallery-images").then((num) => {
   console.log(num);
 });
 
-getImageDimensions("src/components/gallery/gallery-images/1.jpg").then(
+getImageDimensions("src/components/gallery/gallery-images/1.webp").then(
   (dim) => {
     console.log("Width: " + dim.width);
     console.log("Height: " + dim.height);

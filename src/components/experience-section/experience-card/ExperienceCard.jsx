@@ -13,7 +13,7 @@ function ExperienceCard() {
         </div>
         <div className='description'>
             <div className='text'>
-                <p>Lorem ipsum</p>
+                <p>Led a web performance focused 4-person scrum team in daily standups and sprint planning. Regularly met and communicated with several internal and external…</p>
             </div>
             <div className='dates'>
                 <p>Jan 2022 - Present</p>

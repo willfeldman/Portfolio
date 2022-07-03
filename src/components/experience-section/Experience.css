@@ -1,0 +1,10 @@
+.experience-section .cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experience-section .title {
+    font-size: 25px;
+    color: #004d8f;
+    font-weight: 800;
+}

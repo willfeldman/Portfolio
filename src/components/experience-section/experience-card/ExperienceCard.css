@@ -1,0 +1,42 @@
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 290px;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.position h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0081d4;
+}
+
+.details .company {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.details .location {
+    font-size: 10px;
+    font-weight: 700;
+    background-color: #0081d4;
+    color: white;
+    padding: 1px 4px;
+    margin: 3px;
+    border-radius: 4px;
+}
+
+.description .text {
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.description .dates {
+    font-size: 12px;
+}
