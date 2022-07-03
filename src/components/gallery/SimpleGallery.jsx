@@ -6,8 +6,7 @@ import './SimpleGallery.css';
 export default function SimpleGallery(props) {
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
-      gallery: '#' + props.galleryID,
-      children: 'a',
+      gallery: '#' + props.galleryID + " a",
       pswpModule: () => import('photoswipe'),
     });
     lightbox.init();
@@ -22,14 +21,14 @@ export default function SimpleGallery(props) {
     <div className="pswp-gallery" id={props.galleryID}>
       {props.images.map((image, index) => (
         <a
-          href={image.largeURL}
+          href={image.URL}
           data-pswp-width={image.width}
           data-pswp-height={image.height}
           key={props.galleryID + '-' + index}
           target="_blank"
           rel="noreferrer"
         >
-          <img src={image.thumbnailURL} className="pswp-thumnail" alt="" />
+          <img src={image.URL} className="pswp-thumnail" alt="" />
         </a>
       ))}
     </div>

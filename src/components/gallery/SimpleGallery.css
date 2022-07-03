@@ -1,3 +1,12 @@
 .pswp-thumnail {
     padding: 5px;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.pswp-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
