@@ -16,8 +16,8 @@ var experiences = [
     url: "https://www.wasserstrom.com/restaurant-supplies-equipment/n-wasserstrom-and-sons",
   },
   {
-    position: "Unified Communications & Microsoft Teams Calls Assistant",
-    company: "Northeastern University Information Technology Services",
+    position: "UC & Microsoft Teams Calls Assistant",
+    company: "Northeastern University ITS",
     location: "Boston, MA",
     description: ["Installed hundreds of touchscreen Microsoft Teams enabled VoIP phones across Northeastern’s Boston campus", "Created detailed video guides on how to operate the phone devices for university staff", "Removed old landlines and cleaned up associated wire closets using telecommunication equipment"],
     dates: "Jan. 2021 - May 2021",
