@@ -1,5 +1,5 @@
 import "./ExperienceModal.scss";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoLinkOutline, IoLogoLinkedin } from "react-icons/io5";
 
 function ExperienceModal() {
   return (
@@ -12,9 +12,7 @@ function ExperienceModal() {
           />
         </div>
         <div className="close-modal-button">
-          <button>
-            <IoClose />
-          </button>
+          <button><IoClose /></button>
         </div>
         <div className="experience-contents">
           <div className="details">
@@ -34,8 +32,10 @@ function ExperienceModal() {
               </div>
             </div>
             <div className="right-justified">
-              <div className="site-button">Site</div>
-              <div className="linkedin-button">LinkedIn</div>
+              <div className="action">
+                  <button className="site-button"><span className="icon"><IoLinkOutline /></span> Site</button>
+                  <button className="linkedin-button"><span className="icon"><IoLogoLinkedin /></span> LinkedIn</button>
+              </div>
               <div className="dates">Jan 2022 - Present</div>
             </div>
           </div>
