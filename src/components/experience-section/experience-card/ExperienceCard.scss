@@ -1,8 +1,8 @@
-$card-accent: #0081d4;
-$card-border: #707070;
+@use '../../../styles/global';
+@use '../ExperienceGlobal.scss';
 
 .card {
-    border: 1px solid $card-border;
+    border: 1px solid global.$card-border;
     border-radius: 10px;
     padding: 30px;
     margin-left: 0;
@@ -22,36 +22,10 @@ $card-border: #707070;
     }
 }
 
-.position h1 {
-    font-size: 22px;
-    font-weight: 700;
-    color: $card-accent;
-}
-
-.details .company {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.details .location {
-    font-size: 10px;
-    font-weight: 700;
-    background-color: $card-accent;
-    color: white;
-    padding: 1px 4px;
-    margin: 3px;
-    border-radius: 4px;
-    display: inline-block;
-}
-
 .description .text {
     font-size: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-.description .dates {
-    font-size: 12px;
 }
 
 .action .moreButton {
@@ -60,8 +34,9 @@ $card-border: #707070;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 15px;
     background-color: white;
-    border: 1px solid $card-border;
+    border: 1px solid global.$card-border;
     margin-top: 15px;
+    color: black;
 }
 
 .action .moreButton:hover {

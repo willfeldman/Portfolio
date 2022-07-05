@@ -1,0 +1,27 @@
+@use '../../styles/global';
+
+.position h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: global.$card-accent;
+}
+
+.details .company {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.details .location {
+    font-size: 10px;
+    font-weight: 700;
+    background-color: global.$card-accent;
+    color: white;
+    padding: 1px 4px;
+    margin: 3px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.description .dates {
+    font-size: 12px;
+}

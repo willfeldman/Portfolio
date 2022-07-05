@@ -1,0 +1,81 @@
+@use "../../../styles/global";
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-modal {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.header-image img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: none;
+}
+
+@media only screen and (max-width: 1090px) {
+    .experience-modal {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .header-image img {
+        border-radius: 0;
+    }
+}
+
+.close-modal-button button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.8;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: global.$icon-color;
+}
+
+.close-modal-button button:hover {
+    background-color: #e4e4e4;
+    color: darken(global.$icon-color, 30%);
+}
+
+.details .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.details .left-justified {
+    display: flex;
+}
+
+.experience-contents {
+    padding: 25px 50px;
+}
+
+.main-details {
+    margin: 0px 5px;
+    line-height: 1.2;
+}
