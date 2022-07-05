@@ -24,3 +24,6 @@ yarn-error.log*
 
 #images
 /src/components/gallery/gallery-images
+
+#todo
+TODO.md
