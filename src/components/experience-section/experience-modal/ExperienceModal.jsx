@@ -1,24 +1,24 @@
 import "./ExperienceModal.scss";
 import { IoClose, IoLinkOutline, IoLogoLinkedin } from "react-icons/io5";
 import { useNavigate, useParams } from "react-router-dom";
-import { experiences } from "../../../data/experience";
+import { experiences, getExperienceById } from "../../../data/experience";
 
 function ExperienceModal(props) {
   let navigate = useNavigate();
   let { id } = useParams();
 
-  var adjustedIndex = { id }.id - 1;
+  let experience = getExperienceById(Number(id));
 
-  let headerImage = experiences[adjustedIndex].headerImage;
-  let logo = experiences[adjustedIndex].logo;
-  let position = experiences[adjustedIndex].position;
-  let company = experiences[adjustedIndex].company;
-  let location = experiences[adjustedIndex].location;
-  let url = experiences[adjustedIndex].url;
-  let linkedin = experiences[adjustedIndex].linkedin;
-  let dates = experiences[adjustedIndex].dates;
-  let summary = experiences[adjustedIndex].description;
-  let description = experiences[adjustedIndex].additionalInformation;
+  let headerImage = experience.headerImage;
+  let logo = experience.logo;
+  let position = experience.position;
+  let company = experience.company;
+  let location = experience.location;
+  let url = experience.url;
+  let linkedin = experience.linkedin;
+  let dates = experience.dates;
+  let summary = experience.description;
+  let description = experience.additionalInformation;
 
   return (
     <div className="modal-background">
@@ -27,7 +27,7 @@ function ExperienceModal(props) {
           <img src={headerImage} alt="Header" />
         </div>
         <div className="close-modal-button">
-          <button onClick={() => navigate("/")}>
+          <button onClick={() => navigate(-1)}>
             <IoClose />
           </button>
         </div>

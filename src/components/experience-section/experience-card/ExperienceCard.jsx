@@ -1,8 +1,8 @@
 import "./ExperienceCard.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function ExperienceCard(props) {
-  let navigate = useNavigate();
+  let location = useLocation();
   return (
     <div className="card">
       <div className="header">
@@ -23,7 +23,7 @@ function ExperienceCard(props) {
         </div>
       </div>
       <div className="action">
-        <button className="moreButton" onClick={() => navigate(`/experience/${props.id}`)}>Details</button>
+        <Link to={`/experience/${props.id}`} state={{ backgroundLocation: location }}><button className="moreButton">Details</button></Link>
       </div>
     </div>
   );

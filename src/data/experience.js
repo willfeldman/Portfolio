@@ -1,5 +1,6 @@
 var experiences = [
   {
+    id: 0,
     position: "Product Manager",
     company: "Blueport",
     location: "Boston, MA",
@@ -12,6 +13,7 @@ var experiences = [
     logo: "https://ik.imagekit.io/feldman/blueport_logo.jpeg",
   },
   {
+    id: 1,
     position: "ERP Project Intern",
     company: "N. Wasserstrom & Sons",
     location: "Columbus, OH",
@@ -24,6 +26,7 @@ var experiences = [
     logo: "https://ik.imagekit.io/feldman/wasserstrom_logo.jpeg",
   },
   {
+    id: 2,
     position: "UC & Microsoft Teams Calls Assistant",
     company: "Northeastern University ITS",
     location: "Boston, MA",
@@ -37,4 +40,8 @@ var experiences = [
   }
 ];
 
-export { experiences };
+function getExperienceById(id) {
+  return experiences.find((item) => item.id === id);
+}
+
+export { experiences, getExperienceById };
