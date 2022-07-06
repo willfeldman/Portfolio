@@ -4,7 +4,7 @@ import { experiences } from "../../data/experience";
 
 let experienceComponents = [];
 experiences.forEach((item,index)=>{
-    experienceComponents.push( <ExperienceCard key={index} position={item.position} company={item.company} location={item.location} description={item.description} dates={item.dates} />)
+    experienceComponents.push( <ExperienceCard key={index} id={index + 1} position={item.position} company={item.company} location={item.location} description={item.description} dates={item.dates} />)
 })
 
 function Experience() {

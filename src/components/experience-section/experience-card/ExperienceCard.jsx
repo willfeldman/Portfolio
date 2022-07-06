@@ -1,6 +1,8 @@
 import "./ExperienceCard.scss";
+import { useNavigate } from "react-router-dom";
 
 function ExperienceCard(props) {
+  let navigate = useNavigate();
   return (
     <div className="card">
       <div className="header">
@@ -21,7 +23,7 @@ function ExperienceCard(props) {
         </div>
       </div>
       <div className="action">
-        <button className="moreButton">Details</button>
+        <button className="moreButton" onClick={() => navigate(`/experience/${props.id}`)}>Details</button>
       </div>
     </div>
   );
