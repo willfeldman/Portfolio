@@ -86,16 +86,20 @@
     display: inline-flex;
 }
 
-.action a {
+.right-justified .action a {
     text-decoration: none;
 }
 
-.action {
+.right-justified .action {
     display: flex;
-    justify-content: flex-end;
 }
 
-.action button {
+.right-justified .action .icon {
+    padding-top: 2px;
+    padding-right: 2px;
+}
+
+.right-justified .action button {
     margin: 0px 0px 0px 6px;
 }
 

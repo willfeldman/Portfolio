@@ -42,7 +42,7 @@ function ExperienceModal(props) {
                   <h1>{position}</h1>
                 </div>
                 <div>
-                  <span className="company">{company}</span>
+                  <span className="company">{company}</span>{" "}
                   <span className="location">{location}</span>
                 </div>
               </div>
