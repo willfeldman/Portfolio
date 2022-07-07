@@ -5,7 +5,7 @@
     border-radius: 10px;
     margin: 15vh auto;
     padding: 0;
-    overflow: hidden;
+    overflow: scroll;
     position: absolute;
     top: 0;
     right: 0;
@@ -43,8 +43,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
     color: global.$icon-color;
+}
+
+.close-modal-button button svg {
+    width: 20px;
+    height: 20px;
 }
 
 .close-modal-button button:hover {
@@ -61,6 +65,10 @@
     display: flex;
 }
 
+.company-location {
+    margin-bottom: 10px;
+}
+
 .experience-contents {
     padding: 25px 50px;
 }
@@ -71,7 +79,9 @@
 }
 
 .experience-contents .right-justified {
-    justify-content: flex-end;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .details .dates {
