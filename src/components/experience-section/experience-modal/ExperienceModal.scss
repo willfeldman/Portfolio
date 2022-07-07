@@ -1,30 +1,32 @@
 @use "../../../styles/global";
 
-.modal-background {
+[data-reach-dialog-content] {
+    width: 80%;
+    border-radius: 10px;
+    margin: 15vh auto;
+    padding: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .experience-modal {
-    width: 80%;
-    height: 80%;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
     background-color: white;
-    border-radius: 10px;
     position: relative;
+    line-height: 1.3;
 }
 
 .header-image img {
     width: 100%;
     height: 200px;
     border-radius: 10px 10px 0px 0px;
-    object-fit: none;
+    object-fit: cover;
 }
 
 .close-modal-button button {
@@ -82,7 +84,8 @@
     line-height: 1.2;
 }
 
-.site-button, .linkedin-button {
+.site-button,
+.linkedin-button {
     display: inline-flex;
 }
 
@@ -103,13 +106,9 @@
     margin: 0px 0px 0px 6px;
 }
 
-.body .summary h4, .body .additional-details h4 {
+.body .summary h4,
+.body .additional-details h4 {
     font-weight: 700;
-}
-
-.body {
-    margin-top: 20px;
-    line-height: 1.3;
 }
 
 .additional-details {
@@ -122,10 +121,11 @@
 }
 
 @media only screen and (max-width: global.$small-device) {
-    .experience-modal {
+    [data-reach-dialog-content] {
         width: 100%;
         height: 100%;
         border-radius: 0;
+        margin: 0 auto;
     }
 
     .header-image img {

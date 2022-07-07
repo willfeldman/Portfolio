@@ -1,7 +1,9 @@
-import "./ExperienceModal.scss";
 import { IoClose, IoLinkOutline, IoLogoLinkedin } from "react-icons/io5";
 import { useNavigate, useParams } from "react-router-dom";
-import { experiences, getExperienceById } from "../../../data/experience";
+import { getExperienceById } from "../../../data/experience";
+import { Dialog } from "@reach/dialog";
+import "@reach/dialog/styles.css";
+import "./ExperienceModal.scss";
 
 function ExperienceModal(props) {
   let navigate = useNavigate();
@@ -9,25 +11,23 @@ function ExperienceModal(props) {
 
   let experience = getExperienceById(Number(id));
 
-  let headerImage = experience.headerImage;
-  let logo = experience.logo;
-  let position = experience.position;
-  let company = experience.company;
-  let location = experience.location;
-  let url = experience.url;
-  let linkedin = experience.linkedin;
-  let dates = experience.dates;
-  let summary = experience.description;
-  let description = experience.additionalInformation;
+  if (!experience) return null;
+
+  function close() {
+    navigate(-1);
+  }
 
   return (
-    <div className="modal-background">
+    <Dialog
+      aria-labelledby="label"
+      onDismiss={close}
+    >
       <div className="experience-modal">
         <div className="header-image">
-          <img src={headerImage} alt="Header" />
+          <img src={experience.headerImage} alt="Header" />
         </div>
         <div className="close-modal-button">
-          <button onClick={() => navigate(-1)}>
+          <button onClick={close}>
             <IoClose />
           </button>
         </div>
@@ -35,53 +35,57 @@ function ExperienceModal(props) {
           <div className="details">
             <div className="left-justified">
               <div className="logo">
-                <img src={logo} alt="Experience logo" />
+                <img src={experience.logo} alt="Experience logo" />
               </div>
               <div className="main-details">
                 <div className="position">
-                  <h1>{position}</h1>
+                  <h1 id="label">{experience.position}</h1>
                 </div>
                 <div>
-                  <span className="company">{company}</span>{" "}
-                  <span className="location">{location}</span>
+                  <span className="company">{experience.company}</span>{" "}
+                  <span className="location">{experience.location}</span>
                 </div>
               </div>
             </div>
             <div className="right-justified">
               <div className="action">
-                <a href={url} target="_blank" rel="noreferrer">
+                <a href={experience.url} target="_blank" rel="noreferrer">
                   <button className="site-button">
-                    <div className="icon"><IoLinkOutline /></div>
+                    <div className="icon">
+                      <IoLinkOutline />
+                    </div>
                     <div className="button-text">Site</div>
                   </button>
                 </a>
-                <a href={linkedin} target="_blank" rel="noreferrer">
+                <a href={experience.linkedin} target="_blank" rel="noreferrer">
                   <button className="linkedin-button">
-                    <div className="icon"><IoLogoLinkedin /></div>
+                    <div className="icon">
+                      <IoLogoLinkedin />
+                    </div>
                     <div className="button-text">LinkedIn</div>
                   </button>
                 </a>
               </div>
-              <div className="dates">{dates}</div>
+              <div className="dates">{experience.dates}</div>
             </div>
           </div>
           <div className="body">
             <div className="summary">
               <h4>Summary</h4>
               <ul>
-                {summary.map((item, key) => (
+                {experience.description.map((item, key) => (
                   <li key={key}>{item}</li>
                 ))}
               </ul>
             </div>
             <div className="additional-details">
               <h4>Details</h4>
-              <p>{description}</p>
+              <p>{experience.additionalInformation}</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Dialog>
   );
 }
 

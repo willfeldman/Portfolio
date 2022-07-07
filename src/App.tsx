@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
 import Homepage from "./components/homepage/Homepage";
 import ExperienceModal from "./components/experience-section/experience-modal/ExperienceModal";
 import Error from "./components/error/Error";
+import "./App.css";
+
 import {
   Routes,
   Route,
@@ -13,7 +14,7 @@ function App() {
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
   return (
-    <>
+    <div className="app">
         <Routes location={state?.backgroundLocation || location}>
           <Route path="/" element={<Homepage />} />
           <Route path="*" element={<Error />} />
@@ -23,7 +24,7 @@ function App() {
             <Route path="/experience/:id" element={<ExperienceModal />} />
           </Routes>
         )}
-    </>
+    </div>
   );
 }
 
