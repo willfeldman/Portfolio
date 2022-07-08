@@ -1,22 +1,7 @@
 @use "../../../styles/global";
 
-[data-reach-dialog-content] {
-    width: 80%;
-    border-radius: 10px;
-    margin: 15vh auto;
-    padding: 0;
-    overflow: scroll;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
 .experience-modal {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    width: 100%;
-    height: 100%;
     background-color: white;
     position: relative;
     line-height: 1.3;
@@ -25,35 +10,7 @@
 .header-image img {
     width: 100%;
     height: 200px;
-    border-radius: 10px 10px 0px 0px;
     object-fit: cover;
-}
-
-.close-modal-button button {
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    opacity: 0.8;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: global.$icon-color;
-}
-
-.close-modal-button button svg {
-    width: 20px;
-    height: 20px;
-}
-
-.close-modal-button button:hover {
-    background-color: #e4e4e4;
-    color: darken(global.$icon-color, 30%);
 }
 
 .details .logo img {
@@ -131,17 +88,6 @@
 }
 
 @media only screen and (max-width: global.$small-device) {
-    [data-reach-dialog-content] {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        margin: 0 auto;
-    }
-
-    .header-image img {
-        border-radius: 0;
-    }
-
     .experience-contents {
         padding: 25px 30px;
     }

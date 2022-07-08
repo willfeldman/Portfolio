@@ -1,9 +1,9 @@
 import React from "react";
 import Homepage from "./components/homepage/Homepage";
-import ExperienceModal from "./components/experience-section/experience-modal/ExperienceModal";
+import ExperienceView from "./components/experience-section/experience-view/ExperienceView";
 import Error from "./components/error/Error";
+import Modal from "./components/modal/Modal";
 import "./App.css";
-
 import {
   Routes,
   Route,
@@ -17,11 +17,12 @@ function App() {
     <div className="app">
         <Routes location={state?.backgroundLocation || location}>
           <Route path="/" element={<Homepage />} />
+          <Route path="/experience/:id" element={<ExperienceView />} />
           <Route path="*" element={<Error />} />
         </Routes>
         {state?.backgroundLocation && (
           <Routes>
-            <Route path="/experience/:id" element={<ExperienceModal />} />
+            <Route path="/experience/:id" element={<Modal children={<ExperienceView />} />} />
           </Routes>
         )}
     </div>
