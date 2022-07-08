@@ -1,8 +1,17 @@
 import "./ExperienceCard.scss";
-import { Link, useLocation } from "react-router-dom";
+import Button from "../../button/Button";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function ExperienceCard(props) {
   let location = useLocation();
+  let navigate = useNavigate();
+
+  const openExperienceModal = () => {
+    navigate(`/experience/${props.id}`, {
+      state: { backgroundLocation: location },
+    });
+  };
+
   return (
     <div className="card">
       <div className="header">
@@ -23,7 +32,11 @@ function ExperienceCard(props) {
         </div>
       </div>
       <div className="action">
-        <Link to={`/experience/${props.id}`} state={{ backgroundLocation: location }}><button className="moreButton">Details</button></Link>
+        <Button
+          customClass="moreButton"
+          text="Details"
+          action={openExperienceModal}
+        />
       </div>
     </div>
   );
