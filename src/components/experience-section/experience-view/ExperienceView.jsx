@@ -49,12 +49,12 @@ function ExperienceView(props) {
                 link={experience.linkedin}
               />
             </div>
-            <div className="dates">{experience.dates}</div>
+            <div className="dates">{experience.dates} | {experience.type}</div>
           </div>
         </div>
         <div className="body">
           <div className="summary">
-            <h4>Summary</h4>
+            <h4 className="mainHeading">Summary</h4>
             <ul>
               {experience.description.map((item, key) => (
                 <li key={key}>{item}</li>
@@ -62,8 +62,8 @@ function ExperienceView(props) {
             </ul>
           </div>
           <div className="additional-details">
-            <h4>Details</h4>
-            <p>{experience.additionalInformation}</p>
+            <h4 className="mainHeading">Details</h4>
+            {experience.additionalInformation}
           </div>
         </div>
       </div>

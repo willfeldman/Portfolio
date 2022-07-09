@@ -1,6 +1,6 @@
 import "./ExperienceCard.scss";
 import Button from "../../button/Button";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function ExperienceCard(props) {
   let location = useLocation();

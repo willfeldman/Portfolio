@@ -68,11 +68,6 @@
     margin: 0px 0px 0px 6px;
 }
 
-.body .summary h4,
-.body .additional-details h4 {
-    font-weight: 700;
-}
-
 .additional-details {
     margin-top: 10px;
 }
@@ -82,8 +77,53 @@
     margin-left: 15px;
 }
 
+.body h4, .body h3, .body h2, .body h1 {
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.body {
+    line-height: 1.25;
+    font-size: 14px;
+}
+
+.body .presentations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.body .presentations .pdf {
+    width: 49.5%;
+}
+
+.body .presentations iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.body .additional-details p {
+    margin-bottom: 16px;
+}
+
+.body .mainHeading {
+    font-size: 17px;
+}
+
+.body .documentTitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: global.$small-device) {
     .experience-contents {
         padding: 25px 30px;
+    }
+    .body .presentations .pdf {
+        width: 100%;
     }
 }
