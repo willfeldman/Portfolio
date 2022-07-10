@@ -74,7 +74,11 @@
 
 .summary ul {
     list-style-type: "- ";
-    margin-left: 15px;
+    margin-left: 13px;
+}
+
+.summary ul li {
+    margin-bottom: 7px;  
 }
 
 .body h4, .body h3, .body h2, .body h1 {
