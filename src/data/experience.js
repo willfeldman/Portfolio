@@ -1,6 +1,78 @@
 var experiences = [
   {
     id: 0,
+    position: "Intern",
+    company: "StataPile: AI Quality Assurance",
+    location: "Chicago, IL",
+    description: ["Created advanced spreadsheets to analyze the accuracy of a custom AI model on consumer data", "Redesigned website backend to make it easier for employees to utilize", "Conducted and presented research on business-to-business (B2B) growth plans"],
+    dates: "Jun 2018 - Aug 2018",
+    type: "Internship",
+    url: "https://statapile.com/",
+    linkedin: "https://www.linkedin.com/search/results/all/?keywords=StataPile",
+    headerImage: "https://ik.imagekit.io/feldman/statapile_background.png",
+    logo: "https://ik.imagekit.io/feldman/statapile_logo.png",
+  },
+  {
+    id: 1,
+    position: "Web Developer",
+    company: "Freelance",
+    location: "Columbus, OH",
+    description: ["Designed and coded websites for local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery", "Communicated and met frequently with clients to display progress and make adjustments", "Maintained the sites and updated site information on an as-needed basis"],
+    dates: "Apr 2017 - Aug 2020",
+    type: "Part-time",
+    url: ["https://mattryandj.com", "https://audiopromobiledj.com"],
+    headerImage: "https://ik.imagekit.io/feldman/matt_ryan_background.png",
+    logo: "https://ik.imagekit.io/feldman/matt_ryan_logo.jpeg",
+  },
+  {
+    id: 2,
+    position: "Founder",
+    company: "pausecircleplay",
+    location: "Columbus, OH",
+    description: ["Created and led clothing brand that sold $7,000 worth of merchandise made by hand", "Managed related business, web development, graphic design, marketing, and social media"],
+    dates: "Aug 2019 - Aug 2020",
+    type: "Part-time",
+    url: "https://www.pausecircleplay.com/",
+    linkedin: "https://www.linkedin.com/company/pausecircleplay/",
+    headerImage: "https://ik.imagekit.io/feldman/pcp_background.png",
+    logo: "https://ik.imagekit.io/feldman/pcp_logo.jpeg",
+  },
+  {
+    id: 3,
+    position: "UC & Microsoft Teams Calls Assistant",
+    company: "Northeastern University ITS",
+    location: "Boston, MA",
+    description: [
+      "Installed hundreds of touchscreen Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
+      "Created detailed video guides on how to operate the phone devices for university staff",
+      "Removed old landlines and cleaned up associated wire closets using telecommunication equipment",
+    ],
+    dates: "Jan 2021 - May 2021",
+    type: "Part-time",
+    url: "https://its.northeastern.edu",
+    linkedin:
+      "https://www.linkedin.com/company/northeastern-university-information-technology-services/",
+    headerImage: "https://ik.imagekit.io/feldman/its_background.jpeg",
+    logo: "https://ik.imagekit.io/feldman/its_logo.jpeg",
+  },
+  {
+    id: 4,
+    position: "ERP Project Intern",
+    company: "N. Wasserstrom & Sons",
+    location: "Columbus, OH",
+    description: [
+      "Conducted manufacturing time studies to improve accuracy of estimates in ERP system",
+      "Organized and distributed drawings from the engineering team to those manufacturing the equipment",
+    ],
+    dates: "Jun 2021 - Aug 2021",
+    type: "Internship",
+    url: "https://www.wasserstrom.com/restaurant-supplies-equipment/n-wasserstrom-and-sons",
+    linkedin: "https://www.linkedin.com/company/n-wasserstrom-sons/",
+    headerImage: "https://ik.imagekit.io/feldman/wasserstrom_header.png",
+    logo: "https://ik.imagekit.io/feldman/wasserstrom_logo.jpeg",
+  },
+  {
+    id: 5,
     position: "Product Manager",
     company: "Blueport",
     location: "Boston, MA",
@@ -49,7 +121,7 @@ var experiences = [
             <h3 className="documentTitle">Final Presentation</h3>
             <iframe
               title="Blueport Final Presentation"
-              src="https://drive.google.com/viewerng/viewer?url=https://ik.imagekit.io/feldman/co-op-final-presentation.pdf&embedded=true"
+              src="https://drive.google.com/viewerng/viewer?url=https://ik.imagekit.io/feldman/coop-final-presentation.pdf&embedded=true"
               frameborder="0"
             ></iframe>
           </div>
@@ -60,42 +132,6 @@ var experiences = [
     linkedin: "https://www.linkedin.com/company/blueport-commerce/",
     headerImage: "https://ik.imagekit.io/feldman/blueport_header.png",
     logo: "https://ik.imagekit.io/feldman/blueport_logo.jpeg",
-  },
-  {
-    id: 1,
-    position: "ERP Project Intern",
-    company: "N. Wasserstrom & Sons",
-    location: "Columbus, OH",
-    description: [
-      "Conducted manufacturing time studies to improve accuracy of estimates in ERP system",
-      "Organized and distributed drawings from the engineering team to those manufacturing the equipment",
-    ],
-    dates: "Jun. 2021 - Aug. 2021",
-    type: "Internship",
-    additionalInformation: "",
-    url: "https://www.wasserstrom.com/restaurant-supplies-equipment/n-wasserstrom-and-sons",
-    linkedin: "https://www.linkedin.com/company/n-wasserstrom-sons/",
-    headerImage: "https://ik.imagekit.io/feldman/wasserstrom_header.png",
-    logo: "https://ik.imagekit.io/feldman/wasserstrom_logo.jpeg",
-  },
-  {
-    id: 2,
-    position: "UC & Microsoft Teams Calls Assistant",
-    company: "Northeastern University ITS",
-    location: "Boston, MA",
-    description: [
-      "Installed hundreds of touchscreen Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
-      "Created detailed video guides on how to operate the phone devices for university staff",
-      "Removed old landlines and cleaned up associated wire closets using telecommunication equipment",
-    ],
-    dates: "Jan. 2021 - May 2021",
-    type: "Part-time",
-    additionalInformation: "",
-    url: "https://its.northeastern.edu",
-    linkedin:
-      "https://www.linkedin.com/company/northeastern-university-information-technology-services/",
-    headerImage: "https://ik.imagekit.io/feldman/its_background.jpeg",
-    logo: "https://ik.imagekit.io/feldman/its_logo.jpeg",
   },
 ];
 

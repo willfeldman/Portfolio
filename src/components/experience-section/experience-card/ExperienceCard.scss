@@ -4,7 +4,7 @@
 .card {
     border: 1px solid global.$card-border;
     border-radius: 5px;
-    padding: 20px;
+    padding: 15px;
     margin: 5px 5px;
     width: 345px;
     line-height: 1.5;
@@ -29,8 +29,8 @@
 
 .description .text {
     font-size: 13px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .action button {

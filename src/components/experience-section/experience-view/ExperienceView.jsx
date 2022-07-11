@@ -15,6 +15,58 @@ function ExperienceView(props) {
     return <Error />;
   }
 
+  function renderLink() {
+    // Adds two buttons if the url is an array
+    // Only supports adding up to two buttons
+    if (typeof experience.url === "string") {
+      return (
+        <Button icon={<IoLinkOutline />} text="Site" link={experience.url} />
+      );
+    } else {
+      return (
+        <>
+          <Button
+            icon={<IoLinkOutline />}
+            tooltip={true}
+            text="Site 1"
+            link={experience.url[0].split("//").pop()}
+          />
+          <Button
+            icon={<IoLinkOutline />}
+            tooltip={true}
+            text="Site 2"
+            link={experience.url[1].split("//").pop()}
+          />
+        </>
+      );
+    }
+  }
+
+  function renderLinkedIn() {
+    // renders the link for LinkedIn if it is in the data
+    if (experience.linkedin) {
+      return (
+        <Button
+          icon={<IoLogoLinkedin />}
+          text="LinkedIn"
+          link={experience.linkedin}
+        />
+      );
+    }
+  }
+
+  function renderAdditionalDetails() {
+    // renders the additional details section if it is in the data
+    if (experience.additionalInformation) {
+      return (
+        <div className="additional-details">
+          <h4 className="mainHeading">Details</h4>
+          {experience.additionalInformation}
+        </div>
+      );
+    }
+  }
+
   return (
     <div className="experience-modal">
       <div className="header-image">
@@ -38,18 +90,12 @@ function ExperienceView(props) {
           </div>
           <div className="right-justified">
             <div className="action">
-              <Button
-                icon={<IoLinkOutline />}
-                text="Site"
-                link={experience.url}
-              />
-              <Button
-                icon={<IoLogoLinkedin />}
-                text="LinkedIn"
-                link={experience.linkedin}
-              />
+              {renderLink()}
+              {renderLinkedIn()}
             </div>
-            <div className="dates">{experience.dates} | {experience.type}</div>
+            <div className="dates-type">
+              {experience.dates} | <span className="no-wrap">{experience.type}</span>
+            </div>
           </div>
         </div>
         <div className="body">
@@ -61,10 +107,7 @@ function ExperienceView(props) {
               ))}
             </ul>
           </div>
-          <div className="additional-details">
-            <h4 className="mainHeading">Details</h4>
-            {experience.additionalInformation}
-          </div>
+          {renderAdditionalDetails()}
         </div>
       </div>
     </div>
