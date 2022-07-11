@@ -6,7 +6,7 @@ import { getExperienceById } from "../../../data/experience";
 import "@reach/dialog/styles.css";
 import "./ExperienceView.scss";
 
-function ExperienceView(props) {
+function ExperienceView() {
   let { id } = useParams();
 
   let experience = getExperienceById(Number(id));
