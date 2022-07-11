@@ -29,13 +29,13 @@ function ExperienceView() {
             icon={<IoLinkOutline />}
             tooltip={true}
             text="Site 1"
-            link={experience.url[0].split("//").pop()}
+            link={experience.url[0]}
           />
           <Button
             icon={<IoLinkOutline />}
             tooltip={true}
             text="Site 2"
-            link={experience.url[1].split("//").pop()}
+            link={experience.url[1]}
           />
         </>
       );
