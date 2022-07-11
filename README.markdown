@@ -10,7 +10,7 @@ npm start
 #### Components with available parameters
 | Component   | Description  | Parameters |
 | ----------- | -----------  | -----------|
-| `<Button link="https://google.com" />`  | Used to create a button with a link or action | `link`* (string) - used to open a url on button click <br> `action`* (function) - used to indicate an action on button click <br> <b>either `link` or `action` is required for proper function</b> <br><br> `text` (string) - text for button <br> `icon` (img) - button icon image <br> `tooltip` (boolean) - default is `false`, shows `link` string on button hover if set to `true` <br> `customClass` (string) - any custom css classes to add to the button |
+| `<Button link="https://google.com" />`  | Used to create a button with a link or action | `link`* (string) - used to open a url on button click <br> `action`* (function) - used to indicate an action on button click <br> <b>either `link` or `action` is required for proper function</b> <br><hr> `text` (string) - text for button <br> `icon` (img) - button icon image <br> `tooltip` (boolean) - default is `false`, shows `link` string on button hover if set to `true` <br> `customClass` (string) - any custom css classes to add to the button |
 | `<Modal />` | Generates a responsive modal with given content | `children`* (html) - content inside the modal |
 | `<ExperienceCard />` | Generates a card for a single experience |     |
 | `<ExperienceView />` | Generates a view of a single experience | none |
@@ -22,4 +22,5 @@ npm start
 | `<Gallery />`&#176; |                | none |
 
 *parameter is required
+
 &#176;component is unfinished
