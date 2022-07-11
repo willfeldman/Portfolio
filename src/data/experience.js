@@ -17,6 +17,7 @@ var experiences = [
     position: "Web Developer",
     company: "Freelance",
     location: "Columbus, OH",
+    summary: "Designed and coded websites for local DJ companies using HTML, CSS, JavaScript, PHP, and jQuery",
     description: ["Designed and coded websites for local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery", "Communicated and met frequently with clients to display progress and make adjustments", "Maintained the sites and updated site information on an as-needed basis"],
     dates: "Apr 2017 - Aug 2020",
     type: "Part-time",
@@ -39,9 +40,10 @@ var experiences = [
   },
   {
     id: 3,
-    position: "UC & Microsoft Teams Calls Assistant",
+    position: "UC & Teams Calls Assistant",
     company: "Northeastern University ITS",
     location: "Boston, MA",
+    summary: "Installed hundreds of Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
     description: [
       "Installed hundreds of touchscreen Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
       "Created detailed video guides on how to operate the phone devices for university staff",

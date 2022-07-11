@@ -1,13 +1,16 @@
 import "./ExperienceCard.scss";
 import Button from "../../button/Button";
 import { useLocation, useNavigate } from "react-router-dom";
+import { getExperienceById } from "../../../data/experience";
 
 function ExperienceCard(props) {
   let location = useLocation();
   let navigate = useNavigate();
 
+  let experience = getExperienceById(props.id);
+
   const openExperienceModal = () => {
-    navigate(`/experience/${props.id}`, {
+    navigate(`/experience/${experience.id}`, {
       state: { backgroundLocation: location },
     });
   };
@@ -15,20 +18,24 @@ function ExperienceCard(props) {
   return (
     <div className="card">
       <div className="header">
-        <div className="position">
-          <h1>{props.position}</h1>
+        <div className="logo">
+          <img src={experience.logo} alt="Experience logo" />
         </div>
-        <div className="details">
-          <span className="company">{props.company}</span>{" "}
-          <span className="location">{props.location}</span>
+        <div className="text-header">
+          <div className="position">
+            <h1>{experience.position}</h1>
+          </div>
+          <div className="details">
+            <span className="company">{experience.company}</span>
+          </div>
         </div>
-        <div className="description">
-          <div className="text">
-            <p>{props.description[0]}...</p>
-          </div>
-          <div className="dates">
-            <p>{props.dates}</p>
-          </div>
+      </div>
+      <div className="description">
+        <div className="text">
+          <p>{experience.summary || experience.description[0]}...</p>
+        </div>
+        <div className="dates">
+          <p>{experience.dates}</p>
         </div>
       </div>
       <div className="action">
