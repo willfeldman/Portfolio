@@ -22,6 +22,11 @@
     height: 15px;
 }
 
+.expand:hover {
+    background-color: darken(transparentize(#cccccc, 0.8), 20%);
+    color: darken(global.$icon-color, 30%);
+}
+
 .card {
     border: 0.25px solid global.$card-border;
     border-radius: 5px;

@@ -8,7 +8,7 @@ export default function Button(props) {
 
   function addTooltip() {
     if (props.tooltip) {
-      return <span class="tooltiptext">{props.link.split("//").pop()}</span>;
+      return <span className="tooltiptext">{props.link.split("//").pop()}</span>;
     }
   }
 
