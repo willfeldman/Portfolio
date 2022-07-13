@@ -116,7 +116,7 @@ var experiences = [
             <iframe
               title="Blueport Core Web Vitals Project"
               src="https://drive.google.com/viewerng/viewer?url=https://ik.imagekit.io/feldman/core-web-vitals.pdf&embedded=true"
-              frameborder="0"
+              frameBorder="0"
             ></iframe>
           </div>
           <div className="pdf">
@@ -124,7 +124,7 @@ var experiences = [
             <iframe
               title="Blueport Final Presentation"
               src="https://drive.google.com/viewerng/viewer?url=https://ik.imagekit.io/feldman/coop-final-presentation.pdf&embedded=true"
-              frameborder="0"
+              frameBorder="0"
             ></iframe>
           </div>
         </div>

@@ -17,9 +17,11 @@ function ExperienceCard(props) {
 
   return (
     <div className="card" onClick={openExperienceModal}>
-      <button className="expand">
-        <CgArrowsExpandRight />
-      </button>
+      <div className="expand">
+        <button>
+          <CgArrowsExpandRight />
+        </button>
+      </div>
       <div className="header">
         <div className="logo">
           <img src={experience.logo} alt="Experience logo" />

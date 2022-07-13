@@ -1,7 +1,7 @@
 @use '../../../styles/global';
 @use '../ExperienceGlobal.scss';
 
-.expand {
+.expand button {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -11,18 +11,19 @@
     background-color: transparentize(#cccccc, 0.8);
     color: global.$icon-color;
     border-radius: 15px;
+    padding: 0;
     cursor: pointer;
     display: none;
     justify-content: center;
     align-items: center;
 }
 
-.expand svg {
+.expand button svg {
     width: 15px;
     height: 15px;
 }
 
-.expand:hover {
+.expand button:hover {
     background-color: darken(transparentize(#cccccc, 0.8), 20%);
     color: darken(global.$icon-color, 30%);
 }
@@ -43,7 +44,7 @@
 .card:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    .expand {
+    .expand button {
         display: flex;
     }
 }
@@ -70,7 +71,7 @@
     .card {
         width: 100%;
     }
-    .expand {
+    .expand button {
         display: flex;
     }
 }
