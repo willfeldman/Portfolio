@@ -1,7 +1,7 @@
 {
   "name": "ux-portfolio",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "test",
   "private": true,
   "dependencies": {
     "@reach/dialog": "^0.17.0",

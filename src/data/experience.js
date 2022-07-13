@@ -141,4 +141,11 @@ function getExperienceById(id) {
   return experiences.find((item) => item.id === id);
 }
 
-export { experiences, getExperienceById };
+// returns the oppsite id than asked 
+// (ie. with 6 items: id 0 returns id 5, id 1 returns id 4, etc. )
+function convertIdToComplement(id) {
+  var numOfItems = Object.keys(experiences).length;
+  return Math.abs(numOfItems - id - 1);
+}
+
+export { experiences, getExperienceById, convertIdToComplement };
