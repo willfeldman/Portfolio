@@ -1,5 +1,5 @@
 export default function Error() {
   return (
-    <div>Error: Page not found</div>
+    <div>Error: {window.location.pathname} page not found</div>
   )
 }
