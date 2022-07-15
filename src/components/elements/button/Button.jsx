@@ -1,5 +1,5 @@
 import "./Button.scss";
-import "../../styles/tooltip.scss";
+import "../../../styles/tooltip.scss";
 
 export default function Button(props) {
   function openLink(url) {
@@ -18,13 +18,19 @@ export default function Button(props) {
     }
   }
 
+  function addHideWhenSmallClass() {
+    if (props.hideWhenSmall) {
+      return "hideWhenSmall";
+    }
+  }
+
   return (
     <button
       onClick={props.action || openLink}
       className={`${props.customClass} buttonComponent ${addTooltipClass()}`}
     >
       <div className="icon">{props.icon}</div>
-      <div className="button-text">{props.text}</div>
+      <div className={`button-text ${addHideWhenSmallClass()}`}>{props.text}</div>
       {addTooltip()}
     </button>
   );

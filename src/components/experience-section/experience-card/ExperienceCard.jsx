@@ -1,5 +1,5 @@
 import "./ExperienceCard.scss";
-import { CgArrowsExpandRight } from "react-icons/cg";
+import Card from "../../elements/card/Card";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getExperienceById } from "../../../data/experience";
 
@@ -16,12 +16,7 @@ function ExperienceCard(props) {
   };
 
   return (
-    <div className="card" onClick={openExperienceModal}>
-      <div className="expand">
-        <button>
-          <CgArrowsExpandRight />
-        </button>
-      </div>
+    <Card action={openExperienceModal}>
       <div className="header">
         <div className="logo">
           <img src={experience.logo} alt="Experience logo" />
@@ -43,7 +38,7 @@ function ExperienceCard(props) {
           <p>{experience.dates}</p>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 

@@ -1,5 +1,5 @@
 import Error from "../../error/Error";
-import Button from "../../button/Button";
+import Button from "../../elements/button/Button";
 import { IoLinkOutline, IoLogoLinkedin } from "react-icons/io5";
 import { useParams } from "react-router-dom";
 import { getExperienceById } from "../../../data/experience";
@@ -20,7 +20,7 @@ function ExperienceView() {
     // Only supports adding up to two buttons
     if (typeof experience.url === "string") {
       return (
-        <Button icon={<IoLinkOutline />} text="Site" link={experience.url} />
+        <Button icon={<IoLinkOutline />} text="Site" hideWhenSmall={true} link={experience.url} />
       );
     } else {
       return (
@@ -29,12 +29,14 @@ function ExperienceView() {
             icon={<IoLinkOutline />}
             tooltip={true}
             text="Site 1"
+            hideWhenSmall={true}
             link={experience.url[0]}
           />
           <Button
             icon={<IoLinkOutline />}
             tooltip={true}
             text="Site 2"
+            hideWhenSmall={true}
             link={experience.url[1]}
           />
         </>
@@ -49,6 +51,7 @@ function ExperienceView() {
         <Button
           icon={<IoLogoLinkedin />}
           text="LinkedIn"
+          hideWhenSmall={true}
           link={experience.linkedin}
         />
       );

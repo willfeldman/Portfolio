@@ -1,0 +1,58 @@
+@use '../../../styles/global';
+
+.expand button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparentize(#cccccc, 0.8);
+    color: global.$icon-color;
+    border-radius: 15px;
+    padding: 0;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.expand button svg {
+    width: 15px;
+    height: 15px;
+}
+
+.expand button:hover {
+    background-color: darken(transparentize(#cccccc, 0.8), 20%);
+    color: darken(global.$icon-color, 30%);
+}
+
+.card {
+    border: 0.25px solid global.$card-border;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 5px;
+    width: 345px;
+    line-height: 1.35;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    .expand button {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: global.$small-device) {
+    .card {
+        width: 100%;
+    }
+    .expand button {
+        display: flex;
+    }
+}

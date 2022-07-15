@@ -1,0 +1,11 @@
+$hide-button-text-if-enabled-at: 425px;
+
+.buttonComponent {
+    display: inline-flex;
+}
+
+@media only screen and (max-width: $hide-button-text-if-enabled-at) {
+    .hideWhenSmall {
+        display: none;
+    }
+}
