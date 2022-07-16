@@ -1,0 +1,20 @@
+@use '../../../styles/global';
+
+.projectTitle h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: global.$project-card-accent;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: -webkit-fill-available;
+}
+
+.project .text {
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

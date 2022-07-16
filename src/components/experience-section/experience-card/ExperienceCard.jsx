@@ -1,13 +1,14 @@
 import "./ExperienceCard.scss";
 import Card from "../../elements/card/Card";
 import { useLocation, useNavigate } from "react-router-dom";
-import { getExperienceById } from "../../../data/experience";
+import { experiences } from "../../../data/experience";
+import { getById } from "../../../data/operations";
 
 function ExperienceCard(props) {
   let location = useLocation();
   let navigate = useNavigate();
 
-  let experience = getExperienceById(props.id);
+  let experience = getById(props.id, experiences);
 
   const openExperienceModal = () => {
     navigate(`/experience/${experience.id}`, {

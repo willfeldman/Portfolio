@@ -1,15 +1,18 @@
 import Error from "../../error/Error";
 import Button from "../../elements/button/Button";
-import { IoLinkOutline, IoLogoLinkedin } from "react-icons/io5";
+import Tag from "../../elements/tag/Tag";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { FiLink } from "react-icons/fi";
 import { useParams } from "react-router-dom";
-import { getExperienceById } from "../../../data/experience";
+import { experiences } from "../../../data/experience";
+import { getById } from "../../../data/operations";
 import "@reach/dialog/styles.css";
 import "./ExperienceView.scss";
 
 function ExperienceView() {
   let { id } = useParams();
 
-  let experience = getExperienceById(Number(id));
+  let experience = getById(Number(id), experiences);
 
   if (!experience) {
     return <Error />;
@@ -20,20 +23,20 @@ function ExperienceView() {
     // Only supports adding up to two buttons
     if (typeof experience.url === "string") {
       return (
-        <Button icon={<IoLinkOutline />} text="Site" hideWhenSmall={true} link={experience.url} />
+        <Button icon={<FiLink />} text="Site" hideWhenSmall={true} link={experience.url} />
       );
     } else {
       return (
         <>
           <Button
-            icon={<IoLinkOutline />}
+            icon={<FiLink />}
             tooltip={true}
             text="Site 1"
             hideWhenSmall={true}
             link={experience.url[0]}
           />
           <Button
-            icon={<IoLinkOutline />}
+            icon={<FiLink />}
             tooltip={true}
             text="Site 2"
             hideWhenSmall={true}
@@ -87,7 +90,7 @@ function ExperienceView() {
               </div>
               <div className="company-location">
                 <span className="company">{experience.company}</span>{" "}
-                <span className="location">{experience.location}</span>
+                <span className="location"><Tag text={experience.location} color="white" background="#0281d4" /></span>
               </div>
             </div>
           </div>

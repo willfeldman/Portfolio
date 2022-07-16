@@ -5,7 +5,7 @@ export default function Card(props) {
   return (
     <div className="card" onClick={props.action}>
       <div className="expand">
-        <button>
+        <button aria-label="Expand">
           <CgArrowsExpandRight />
         </button>
       </div>
