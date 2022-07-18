@@ -1,43 +1,42 @@
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./Carousel.scss";
+import { Navigation } from "swiper";
 
-export default function Carousel() {
+export default function Carousel(props) {
+  var slides = props.slides;
   return (
-    <OwlCarousel
-      className="owl-carousel owl-theme"
-      loop
-      margin={10}
-      dots={false}
-      center={true}
-      responsive={{
-        0: {
-          items: 2,
-        },
-        1000: {
-          items: 4,
-        },
-      }}
-    >
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
-      </div>
-      <div class="item">
-      <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
-      </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
-      </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
-      </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
-      </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
-      </div>
-    </OwlCarousel>
+    <div className="slideshow">
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={30}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        centeredSlides={true}
+        navigation={true}
+        breakpoints={{
+          "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          "@1.00": {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }}
+        modules={[Navigation]}
+        className="mySwiper"
+      >
+        {slides.map((item, key) => (
+          <SwiperSlide key={key}>{item}</SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
