@@ -3,6 +3,10 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Carousel.scss";
 
+function expandOnClick() {
+  console.log("clicked");
+}
+
 export default function Carousel() {
   return (
     <OwlCarousel
@@ -20,23 +24,23 @@ export default function Carousel() {
         },
       }}
     >
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
+      <div className="item">
+        <img onClick={expandOnClick()} alt="Placeholder" src="https://ik.imagekit.io/feldman/portfolio_vsc_screenshot.png" />
       </div>
-      <div class="item">
-      <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
+      <div className="item">
+      <a target="_blank" rel="noreferrer" href="https://via.placeholder.com/400x250"><img alt="Placeholder" src="https://via.placeholder.com/400x250" /></a>
       </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
+      <div className="item">
+        <a target="_blank" rel="noreferrer" href="https://via.placeholder.com/400x250"><img alt="Placeholder" src="https://via.placeholder.com/400x250" /></a>
       </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
+      <div className="item">
+        <a target="_blank" rel="noreferrer" href="https://via.placeholder.com/400x250"><img alt="Placeholder" src="https://via.placeholder.com/400x250" /></a>
       </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
+      <div className="item">
+        <a target="_blank" rel="noreferrer" href="https://via.placeholder.com/400x250"><img alt="Placeholder" src="https://via.placeholder.com/400x250" /></a>
       </div>
-      <div class="item">
-        <a target="_blank" rel="noreferrer" alt="Placeholder" href="https://via.placeholder.com/400x250"><img src="https://via.placeholder.com/400x250" /></a>
+      <div className="item">
+        <a target="_blank" rel="noreferrer" href="https://via.placeholder.com/400x250"><img alt="Placeholder" src="https://via.placeholder.com/400x250" /></a>
       </div>
     </OwlCarousel>
   );
