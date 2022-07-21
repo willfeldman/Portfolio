@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Carousel.scss";
 import { Navigation } from "swiper";
-import Expand from "../expand/Expand";
+import Expand from "../button/expand/Expand";
 import { useNavigate } from "react-router-dom";
 
 export default function Carousel(props) {
@@ -37,7 +36,7 @@ export default function Carousel(props) {
         {slides.map((item, key) => (
           <SwiperSlide key={key}>
             <div className="expandSlideButton">
-              <Expand onClick={() => navigate('/image', { state: { src: item } })} size="30px" />
+              <Expand size="30px" onClick={() => navigate('/image', { state: { src: item } })} />
             </div>
             <img alt="Carousel element" src={item} />
           </SwiperSlide>

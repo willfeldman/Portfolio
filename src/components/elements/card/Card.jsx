@@ -1,5 +1,5 @@
 import "./Card.scss";
-import Expand from "../expand/Expand";
+import Expand from "../button/expand/Expand";
 
 export default function Card(props) {
   return (

@@ -15,35 +15,6 @@
     border: 1px solid rgba(112, 112, 112, 0.5);
 }
 
-.close-modal-button button {
-    z-index: 2;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    opacity: 0.8;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: global.$icon-color;
-}
-
-.close-modal-button button svg {
-    width: 20px;
-    height: 20px;
-}
-
-.close-modal-button button:hover {
-    background-color: #e4e4e4;
-    color: darken(global.$icon-color, 30%);
-}
-
 @media only screen and (max-width: global.$small-device) {
     [data-reach-dialog-content] {
         width: 100%;
