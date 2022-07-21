@@ -1,7 +1,27 @@
+@use '../../../styles/global';
+
 $hide-button-text-if-enabled-at: 425px;
 
 .buttonComponent {
     display: inline-flex;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid global.$card-border;
+    color: black;
+}
+
+.buttonComponent:hover {
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    transform: scale(1.05) perspective(1px);
+}
+
+.buttonComponent .icon {
+    padding-top: 2px;
+    padding-right: 2px;
 }
 
 @media only screen and (max-width: $hide-button-text-if-enabled-at) {

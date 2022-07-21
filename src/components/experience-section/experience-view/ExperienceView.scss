@@ -71,11 +71,6 @@
     justify-content: flex-end;
 }
 
-.right-justified .action .icon {
-    padding-top: 2px;
-    padding-right: 2px;
-}
-
 .right-justified .action button {
     margin: 0px 0px 0px 6px;
 }
@@ -99,7 +94,7 @@
 }
 
 .body {
-    line-height: 1.25;
+    line-height: global.$long-text-line-height;
     font-size: 14px;
 }
 

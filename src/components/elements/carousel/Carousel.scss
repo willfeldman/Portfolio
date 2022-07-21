@@ -14,11 +14,19 @@
     display: block;
     border-radius: 10px;
     width: 100%;
-    object-fit: contain;
+    height: 160px;
+    object-fit: cover;
+    border: 0.75px solid global.$card-border;
+}
+
+.swiper-slide:hover {
+    .expandSlideButton button {
+        display: flex;
+    }
 }
 
 .slideshow {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -28,15 +36,22 @@
 @media only screen and (max-width: global.$carousel-breakpoint-small) {
     .swiper-slide img {
         border-radius: 0px;
+        height: 200px;
+        border: none;
     }
     .slideshow {
         margin-top: 0px;
     }
     .swiper-button-prev, .swiper-button-next {
         display: inline;
-        color: white;
+        color: #0281d4;
     }
-    .swiper {
-        height: 300px;
+    .expandSlideButton button {
+        display: none;
+    }
+    .swiper-slide:hover {
+        .expandSlideButton button {
+            display: none;
+        }
     }
 }

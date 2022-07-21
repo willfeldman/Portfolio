@@ -2,6 +2,7 @@ import React from "react";
 import Homepage from "./components/homepage/Homepage";
 import ExperienceView from "./components/experience-section/experience-view/ExperienceView";
 import ProjectView from "./components/project-section/project-view/ProjectView";
+import ImageView from "./components/image-view/ImageView";
 import Error from "./components/error/Error";
 import Modal from "./components/elements/modal/Modal";
 import "./App.css";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/experience/:id" element={<ExperienceView />} />
         <Route path="/project/:id" element={<ProjectView />} />
+        <Route path="/image" element={<ImageView />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {state?.backgroundLocation && (

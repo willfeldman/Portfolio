@@ -1,13 +1,11 @@
 import "./Card.scss";
-import { CgArrowsExpandRight } from "react-icons/cg";
+import Expand from "../expand/Expand";
 
 export default function Card(props) {
   return (
     <div className="card" onClick={props.action}>
-      <div className="expand">
-        <button aria-label="Expand">
-          <CgArrowsExpandRight />
-        </button>
+      <div className="expandCardButton">
+        <Expand size="30px" />
       </div>
       {props.children}
     </div>
