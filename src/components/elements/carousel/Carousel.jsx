@@ -4,37 +4,43 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Carousel.scss";
 import { Navigation } from "swiper";
+import Expand from "../expand/Expand";
+import { useNavigate } from "react-router-dom";
 
 export default function Carousel(props) {
+  const navigate = useNavigate();
+
   var slides = props.slides;
+  
   return (
     <div className="slideshow">
       <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={10}
         loop={true}
         loopFillGroupWithBlank={true}
         centeredSlides={true}
         navigation={true}
         breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
+          505: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          "@1.00": {
+          880: {
             slidesPerView: 4,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
         }}
         modules={[Navigation]}
         className="mySwiper"
       >
         {slides.map((item, key) => (
-          <SwiperSlide key={key}>{item}</SwiperSlide>
+          <SwiperSlide key={key}>
+            <div className="expandSlideButton">
+              <Expand onClick={() => navigate('/image', { state: { src: item } })} size="30px" />
+            </div>
+            <img alt="Carousel element" src={item} />
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>
