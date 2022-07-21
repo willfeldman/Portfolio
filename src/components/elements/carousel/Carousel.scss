@@ -35,7 +35,7 @@
 
 .swiper-button-next::after, .swiper-button-prev::after {
     font-size: 25px;
-    -webkit-text-stroke: 0.4px black;
+    -webkit-text-stroke: 0.5px black;
 }
 
 @media only screen and (max-width: global.$carousel-breakpoint-small) {
