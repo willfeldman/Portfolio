@@ -23,6 +23,8 @@
     .expandSlideButton button {
         display: flex;
     }
+    cursor: move; /* fallback for grab cursor */
+    cursor: grab;
 }
 
 .slideshow {

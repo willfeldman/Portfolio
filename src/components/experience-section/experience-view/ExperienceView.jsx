@@ -1,5 +1,5 @@
 import Error from "../../error/Error";
-import Button from "../../elements/button/Button";
+import Button from "../../elements/button/link/Button";
 import Tag from "../../elements/tag/Tag";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FiLink } from "react-icons/fi";

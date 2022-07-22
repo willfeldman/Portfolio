@@ -1,5 +1,5 @@
 import "./Button.scss";
-import "../../../styles/tooltip.scss";
+import "../../../../styles/tooltip.scss";
 
 export default function Button(props) {
   function openLink(url) {

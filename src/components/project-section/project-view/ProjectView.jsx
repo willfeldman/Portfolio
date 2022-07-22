@@ -1,5 +1,5 @@
 import Error from "../../error/Error";
-import Button from "../../elements/button/Button";
+import Button from "../../elements/button/link/Button";
 import Carousel from "../../elements/carousel/Carousel";
 import Tag from "../../elements/tag/Tag";
 import { IoLogoGithub } from "react-icons/io5";
