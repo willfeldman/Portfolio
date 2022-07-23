@@ -82,7 +82,7 @@ var experiences = [
       "Led a web performance focused 4-person scrum team in daily standups and sprint planning",
       "Regularly met and communicated with several internal and external stakeholders of projects to collaborate and gather feedback",
     ],
-    dates: "Jan 2022 - Present",
+    dates: "Jan 2022 - Jul 2022",
     type: "Full-time",
     additionalInformation: (
       <div>

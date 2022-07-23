@@ -74,7 +74,7 @@ function ExperienceView() {
   }
 
   return (
-    <div className="experience-modal">
+    <div className="experience-modal experience">
       <div className="header-image">
         <img src={experience.headerImage} alt="Header" />
       </div>

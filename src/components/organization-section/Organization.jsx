@@ -1,6 +1,6 @@
 import "./Organization.scss";
-import OrganizationCard from "./project-card/OrganizationCard";
-// import { organizations } from "../../data/project";
+import OrganizationCard from "./organization-card/OrganizationCard";
+import { organizations } from "../../data/organization";
 import { convertIdToComplement } from "../../data/operations";
 
 let organizationComponents = [];
@@ -10,7 +10,7 @@ organizations.forEach((item,index)=>{
 
 function Organization() {
   return (
-    <div className="organization-section">
+    <div className="organization-section organization">
       <div className="title">
         <h1>Organizations</h1>
       </div>

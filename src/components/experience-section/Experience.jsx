@@ -10,7 +10,7 @@ experiences.forEach((item,index)=>{
 
 function Experience() {
   return (
-    <div className="experience-section">
+    <div className="experience-section experience">
       <div className="title">
         <h1>Experiences</h1>
       </div>

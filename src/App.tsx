@@ -7,6 +7,7 @@ import Error from "./components/error/Error";
 import Modal from "./components/elements/modal/Modal";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
+import OrganizationView from "./components/organization-section/organization-view/OrganizationView";
 
 function App() {
   let location = useLocation();
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/experience/:id" element={<ExperienceView />} />
         <Route path="/project/:id" element={<ProjectView />} />
+        <Route path="/organization/:id" element={<OrganizationView />} />
         <Route path="/image" element={<ImageView />} />
         <Route path="*" element={<Error />} />
       </Routes>
@@ -35,6 +37,14 @@ function App() {
             element={
               <Modal>
                 <ProjectView />
+              </Modal>
+            }
+          />
+          <Route
+            path="/organization/:id"
+            element={
+              <Modal>
+                <OrganizationView />
               </Modal>
             }
           />

@@ -1,3 +1,5 @@
+@use '../../styles/global';
+
 .organization-section {
     margin-top: 40px;
 }
@@ -13,4 +15,23 @@
     font-weight: 800;
     margin-bottom: 10px;
     margin-left: 5px;
+}
+
+.organization .role h1 {
+    font-size: global.$card-level2-heading;
+    font-weight: 700;
+}
+
+.organization .details .name {
+    font-size: global.$card-level1-heading;
+    font-weight: 600;
+    color: global.$experience-card-accent;
+}
+
+.organization .dates {
+    font-size: 12px;
+}
+
+.organization .logo img {
+    border-radius: 50%;
 }

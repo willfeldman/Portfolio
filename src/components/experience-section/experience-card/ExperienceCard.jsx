@@ -18,7 +18,7 @@ function ExperienceCard(props) {
 
   return (
     <Card action={openExperienceModal}>
-      <div className="header">
+      <div className="header experience">
         <div className="logo">
           <img src={experience.logo} alt="Experience logo" />
         </div>

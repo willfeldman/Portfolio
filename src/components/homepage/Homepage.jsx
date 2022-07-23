@@ -2,6 +2,7 @@ import Header from "../header/Header";
 import Experience from "../experience-section/Experience";
 import Project from "../project-section/Project";
 import "./Homepage.scss";
+import Organization from "../organization-section/Organization";
 
 function Homepage() {
   return (
@@ -9,6 +10,7 @@ function Homepage() {
       <Header />
       <Experience />
       <Project />
+      <Organization />
     </div>
   );
 }
