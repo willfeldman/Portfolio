@@ -67,7 +67,6 @@ function OrganizationView() {
         </div>
         <div className="body">
           <div className="summary">
-            <h4 className="mainHeading">Summary</h4>
             <ul>
               {organization.description.map((item, key) => (
                 <li key={key}>{item}</li>
