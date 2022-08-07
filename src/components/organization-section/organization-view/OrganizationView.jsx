@@ -60,12 +60,20 @@ function OrganizationView() {
             </div>
           </div>
           <div className="right-justified">
-            <div className="action">
-              {renderLink()}
-            </div>
+            <div className="action">{renderLink()}</div>
           </div>
         </div>
         <div className="body">
+          <div className="yearsActive">
+            <h4>Years Active</h4>
+            <p>{organization.yearsActive}</p>
+          </div>
+          <div className="leadershipRoles">
+            <h4>Leadership Roles</h4>
+            {organization.role.map((item, key) => (
+              <p key={key}>{item.title}, {item.years}</p>
+            ))}
+          </div>
           <div className="summary">
             <ul>
               {organization.description.map((item, key) => (

@@ -1,21 +1,21 @@
 @use '../../../styles/global';
 @use '../ExperienceGlobal.scss';
 
-.details .company {
+.experience .details .company {
     font-size: 16px;
 }
 
-.header .logo img {
+.experience .header .logo img {
     width: 45px;
     height: 45px;
     margin-right: 10px;
 }
 
-.header {
+.experience .header {
     display: flex;
 }
 
-.description .text {
+.experience .description .text {
     font-size: 13px;
     padding-top: 5px;
     padding-bottom: 5px;

@@ -1,8 +1,9 @@
+import "./Homepage.scss";
 import Header from "../header/Header";
 import Experience from "../experience-section/Experience";
 import Project from "../project-section/Project";
-import "./Homepage.scss";
 import Organization from "../organization-section/Organization";
+import Education from "../education-section/Education";
 
 function Homepage() {
   return (
@@ -11,6 +12,7 @@ function Homepage() {
       <Experience />
       <Project />
       <Organization />
+      <Education />
     </div>
   );
 }

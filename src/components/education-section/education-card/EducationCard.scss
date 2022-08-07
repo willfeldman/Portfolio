@@ -1,0 +1,37 @@
+@use '../../../styles/global';
+
+.education .details .subtitle {
+    font-size: 16px;
+}
+
+.education .header .logo img {
+    width: auto;
+    max-height: 70px;
+    margin-right: 10px;
+}
+
+.education .header {
+    display: flex;
+}
+
+.education .text-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.education .school h1 {
+    font-size: global.$card-level1-heading;
+    font-weight: 700;
+    color: global.$education-card-accent;
+}
+
+.education .details .subtitle {
+    font-size: global.$card-level2-heading;
+    font-weight: 600;
+}
+
+.education .logo {
+    display: flex;
+    justify-content: center;
+}
