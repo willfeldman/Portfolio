@@ -2,7 +2,7 @@ import "./Card.scss";
 import Expand from "../button/expand/Expand";
 
 export default function Card(props) {
-  function renderCardClasses() {
+  function renderCardExpandableClass() {
     // renders the expand button class if needed
     if (props.expandable !== false) {
       return "expandable";
@@ -21,7 +21,7 @@ export default function Card(props) {
   }
 
   return (
-    <div className={`card ${renderCardClasses()}`} onClick={props.action}>
+    <div className={`card ${renderCardExpandableClass()} ${props.customClass}`} onClick={props.action}>
       {renderExpandButton()}
       {props.children}
     </div>

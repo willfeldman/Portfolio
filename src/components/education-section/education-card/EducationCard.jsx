@@ -1,5 +1,6 @@
 import "./EducationCard.scss";
 import Card from "../../elements/card/Card";
+import Tag from "../../elements/tag/Tag";
 import { useLocation } from "react-router-dom";
 import { educations } from "../../../data/education";
 import { getById } from "../../../data/operations";
@@ -10,7 +11,7 @@ function EducationCard(props) {
   let education = getById(props.id, educations);
 
   return (
-    <Card expandable={false}>
+    <Card expandable={false} customClass="educationCard">
       <div className="header education">
         <div className="logo">
           <img src={education.logo} alt="Education logo" />
@@ -21,6 +22,7 @@ function EducationCard(props) {
           </div>
           <div className="details">
             <span className="subtitle">{education.subtitle}</span>
+            <span className="years"><Tag text={education.years} color="white" background="#0281d4" /></span>
           </div>
         </div>
       </div>

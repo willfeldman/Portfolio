@@ -6,7 +6,7 @@
 
 .education .header .logo img {
     width: auto;
-    max-height: 70px;
+    max-height: 50px;
     margin-right: 10px;
 }
 
@@ -34,4 +34,13 @@
 .education .logo {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.education .details .years {
+    margin-left: 5px;
+}
+
+.educationCard {
+    flex-direction: inherit;
 }
