@@ -8,6 +8,7 @@ import Modal from "./components/elements/modal/Modal";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import OrganizationView from "./components/organization-section/organization-view/OrganizationView";
+import AwardView from "./components/award-section/award-view/AwardView";
 
 function App() {
   let location = useLocation();
@@ -19,6 +20,7 @@ function App() {
         <Route path="/experience/:id" element={<ExperienceView />} />
         <Route path="/project/:id" element={<ProjectView />} />
         <Route path="/organization/:id" element={<OrganizationView />} />
+        <Route path="/award/:id" element={<AwardView />} />
         <Route path="/image" element={<ImageView />} />
         <Route path="*" element={<Error />} />
       </Routes>
@@ -45,6 +47,14 @@ function App() {
             element={
               <Modal>
                 <OrganizationView />
+              </Modal>
+            }
+          />
+          <Route
+            path="/award/:id"
+            element={
+              <Modal>
+                <AwardView />
               </Modal>
             }
           />

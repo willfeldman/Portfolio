@@ -4,6 +4,7 @@ import Experience from "../experience-section/Experience";
 import Project from "../project-section/Project";
 import Organization from "../organization-section/Organization";
 import Education from "../education-section/Education";
+import Award from "../award-section/Award";
 
 function Homepage() {
   return (
@@ -13,6 +14,7 @@ function Homepage() {
       <Project />
       <Organization />
       <Education />
+      <Award />
     </div>
   );
 }
