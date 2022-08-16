@@ -34,7 +34,7 @@ function OrganizationCard(props) {
         </div>
         <div className="description">
           <div className="text">
-            <p>{organization.summary || organization.description[0]}...</p>
+            <p>{organization.summary || organization.description[0]}.</p>
           </div>
         </div>
       </div>

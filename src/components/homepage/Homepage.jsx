@@ -11,8 +11,8 @@ function Homepage() {
     <div className="homepage">
       <Header />
       <Experience />
-      <Project />
       <Organization />
+      <Project />
       <Education />
       <Award />
     </div>

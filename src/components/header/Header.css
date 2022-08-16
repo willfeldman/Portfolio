@@ -1,31 +1,41 @@
-.container {
+ .header .information {
+     display: flex;
+ }
+
+ .header .container {
     display: flex;
+    justify-content: space-between;
 }
 
-.container .text {
+ .header .information .text {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+ }
+
+ .header .contact {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+    align-items: center;
+ }
 
-.profile img {
-    border-radius: 50%;
-    width: 55px;
-    height: auto;
-}
+ .profile img {
+     border-radius: 50%;
+     width: 55px;
+     height: auto;
+ }
 
-.text .name {
-    font-size: 23px;
-    font-weight: 700;
-    padding-left: 15px;
-}
+ .text .name {
+     font-size: 23px;
+     font-weight: 700;
+     padding-left: 15px;
+ }
 
-.text .position {
-    font-size: 20px;
-    padding-left: 15px;
-}
+ .text .position {
+     font-size: 20px;
+     padding-left: 15px;
+ }
 
-.text .position {
-    color: #757575;
-    padding-top: 10px;
-}
+ .text .position {
+     color: #757575;
+     padding-top: 10px;
+ }
