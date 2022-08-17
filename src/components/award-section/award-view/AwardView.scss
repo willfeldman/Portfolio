@@ -19,12 +19,13 @@
 .awardName {
     font-size: 18px;
     font-weight: 700;
-    color: global.$award-card-accent;
+    color: global.$card-header-accent;
 }
 
 .awardView .description {
     margin-top: 15px;
     font-size: 14px;
+    line-height: 1.25;
 }
 
 .awardView ul {

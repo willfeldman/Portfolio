@@ -29,6 +29,11 @@ var projectTags = [
     color: "#ff61f6",
     background: "#460034",
   },
+  {
+    name: "Final Cut Pro",
+    color: "#dee4ea",
+    background: "#4d535f",
+  },
 ];
 
 function getProjectTagByName(name) {
@@ -38,6 +43,34 @@ function getProjectTagByName(name) {
 var projects = [
   {
     id: 0,
+    title: "YouTube Vlogs",
+    description: "Fun, light-hearted original adventure video edited on Final Cut Pro",
+    tags: [
+      getProjectTagByName("Final Cut Pro"),
+    ],
+    images: [
+      "https://ik.imagekit.io/feldman/vlogs_fcp_screenshot.png",
+      "https://ik.imagekit.io/feldman/vlogs_youtube_screenshot.png",
+      "https://ik.imagekit.io/feldman/vlogs_video_screenshot.png",
+    ],
+  },
+  {
+    id: 1,
+    title: "Grade Calculator",
+    description: "Simple high school semester-based grade calculator made in JavaScript",
+    github: "https://github.com/willfeldman/grade-calculator",
+    tags: [
+      getProjectTagByName("JavaScript"),
+      getProjectTagByName("Personal project"),
+    ],
+    images: [
+      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+    ],
+  },
+  {
+    id: 2,
     title: "Succulent Emojis",
     description:
       "Send friends succulent stickers, available on the Apple App Store",
@@ -46,14 +79,13 @@ var projects = [
       getProjectTagByName("Personal project"),
     ],
     images: [
-      "https://www.xda-developers.com/files/2021/11/Google-Photos-Screenshots-shortcut-1024x753.jpg",
-      "https://media.wired.co.uk/photos/606d9b31751ea43ccd98868e/4:3/w_2664,h_1998,c_limit/wired-screenshot.jpg",
-      "https://www.androidguys.com/wp-content/uploads/2018/04/screener_1525136849196.png",
-      "https://linuxhint.com/wp-content/uploads/2020/05/2-10.png",
+      "https://ik.imagekit.io/feldman/succulent_xcode_screenshot.png",
+      "https://ik.imagekit.io/feldman/succulent_asc_screenshot.png",
+      "https://ik.imagekit.io/feldman/succulent_iphone_screenshot.png",
     ],
   },
   {
-    id: 1,
+    id: 3,
     title: "Chrome Commands",
     description:
       "A curated list of the best chrome URL commands, built in React",
@@ -71,21 +103,20 @@ var projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: "Photo Filtering Application",
     description:
       "Photo filtering app with multiple layers and effects, including Sepia, Blur, Downscale, and Mosaic",
     code: "https://drive.google.com/drive/folders/1Q0BESK_FBM1WfRHPC_vFe9fKuK7bXGbd?usp=sharing",
     tags: [getProjectTagByName("Java")],
     images: [
-      "https://www.xda-developers.com/files/2021/11/Google-Photos-Screenshots-shortcut-1024x753.jpg",
-      "https://media.wired.co.uk/photos/606d9b31751ea43ccd98868e/4:3/w_2664,h_1998,c_limit/wired-screenshot.jpg",
-      "https://www.androidguys.com/wp-content/uploads/2018/04/screener_1525136849196.png",
-      "https://linuxhint.com/wp-content/uploads/2020/05/2-10.png",
+      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "Portfolio Website",
     description:
       "A portfolio website built in React containing experiences, accomplishments, and contact information.",
@@ -96,10 +127,9 @@ var projects = [
       getProjectTagByName("Adobe XD"),
     ],
     images: [
-      "https://www.xda-developers.com/files/2021/11/Google-Photos-Screenshots-shortcut-1024x753.jpg",
-      "https://media.wired.co.uk/photos/606d9b31751ea43ccd98868e/4:3/w_2664,h_1998,c_limit/wired-screenshot.jpg",
-      "https://www.androidguys.com/wp-content/uploads/2018/04/screener_1525136849196.png",
-      "https://linuxhint.com/wp-content/uploads/2020/05/2-10.png",
+      "https://ik.imagekit.io/feldman/portfolio_site_screenshot.png",
+      "https://ik.imagekit.io/feldman/portfolio_code_screenshot.png",
+      "https://ik.imagekit.io/feldman/portfolio_github_screenshot.png",
     ],
   },
 ];

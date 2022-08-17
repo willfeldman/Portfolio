@@ -25,10 +25,6 @@ export default function Carousel(props) {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          880: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
         }}
         modules={[Navigation]}
         className="mySwiper"
