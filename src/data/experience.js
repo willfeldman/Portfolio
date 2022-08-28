@@ -4,7 +4,11 @@ var experiences = [
     position: "Intern",
     company: "StataPile: AI Quality Assurance",
     location: "Chicago, IL",
-    description: ["Created advanced spreadsheets to analyze the accuracy of a custom AI model on consumer data", "Redesigned website backend to make it easier for employees to utilize", "Conducted and presented research on business-to-business (B2B) growth plans"],
+    description: [
+      "Created advanced spreadsheets to analyze the accuracy of a custom AI model on consumer data",
+      "Redesigned website backend to make it easier for employees to utilize",
+      "Conducted and presented research on business-to-business (B2B) growth plans",
+    ],
     dates: "June 2018 - Aug. 2018",
     type: "Internship",
     url: "https://statapile.com/",
@@ -17,8 +21,13 @@ var experiences = [
     position: "Web Developer",
     company: "Freelance",
     location: "Columbus, OH",
-    summary: "Designed and coded websites for local DJ companies using HTML, CSS, JavaScript, PHP, and jQuery",
-    description: ["Designed and coded websites for local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery", "Communicated and met frequently with clients to display progress and make adjustments", "Maintained the sites and updated site information on an as-needed basis"],
+    summary:
+      "Designed and coded websites for local DJ companies using HTML, CSS, JavaScript, PHP, and jQuery",
+    description: [
+      "Designed and coded websites for local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery",
+      "Communicated and met frequently with clients to display progress and make adjustments",
+      "Maintained the sites and updated site information on an as-needed basis",
+    ],
     dates: "April 2017 - Aug. 2020",
     type: "Part-time",
     url: ["https://mattryandj.com", "https://audiopromobiledj.com"],
@@ -30,7 +39,10 @@ var experiences = [
     position: "Founder",
     company: "pausecircleplay",
     location: "Columbus, OH",
-    description: ["Created and led clothing brand that sold $7,000 worth of merchandise made by hand", "Managed related business, web development, graphic design, marketing, and social media"],
+    description: [
+      "Created and led clothing brand that sold $7,000 worth of merchandise made by hand",
+      "Managed related business, web development, graphic design, marketing, and social media",
+    ],
     dates: "Aug. 2019 - Aug. 2020",
     type: "Part-time",
     url: "https://www.pausecircleplay.com/",
@@ -43,7 +55,8 @@ var experiences = [
     position: "UC & Teams Calls Assistant",
     company: "Northeastern University ITS",
     location: "Boston, MA",
-    summary: "Installed hundreds of Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
+    summary:
+      "Installed hundreds of Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
     description: [
       "Installed hundreds of touchscreen Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
       "Created detailed video guides on how to operate the phone devices for university staff",
@@ -70,7 +83,7 @@ var experiences = [
     type: "Internship",
     url: "https://www.wasserstrom.com/restaurant-supplies-equipment/n-wasserstrom-and-sons",
     linkedin: "https://www.linkedin.com/company/n-wasserstrom-sons/",
-    headerImage: "https://ik.imagekit.io/feldman/wasserstrom_header.png",
+    headerImage: "https://ik.imagekit.io/feldman/wasserstrom_hq_header.jpg",
     logo: "https://ik.imagekit.io/feldman/wasserstrom_logo.jpeg",
   },
   {

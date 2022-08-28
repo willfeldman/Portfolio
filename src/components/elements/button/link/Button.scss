@@ -4,8 +4,8 @@ $hide-button-text-if-enabled-at: 425px;
 
 .buttonComponent {
     display: inline-flex;
-    padding: 3px 10px;
-    border-radius: 20px;
+    padding: 4px 10px;
+    border-radius: 10px;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 14px;
     background-color: white;
@@ -21,7 +21,7 @@ $hide-button-text-if-enabled-at: 425px;
 
 .buttonComponent .icon {
     padding-top: 2px;
-    padding-right: 2px;
+    padding-right: 3px;
 }
 
 @media only screen and (max-width: $hide-button-text-if-enabled-at) {
