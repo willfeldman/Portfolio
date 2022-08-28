@@ -29,6 +29,7 @@
 .education .details .subtitle {
     font-size: global.$card-level2-heading;
     font-weight: 600;
+    margin-right: 5px;
 }
 
 .education .logo {
@@ -38,7 +39,8 @@
 }
 
 .education .details .years {
-    margin-left: 5px;
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 .educationCard {

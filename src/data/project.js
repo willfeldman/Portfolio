@@ -44,10 +44,10 @@ var projects = [
   {
     id: 0,
     title: "YouTube Vlogs",
-    description: "Fun, light-hearted original adventure video edited on Final Cut Pro",
-    tags: [
-      getProjectTagByName("Final Cut Pro"),
-    ],
+    description:
+      "Fun, light-hearted original adventure video edited on Final Cut Pro",
+    url: "https://www.youtube.com/channel/UCQOig6CGyGK7sli6MuEaf_g/videos",
+    tags: [getProjectTagByName("Final Cut Pro")],
     images: [
       "https://ik.imagekit.io/feldman/vlogs_fcp_screenshot.png",
       "https://ik.imagekit.io/feldman/vlogs_youtube_screenshot.png",
@@ -57,16 +57,17 @@ var projects = [
   {
     id: 1,
     title: "Grade Calculator",
-    description: "Simple high school semester-based grade calculator made in JavaScript",
-    github: "https://github.com/willfeldman/grade-calculator",
+    description:
+      "Simple high school semester-based grade calculator made in JavaScript",
+    github: "https://github.com/willfeldman/GradeCalculator",
     tags: [
       getProjectTagByName("JavaScript"),
       getProjectTagByName("Personal project"),
     ],
     images: [
-      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
-      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
-      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+      "https://ik.imagekit.io/feldman/grade_calculator_top_screenshot.png",
+      "https://ik.imagekit.io/feldman/grade_calculator_bottom_screenshot.png",
+      "https://ik.imagekit.io/feldman/grade_calculator_github_screenshot.png",
     ],
   },
   {
@@ -74,6 +75,7 @@ var projects = [
     title: "Succulent Emojis",
     description:
       "Send friends succulent stickers, available on the Apple App Store",
+    url: "https://apps.apple.com/us/app/succulent-emojis/id1400046038",
     tags: [
       getProjectTagByName("Xcode"),
       getProjectTagByName("Personal project"),
@@ -110,9 +112,10 @@ var projects = [
     code: "https://drive.google.com/drive/folders/1Q0BESK_FBM1WfRHPC_vFe9fKuK7bXGbd?usp=sharing",
     tags: [getProjectTagByName("Java")],
     images: [
-      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
-      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
-      "https://ik.imagekit.io/feldman/photo_coming_soon.png",
+      "https://ik.imagekit.io/feldman/photo_filter_class_diagram_screenshot.png",
+      "https://ik.imagekit.io/feldman/photo_filter_structure_screenshot.png",
+      "https://ik.imagekit.io/feldman/photo_filter_interface_screenshot.png",
+      "https://ik.imagekit.io/feldman/photo_filter_demo.gif",
     ],
   },
   {

@@ -4,14 +4,16 @@ var educations = [
     school: "Bexley High School",
     logo: "https://ik.imagekit.io/feldman/bexley_high_school_logo.jpg",
     subtitle: "High School Diploma with Honors",
-    years: "2016 - 2020",
+    tags: ["Summa Cum Laude"],
+    years: "Aug. 2016 - May 2020",
   },
   {
     id: 1,
     school: "Northeastern University",
     logo: "https://ik.imagekit.io/feldman/northeastern_logo.jpg",
     subtitle: "Bachelor’s Degree in Computer Science and Business",
-    years: "2020 - 2025",
+    tags: ["Honors"],
+    years: "Sept. 2020 - expected May 2025",
   },
 ];
 

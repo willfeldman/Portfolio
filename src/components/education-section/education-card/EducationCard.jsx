@@ -22,7 +22,19 @@ function EducationCard(props) {
           </div>
           <div className="details">
             <span className="subtitle">{education.subtitle}</span>
-            <span className="years"><Tag text={education.years} color="white" background="#0281d4" /></span>
+            <span className="tags">
+              {education.tags.map((item, key) => (
+                <span className="tag">
+                  <Tag
+                    key={key}
+                    text={item}
+                    color="white"
+                    background="#0281d4"
+                  />
+                </span>
+              ))}
+            </span>
+            <div className="years">{education.years}</div>
           </div>
         </div>
       </div>

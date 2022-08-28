@@ -17,6 +17,7 @@ function App() {
     <div className="app">
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Homepage />} />
+        <Route path="/index.html" element={<Homepage />} />
         <Route path="/experience/:id" element={<ExperienceView />} />
         <Route path="/project/:id" element={<ProjectView />} />
         <Route path="/organization/:id" element={<OrganizationView />} />

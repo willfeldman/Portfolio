@@ -3,6 +3,8 @@ import Button from "../../elements/button/link/Button";
 import Carousel from "../../elements/carousel/Carousel";
 import Tag from "../../elements/tag/Tag";
 import { IoLogoGithub } from "react-icons/io5";
+import { HiOutlineCode } from "react-icons/hi";
+import { FiLink } from "react-icons/fi";
 import "./ProjectView.scss";
 import { useParams } from "react-router-dom";
 import { projects } from "../../../data/project";
@@ -15,6 +17,33 @@ export default function ProjectView() {
 
   if (!project) {
     return <Error />;
+  }
+
+  function renderGitHubLink() {
+    // renders the link for GitHub if it is in the data
+    if (project.github) {
+      return (
+        <Button icon={<IoLogoGithub />} text="GitHub" link={project.github} />
+      );
+    }
+  }
+
+  function renderCodeLink() {
+    // renders the link for code if it is in the data
+    if (project.code) {
+      return (
+        <Button icon={<HiOutlineCode />} text="Code" link={project.code} />
+      );
+    }
+  }
+
+  function renderLink() {
+    // renders a link button if it is in the data
+    if (project.url) {
+      return (
+        <Button icon={<FiLink />} text="Site" link={project.url} />
+      );
+    }
   }
 
   return (
@@ -40,7 +69,9 @@ export default function ProjectView() {
             </div>
           </div>
           <div className="links">
-            <Button icon={<IoLogoGithub />} text="GitHub" link={project.github} />
+            {renderGitHubLink()}
+            {renderCodeLink()}
+            {renderLink()}
           </div>
         </div>
         <div className="text">{project.description}</div>

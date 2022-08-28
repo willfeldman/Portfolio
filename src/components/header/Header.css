@@ -13,9 +13,17 @@
      justify-content: space-around;
  }
 
- .header .contact {
+ .header .links {
+    display: flex;
+ }
+
+ .header .contact, .header .resume {
     display: flex;
     align-items: center;
+ }
+
+ .header .contact {
+    margin-left: 5px;
  }
 
  .profile img {

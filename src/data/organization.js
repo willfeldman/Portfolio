@@ -2,11 +2,11 @@ var organizations = [
   {
     id: 0,
     name: "Student Council",
-    yearsActive: "Aug 2017 - May 2020",
+    yearsActive: "Aug. 2017 - May 2020",
     role: [
       {
         title: "Junior Class Vice President",
-        years: "Aug 2018 - May 2019",
+        years: "Aug. 2018 - May 2019",
       },
     ],
     summary: "Elected to represent students to school administration",
@@ -18,15 +18,15 @@ var organizations = [
   {
     id: 1,
     name: "Bexleo Student Yearbook",
-    yearsActive: "Aug 2017 - Jul 2020",
+    yearsActive: "Aug. 2017 - July 2020",
     role: [
       {
         title: "Co-Executive Editor",
-        years: "Aug 2019 - Jul 2020",
+        years: "Aug. 2019 - July 2020",
       },
       {
         title: "Website Editor",
-        years: "Aug 2017 - May 2019",
+        years: "Aug. 2017 - May 2019",
       },
     ],
     summary: "Bexley High School’s top-rated yearbook program",
@@ -44,11 +44,11 @@ var organizations = [
     role: [
       {
         title: "President",
-        years: "Aug 2018 - May 2020",
+        years: "Aug. 2018 - May 2020",
       },
       {
         title: "Vice President",
-        years: "Aug 2017 - May 2018",
+        years: "Aug. 2017 - May 2018",
       },
     ],
     summary: "An international, student-led service organization",
@@ -62,15 +62,15 @@ var organizations = [
   {
     id: 3,
     name: "CISV Columbus",
-    yearsActive: "Jan 2016 - Jun 2020",
+    yearsActive: "Jan. 2016 - June 2020",
     role: [
       {
         title: "Social Media Marketing",
-        years: "Aug 2018 - May 2020",
+        years: "Aug. 2018 - May 2020",
       },
       {
         title: "Vice President",
-        years: "Aug 2017 - May 2018",
+        years: "Aug. 2017 - May 2018",
       },
     ],
     summary: "Inspires action for a more just and peaceful world",
