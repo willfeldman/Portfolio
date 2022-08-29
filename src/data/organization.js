@@ -51,7 +51,7 @@ var organizations = [
         years: "Aug. 2017 - May 2018",
       },
     ],
-    summary: "An international, student-led service organization",
+    summary: "International, student-led organization that provides its members with opportunities to provide service",
     description: [
       "Led a group of Bexley High School students in bi-weekly meetings",
       "In charge of executive decisions and leading the local executive board",
@@ -73,12 +73,29 @@ var organizations = [
         years: "Aug. 2017 - May 2018",
       },
     ],
-    summary: "Inspires action for a more just and peaceful world",
+    summary: "Educates and inspires action for a more just and peaceful world",
     description: [
       "Maintained social media to inform and promote local events, using Adobe Photoshop and Illustrator to make announcements for Instagram, Twitter, and Facebook",
     ],
     logo: "https://ik.imagekit.io/feldman/cisv_logo.png",
-    headerImage: "https://ik.imagekit.io/feldman/cisv_background.jpg",
+    headerImage: "https://ik.imagekit.io/feldman/cisv_background.png",
+  },
+  {
+    id: 4,
+    name: "Entrepreneurs Club",
+    yearsActive: "Sept. 2020 - Present",
+    role: [
+      {
+        title: "Executive Board - Photographer",
+        years: "May 2022 - Present",
+      },
+    ],
+    summary: "Educating, inspiring, and empowering the world's future entrepreneurs, innovators, and leaders",
+    description: [
+      "Photographed events and attended board meetings to plan events for Entrepreneurs Club - the largest club at Northeastern University",
+    ],
+    logo: "https://ik.imagekit.io/feldman/eclub_logo.png",
+    headerImage: "https://ik.imagekit.io/feldman/eclub_background.png",
   },
 ];
 

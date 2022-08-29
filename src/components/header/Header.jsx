@@ -10,7 +10,7 @@ function Header() {
         <div className="information">
           <div className="profile">
             <img
-              src="https://ik.imagekit.io/feldman/profile.jpg/tr:q-80,h-300,w-300"
+              src="https://ik.imagekit.io/feldman/will_emoji.png/tr:q-80"
               alt="Profile"
             />
           </div>

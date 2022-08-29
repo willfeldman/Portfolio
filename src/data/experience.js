@@ -5,8 +5,8 @@ var experiences = [
     company: "StataPile: AI Quality Assurance",
     location: "Chicago, IL",
     description: [
-      "Created advanced spreadsheets to analyze the accuracy of a custom AI model on consumer data",
-      "Redesigned website backend to make it easier for employees to utilize",
+      "Formulated advanced spreadsheets weekly to analyze the accuracy of custom AI models built using consumer data",
+      "Redesigned the website backend using WordPress",
       "Conducted and presented research on business-to-business (B2B) growth plans",
     ],
     dates: "June 2018 - Aug. 2018",
@@ -24,7 +24,7 @@ var experiences = [
     summary:
       "Designed and coded websites for local DJ companies using HTML, CSS, JavaScript, PHP, and jQuery",
     description: [
-      "Designed and coded websites for local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery",
+      "Designed and programmed websites for two local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery",
       "Communicated and met frequently with clients to display progress and make adjustments",
       "Maintained the sites and updated site information on an as-needed basis",
     ],
@@ -40,8 +40,8 @@ var experiences = [
     company: "pausecircleplay",
     location: "Columbus, OH",
     description: [
-      "Created and led clothing brand that sold $7,000 worth of merchandise made by hand",
-      "Managed related business, web development, graphic design, marketing, and social media",
+      "Launched and led a clothing brand that sold $7,000 worth of hand-made merchandise",
+      "Directed related business, web development, graphic design, marketing, and social media sectors",
     ],
     dates: "Aug. 2019 - Aug. 2020",
     type: "Part-time",
@@ -58,8 +58,8 @@ var experiences = [
     summary:
       "Installed hundreds of Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
     description: [
-      "Installed hundreds of touchscreen Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
-      "Created detailed video guides on how to operate the phone devices for university staff",
+      "Installed hundreds of touchscreen Microsoft Teams-enabled VoIP phones across the campus",
+      "Produced 10 professional-quality video guides that explain equipment operations for the university staff members",
       "Removed old landlines and cleaned up associated wire closets using telecommunication equipment",
     ],
     dates: "Jan. 2021 - May 2021",
@@ -76,15 +76,15 @@ var experiences = [
     company: "N. Wasserstrom & Sons",
     location: "Columbus, OH",
     description: [
-      "Conducted manufacturing time studies to improve accuracy of estimates in ERP system",
-      "Organized and distributed drawings from the engineering team to those manufacturing the equipment",
+      "Improved estimate accuracy in ERP system by conducting over 30 hours of manufacturing time studies",
+      "Organized thousands of drawings from the engineering team to those manufacturing the equipment",
     ],
     dates: "June 2021 - Aug. 2021",
     type: "Internship",
     url: "https://www.wasserstrom.com/restaurant-supplies-equipment/n-wasserstrom-and-sons",
     linkedin: "https://www.linkedin.com/company/n-wasserstrom-sons/",
     headerImage: "https://ik.imagekit.io/feldman/wasserstrom_hq_header.jpg",
-    logo: "https://ik.imagekit.io/feldman/wasserstrom_logo.jpeg",
+    logo: "https://ik.imagekit.io/feldman/wasserstrom_logo.png",
   },
   {
     id: 5,
@@ -92,8 +92,11 @@ var experiences = [
     company: "Blueport Commerce",
     location: "Boston, MA",
     description: [
-      "Led a web performance focused 4-person scrum team in daily standups and sprint planning",
-      "Regularly met and communicated with several internal and external stakeholders of projects to collaborate and gather feedback",
+      "Led a web performance-focused 4-person scrum team that improved client performance by an average of 80.2%",
+      "Improved an admin tool clients use to control hundreds of settings and content on websites",
+      "Directed a $60,000 purchasing decision for a tool that speeds up the process of making internal tooling",
+      "Created dozens of product briefs detailing the scope and direction of products",
+      "Regularly met and communicated with several internal and external stakeholders of projects for collaboration",
     ],
     dates: "Jan. 2022 - July 2022",
     type: "Full-time",
