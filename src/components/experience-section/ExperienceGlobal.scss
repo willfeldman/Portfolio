@@ -1,20 +1,20 @@
-@use '../../styles/global';
+@use "../../styles/global";
 
 .experience .position h1 {
-    font-size: global.$card-level1-heading;
-    font-weight: 700;
-    color: global.$card-header-accent;
+  font-size: global.$card-level1-heading;
+  font-weight: 700;
+  color: global.$card-header-accent;
 }
 
 .experience .details .company {
-    font-size: global.$card-level2-heading;
-    font-weight: 600;
+  font-size: global.$card-level2-heading;
+  font-weight: 600;
 }
 
 .experience .dates {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .experience .logo img {
-    border-radius: 3px;
+  border-radius: 3px;
 }

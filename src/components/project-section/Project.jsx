@@ -4,9 +4,14 @@ import { projects } from "../../data/project";
 import { convertIdToComplement } from "../../data/operations";
 
 let projectComponents = [];
-projects.forEach((item,index)=>{
-    projectComponents.push( <ProjectCard key={convertIdToComplement(index, projects)} id={convertIdToComplement(index, projects)} />)
-})
+projects.forEach((item, index) => {
+  projectComponents.push(
+    <ProjectCard
+      key={convertIdToComplement(index, projects)}
+      id={convertIdToComplement(index, projects)}
+    />
+  );
+});
 
 function Project() {
   return (
@@ -14,9 +19,7 @@ function Project() {
       <div className="title">
         <h1>Projects</h1>
       </div>
-      <div className="cards">
-        {projectComponents}
-      </div>
+      <div className="cards">{projectComponents}</div>
     </div>
   );
 }

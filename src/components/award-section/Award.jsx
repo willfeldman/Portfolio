@@ -4,9 +4,14 @@ import { awards } from "../../data/award";
 import { convertIdToComplement } from "../../data/operations";
 
 let awardComponents = [];
-awards.forEach((item,index)=>{
-    awardComponents.push( <AwardCard key={convertIdToComplement(index, awards)} id={convertIdToComplement(index, awards)} />)
-})
+awards.forEach((item, index) => {
+  awardComponents.push(
+    <AwardCard
+      key={convertIdToComplement(index, awards)}
+      id={convertIdToComplement(index, awards)}
+    />
+  );
+});
 
 function Award() {
   return (
@@ -14,9 +19,7 @@ function Award() {
       <div className="title">
         <h1>Awards</h1>
       </div>
-      <div className="cards">
-        {awardComponents}
-      </div>
+      <div className="cards">{awardComponents}</div>
     </div>
   );
 }

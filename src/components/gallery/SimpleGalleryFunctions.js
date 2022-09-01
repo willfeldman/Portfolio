@@ -14,11 +14,13 @@ async function createImageData() {
   var loopNum = await getNumFiles("src/components/gallery/gallery-images");
   var galleryData = [];
   for (let i = 1; i < loopNum; i++) {
-    var imgDims = await getImageDimensions(`src/components/gallery/gallery-images/${i}.webp`);
+    var imgDims = await getImageDimensions(
+      `src/components/gallery/gallery-images/${i}.webp`
+    );
     var object = {
-        URL: `https://willfeldman.com/img/ig/${i}.webp`,
-        width: imgDims.width,
-        height: imgDims.height
+      URL: `https://willfeldman.com/img/ig/${i}.webp`,
+      width: imgDims.width,
+      height: imgDims.height,
     };
     galleryData.push(object);
   }
@@ -36,8 +38,6 @@ getImageDimensions("src/components/gallery/gallery-images/1.webp").then(
   }
 );
 
-let imageData = createImageData().then(
-    (res) => {
-        console.log(res);
-    }
-);
+let imageData = createImageData().then((res) => {
+  console.log(res);
+});

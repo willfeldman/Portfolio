@@ -23,9 +23,9 @@ export default function ProjectCard(props) {
         <div className="projectTitle">
           <h1>{project.title}</h1>
         </div>
-          <div className="text">
-            <p>{project.description}</p>
-          </div>
+        <div className="text">
+          <p>{project.description}</p>
+        </div>
         <div className="tags">
           {project.tags.map((item, key) => (
             <Tag

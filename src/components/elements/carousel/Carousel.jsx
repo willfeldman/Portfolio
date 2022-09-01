@@ -10,7 +10,7 @@ export default function Carousel(props) {
   const navigate = useNavigate();
 
   var slides = props.slides;
-  
+
   return (
     <div className="slideshow">
       <Swiper
@@ -32,7 +32,10 @@ export default function Carousel(props) {
         {slides.map((item, key) => (
           <SwiperSlide key={key}>
             <div className="expandSlideButton">
-              <Expand size="30px" onClick={() => navigate('/image', { state: { src: item } })} />
+              <Expand
+                size="30px"
+                onClick={() => navigate("/image", { state: { src: item } })}
+              />
             </div>
             <img alt="Carousel element" src={item} />
           </SwiperSlide>

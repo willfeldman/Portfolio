@@ -1,37 +1,37 @@
-@use '../../styles/global';
+@use "../../styles/global";
 
 .organization-section {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .organization-section .cards {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .organization-section .title {
-    font-size: 25px;
-    color: #004d8f;
-    font-weight: 800;
-    margin-bottom: 10px;
-    margin-left: 5px;
+  font-size: 25px;
+  color: #004d8f;
+  font-weight: 800;
+  margin-bottom: 10px;
+  margin-left: 5px;
 }
 
 .organization .role h1 {
-    font-size: global.$card-level2-heading;
-    font-weight: 700;
+  font-size: global.$card-level2-heading;
+  font-weight: 700;
 }
 
 .organization .details .name {
-    font-size: global.$card-level1-heading;
-    font-weight: 600;
-    color: global.$card-header-accent;
+  font-size: global.$card-level1-heading;
+  font-weight: 600;
+  color: global.$card-header-accent;
 }
 
 .organization .dates {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .organization .logo img {
-    border-radius: 50%;
+  border-radius: 50%;
 }

@@ -51,7 +51,8 @@ var organizations = [
         years: "Aug. 2017 - May 2018",
       },
     ],
-    summary: "International, student-led organization that provides its members with opportunities to provide service",
+    summary:
+      "International, student-led organization that provides its members with opportunities to provide service",
     description: [
       "Led a group of Bexley High School students in bi-weekly meetings",
       "In charge of executive decisions and leading the local executive board",
@@ -90,7 +91,8 @@ var organizations = [
         years: "May 2022 - Present",
       },
     ],
-    summary: "Educating, inspiring, and empowering the world's future entrepreneurs, innovators, and leaders",
+    summary:
+      "Educating, inspiring, and empowering the world's future entrepreneurs, innovators, and leaders",
     description: [
       "Photographed events and attended board meetings to plan events for Entrepreneurs Club - the largest club at Northeastern University",
     ],

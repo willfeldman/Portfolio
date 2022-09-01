@@ -1,26 +1,26 @@
 @use "../../../styles/global";
 
 [data-reach-dialog-content] {
-    width: 80%;
-    border-radius: 10px;
-    margin: 15vh auto;
-    padding: 0;
-    overflow: scroll;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: 1px solid rgb(112, 112, 112);
-    border: 1px solid rgba(112, 112, 112, 0.5);
+  width: 80%;
+  border-radius: 10px;
+  margin: 15vh auto;
+  padding: 0;
+  overflow: scroll;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid rgb(112, 112, 112);
+  border: 1px solid rgba(112, 112, 112, 0.5);
 }
 
 @media only screen and (max-width: global.$small-device) {
-    [data-reach-dialog-content] {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        margin: 0 auto;
-        border: none;
-    }
+  [data-reach-dialog-content] {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0 auto;
+    border: none;
+  }
 }

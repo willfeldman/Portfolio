@@ -1,64 +1,67 @@
-@use '../../../styles/global';
+@use "../../../styles/global";
 
 .swiper {
-    width: 100%;
+  width: 100%;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
 }
 
 .swiper-slide img {
-    display: block;
-    border-radius: 10px;
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border: 0.75px solid global.$card-border;
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border: 0.75px solid global.$card-border;
 }
 
 .swiper-slide:hover {
-    .expandSlideButton button {
-        display: flex;
-    }
-    cursor: move; /* fallback for grab cursor */
-    cursor: grab;
+  .expandSlideButton button {
+    display: flex;
+  }
+  cursor: move; /* fallback for grab cursor */
+  cursor: grab;
 }
 
 .slideshow {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
-.swiper-button-prev, .swiper-button-next {
-    display: none;
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 25px;
-    -webkit-text-stroke: 0.5px black;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 25px;
+  -webkit-text-stroke: 0.5px black;
 }
 
 @media only screen and (max-width: global.$carousel-breakpoint-small) {
-    .swiper-slide img {
-        border-radius: 0px;
-        height: 200px;
-        border: none;
-    }
-    .slideshow {
-        margin-top: 0px;
-    }
-    .swiper-button-prev, .swiper-button-next {
-        display: flex;
-        color: white;
-    }
+  .swiper-slide img {
+    border-radius: 0px;
+    height: 200px;
+    border: none;
+  }
+  .slideshow {
+    margin-top: 0px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex;
+    color: white;
+  }
+  .expandSlideButton button {
+    display: none;
+  }
+  .swiper-slide:hover {
     .expandSlideButton button {
-        display: none;
+      display: none;
     }
-    .swiper-slide:hover {
-        .expandSlideButton button {
-            display: none;
-        }
-    }
+  }
 }

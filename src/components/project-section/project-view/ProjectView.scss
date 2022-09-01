@@ -1,33 +1,33 @@
 @use "../../../styles/global";
 
 .project-contents {
-    padding: 25px 50px;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  padding: 25px 50px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .project-contents .top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-contents .text {
-    margin-top: 15px;
-    font-size: 14px;
-    line-height: global.$long-text-line-height;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: global.$long-text-line-height;
 }
 
 .projectName {
-    font-size: 18px;
-    font-weight: 700;
-    color: global.$card-header-accent;
+  font-size: 18px;
+  font-weight: 700;
+  color: global.$card-header-accent;
 }
 
 .projectTags {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 1240px) {
-    .project-contents {
-        padding: 25px 30px;
-    }
+  .project-contents {
+    padding: 25px 30px;
+  }
 }

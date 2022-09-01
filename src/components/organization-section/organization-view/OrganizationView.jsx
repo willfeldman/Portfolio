@@ -71,7 +71,9 @@ function OrganizationView() {
           <div className="leadershipRoles">
             <h4>Leadership Roles</h4>
             {organization.role.map((item, key) => (
-              <p key={key}>{item.title}, {item.years}</p>
+              <p key={key}>
+                {item.title}, {item.years}
+              </p>
             ))}
           </div>
           <div className="summary">

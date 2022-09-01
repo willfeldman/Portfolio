@@ -1,30 +1,30 @@
-@use '../../../../styles/global';
+@use "../../../../styles/global";
 
 $hide-button-text-if-enabled-at: 425px;
 
 .buttonComponent {
-    display: inline-flex;
-    padding: 4px 10px;
-    border-radius: 10px;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    background-color: white;
-    border: 1px solid global.$card-border;
-    color: black;
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid global.$card-border;
+  color: black;
 }
 
 .buttonComponent:hover {
-    cursor: pointer;
-    background-color: global.$button-hover-color;
+  cursor: pointer;
+  background-color: global.$button-hover-color;
 }
 
 .buttonComponent .icon {
-    padding-top: 2px;
-    padding-right: 3px;
+  padding-top: 2px;
+  padding-right: 3px;
 }
 
 @media only screen and (max-width: $hide-button-text-if-enabled-at) {
-    .hideWhenSmall {
-        display: none;
-    }
+  .hideWhenSmall {
+    display: none;
+  }
 }

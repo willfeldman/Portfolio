@@ -1,44 +1,44 @@
 @use "../../../styles/global";
 
 .award-contents {
-    padding: 25px 50px;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  padding: 25px 50px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .award-contents .top {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .award-contents .text {
-    font-size: 15px;
-    font-weight: 600;
-    line-height: global.$long-text-line-height;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: global.$long-text-line-height;
 }
 
 .awardName {
-    font-size: 18px;
-    font-weight: 700;
-    color: global.$card-header-accent;
+  font-size: 18px;
+  font-weight: 700;
+  color: global.$card-header-accent;
 }
 
 .awardView .description {
-    margin-top: 15px;
-    font-size: 14px;
-    line-height: 1.25;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.25;
 }
 
 .awardView ul {
-    list-style-type: "- ";
-    margin-left: 13px;
+  list-style-type: "- ";
+  margin-left: 13px;
 }
 
 .awardView ul li {
-    margin-top: 7px;
+  margin-top: 7px;
 }
 
 @media only screen and (max-width: 1240px) {
-    .award-contents {
-        padding: 25px 30px;
-    }
+  .award-contents {
+    padding: 25px 30px;
+  }
 }

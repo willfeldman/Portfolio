@@ -8,7 +8,9 @@ export default function Button(props) {
 
   function addTooltip() {
     if (props.tooltip) {
-      return <span className="tooltiptext">{props.link.split("//").pop()}</span>;
+      return (
+        <span className="tooltiptext">{props.link.split("//").pop()}</span>
+      );
     }
   }
 
@@ -30,7 +32,9 @@ export default function Button(props) {
       className={`${props.customClass} buttonComponent ${addTooltipClass()}`}
     >
       <div className="icon">{props.icon}</div>
-      <div className={`button-text ${addHideWhenSmallClass()}`}>{props.text}</div>
+      <div className={`button-text ${addHideWhenSmallClass()}`}>
+        {props.text}
+      </div>
       {addTooltip()}
     </button>
   );

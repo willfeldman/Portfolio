@@ -1,48 +1,48 @@
- .header .information {
-     display: flex;
- }
+.header .information {
+  display: flex;
+}
 
- .header .container {
-     display: flex;
-     justify-content: space-between;
- }
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
 
- .header .information .text {
-     display: flex;
-     flex-direction: column;
- }
+.header .information .text {
+  display: flex;
+  flex-direction: column;
+}
 
- .header .links {
-     display: flex;
- }
+.header .links {
+  display: flex;
+}
 
- .header .contact,
- .header .resume {
-     display: flex;
-     align-items: center;
- }
+.header .contact,
+.header .resume {
+  display: flex;
+  align-items: center;
+}
 
- .header .contact {
-     margin-left: 5px;
- }
+.header .contact {
+  margin-left: 5px;
+}
 
- .profile img {
-     height: 53px;
-     width: auto;
- }
+.profile img {
+  height: 53px;
+  width: auto;
+}
 
- .text .name {
-     font-size: 23px;
-     font-weight: 700;
-     padding-left: 10px;
- }
+.text .name {
+  font-size: 23px;
+  font-weight: 700;
+  padding-left: 10px;
+}
 
- .text .position {
-     font-size: 20px;
-     padding-left: 10px;
- }
+.text .position {
+  font-size: 20px;
+  padding-left: 10px;
+}
 
- .text .position {
-     color: #757575;
-     padding-top: 10px;
- }
+.text .position {
+  color: #757575;
+  padding-top: 10px;
+}

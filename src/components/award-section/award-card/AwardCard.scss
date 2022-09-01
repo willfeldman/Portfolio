@@ -1,18 +1,18 @@
-@use '../../../styles/global';
+@use "../../../styles/global";
 
 .awardTitle h1 {
-    font-size: 18px;
-    font-weight: 700;
-    color: global.$card-header-accent;
+  font-size: 18px;
+  font-weight: 700;
+  color: global.$card-header-accent;
 }
 
 .award {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .award .text {
-    font-size: 15px;
-    font-weight: 600;
+  font-size: 15px;
+  font-weight: 600;
 }

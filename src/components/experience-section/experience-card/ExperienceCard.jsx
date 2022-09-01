@@ -18,7 +18,9 @@ function ExperienceCard(props) {
 
   function renderPosition() {
     // renders the correct position name (shows shortened if in the data)
-    return experience.position_nickname ? experience.position_nickname : experience.position;
+    return experience.position_nickname
+      ? experience.position_nickname
+      : experience.position;
   }
 
   return (

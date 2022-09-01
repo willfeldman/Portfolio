@@ -1,153 +1,153 @@
 @use "../../../styles/global";
 
 .organization-modal {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    background-color: white;
-    position: relative;
-    line-height: 1.3;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-color: white;
+  position: relative;
+  line-height: 1.3;
 }
 
 .organization-modal .body {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .header-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .details .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
 }
 
 .organization .details .logo,
 .organization .details .main-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .details .left-justified {
-    display: flex;
+  display: flex;
 }
 
 .organization-contents {
-    padding: 15px 50px;
+  padding: 15px 50px;
 }
 
 .organization-contents .details {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .organization-contents .right-justified {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .organization .main-details {
-    margin: 0px 8px;
-    line-height: 1.2;
+  margin: 0px 8px;
+  line-height: 1.2;
 }
 
 .organization-modal .details .name {
-    font-size: 23px;
+  font-size: 23px;
 }
 
 .organization-modal .body .yearsActive,
 .organization-modal .body .leadershipRoles {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .organization-modal .body .yearsActive h4,
 .organization-modal .body .leadershipRoles h4 {
-    text-transform: uppercase;
-    color: #919191;
-    font-size: 13px;
-    font-weight: 800;
+  text-transform: uppercase;
+  color: #919191;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .right-justified .action a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .right-justified .action {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .right-justified .action button {
-    margin: 0px 0px 0px 6px;
+  margin: 0px 0px 0px 6px;
 }
 
 .additional-details {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .summary ul {
-    list-style-type: "- ";
-    margin-left: 13px;
+  list-style-type: "- ";
+  margin-left: 13px;
 }
 
 .summary ul li {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .body h4,
 .body h3,
 .body h2,
 .body h1 {
-    font-weight: 700;
-    margin-bottom: 3px;
+  font-weight: 700;
+  margin-bottom: 3px;
 }
 
 .body {
-    line-height: global.$long-text-line-height;
-    font-size: 14px;
+  line-height: global.$long-text-line-height;
+  font-size: 14px;
 }
 
 .body .presentations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .body .presentations .pdf {
-    width: 49.5%;
+  width: 49.5%;
 }
 
 .body .presentations iframe {
-    width: 100%;
-    height: 250px;
-    border-radius: 5px;
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
 }
 
 .body .additional-details p {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .body .mainHeading {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .body .documentTitle {
-    font-size: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: global.$small-device) {
-    .organization-contents {
-        padding: 25px 30px;
-    }
+  .organization-contents {
+    padding: 25px 30px;
+  }
 
-    .body .presentations .pdf {
-        width: 100%;
-    }
+  .body .presentations .pdf {
+    width: 100%;
+  }
 }

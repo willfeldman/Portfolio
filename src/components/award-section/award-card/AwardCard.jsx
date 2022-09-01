@@ -22,9 +22,9 @@ export default function AwardCard(props) {
         <div className="awardTitle">
           <h1>{award.name}</h1>
         </div>
-          <div className="text">
-            <p>{award.issuer}</p>
-          </div>
+        <div className="text">
+          <p>{award.issuer}</p>
+        </div>
       </div>
     </Card>
   );

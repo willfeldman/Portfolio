@@ -40,9 +40,7 @@ export default function ProjectView() {
   function renderLink() {
     // renders a link button if it is in the data
     if (project.url) {
-      return (
-        <Button icon={<FiLink />} text="Site" link={project.url} />
-      );
+      return <Button icon={<FiLink />} text="Site" link={project.url} />;
     }
   }
 

@@ -21,7 +21,10 @@ export default function Card(props) {
   }
 
   return (
-    <div className={`card ${renderCardExpandableClass()} ${props.customClass}`} onClick={props.action}>
+    <div
+      className={`card ${renderCardExpandableClass()} ${props.customClass}`}
+      onClick={props.action}
+    >
       {renderExpandButton()}
       {props.children}
     </div>

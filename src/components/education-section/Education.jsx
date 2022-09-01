@@ -4,9 +4,14 @@ import { educations } from "../../data/education";
 import { convertIdToComplement } from "../../data/operations";
 
 let educationComponents = [];
-educations.forEach((item,index)=>{
-    educationComponents.push( <EducationCard key={convertIdToComplement(index, educations)} id={convertIdToComplement(index, educations)} />)
-})
+educations.forEach((item, index) => {
+  educationComponents.push(
+    <EducationCard
+      key={convertIdToComplement(index, educations)}
+      id={convertIdToComplement(index, educations)}
+    />
+  );
+});
 
 function Education() {
   return (
@@ -14,9 +19,7 @@ function Education() {
       <div className="title">
         <h1>Education</h1>
       </div>
-      <div className="cards">
-        { educationComponents }
-      </div>
+      <div className="cards">{educationComponents}</div>
     </div>
   );
 }

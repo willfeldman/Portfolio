@@ -22,7 +22,9 @@ function ExperienceView() {
     // renders the location tag if in the data
     if (experience.location) {
       return (
-        <span className="location"><Tag text={experience.location} color="white" background="#0281d4" /></span>
+        <span className="location">
+          <Tag text={experience.location} color="white" background="#0281d4" />
+        </span>
       );
     }
   }
@@ -32,7 +34,12 @@ function ExperienceView() {
     // Only supports adding up to two buttons
     if (typeof experience.url === "string") {
       return (
-        <Button icon={<FiLink />} text="Site" hideWhenSmall={true} link={experience.url} />
+        <Button
+          icon={<FiLink />}
+          text="Site"
+          hideWhenSmall={true}
+          link={experience.url}
+        />
       );
     } else {
       return (
@@ -109,7 +116,8 @@ function ExperienceView() {
               {renderLinkedIn()}
             </div>
             <div className="dates-type">
-              {experience.dates} | <span className="no-wrap">{experience.type}</span>
+              {experience.dates} |{" "}
+              <span className="no-wrap">{experience.type}</span>
             </div>
           </div>
         </div>

@@ -1,22 +1,22 @@
-@use '../../../styles/global';
-@use '../ExperienceGlobal.scss';
+@use "../../../styles/global";
+@use "../ExperienceGlobal.scss";
 
 .experience .details .company {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .experience .header .logo img {
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
 }
 
 .experience .header {
-    display: flex;
+  display: flex;
 }
 
 .experience .description .text {
-    font-size: 13px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  font-size: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

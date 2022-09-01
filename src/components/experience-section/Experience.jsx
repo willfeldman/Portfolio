@@ -4,9 +4,14 @@ import { experiences } from "../../data/experience";
 import { convertIdToComplement } from "../../data/operations";
 
 let experienceComponents = [];
-experiences.forEach((item,index)=>{
-    experienceComponents.push( <ExperienceCard key={convertIdToComplement(index, experiences)} id={convertIdToComplement(index, experiences)} />)
-})
+experiences.forEach((item, index) => {
+  experienceComponents.push(
+    <ExperienceCard
+      key={convertIdToComplement(index, experiences)}
+      id={convertIdToComplement(index, experiences)}
+    />
+  );
+});
 
 function Experience() {
   return (
@@ -14,9 +19,7 @@ function Experience() {
       <div className="title">
         <h1>Experiences</h1>
       </div>
-      <div className="cards">
-        { experienceComponents }
-      </div>
+      <div className="cards">{experienceComponents}</div>
     </div>
   );
 }
