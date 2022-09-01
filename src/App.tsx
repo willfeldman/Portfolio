@@ -9,6 +9,7 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import OrganizationView from "./components/organization-section/organization-view/OrganizationView";
 import AwardView from "./components/award-section/award-view/AwardView";
+import ProfileView from "./components/profile/profile-view/ProfileView";
 
 function App() {
   let location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/organization/:id" element={<OrganizationView />} />
         <Route path="/award/:id" element={<AwardView />} />
         <Route path="/image" element={<ImageView />} />
+        <Route path="/contact" element={<ProfileView />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {state?.backgroundLocation && (
@@ -56,6 +58,14 @@ function App() {
             element={
               <Modal>
                 <AwardView />
+              </Modal>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Modal>
+                <ProfileView />
               </Modal>
             }
           />
