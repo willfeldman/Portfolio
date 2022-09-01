@@ -15,8 +15,7 @@ $hide-button-text-if-enabled-at: 425px;
 
 .buttonComponent:hover {
     cursor: pointer;
-    transition: all .1s ease-in-out;
-    transform: scale(1.05) perspective(1px);
+    background-color: global.$button-hover-color;
 }
 
 .buttonComponent .icon {

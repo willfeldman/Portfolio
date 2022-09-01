@@ -52,7 +52,8 @@ var experiences = [
   },
   {
     id: 3,
-    position: "UC & Teams Calls Assistant",
+    position: "Unified Communications & Microsoft Teams Calls Assistant",
+    position_nickname: "UC & Teams Calls Assistant",
     company: "Northeastern University ITS",
     location: "Boston, MA",
     summary:
@@ -88,7 +89,7 @@ var experiences = [
   },
   {
     id: 5,
-    position: "Product Manager",
+    position: "Product Manager Co-op",
     company: "Blueport Commerce",
     location: "Boston, MA",
     description: [
@@ -150,6 +151,21 @@ var experiences = [
     linkedin: "https://www.linkedin.com/company/blueport-commerce/",
     headerImage: "https://ik.imagekit.io/feldman/blueport_header.png",
     logo: "https://ik.imagekit.io/feldman/blueport_logo.jpeg",
+  },
+  {
+    id: 6,
+    position: "Above and Beyond Computer Science (ABCS) Fellow",
+    position_nickname: "ABCS Fellow",
+    company: "Meta",
+    description: [
+      "Selected to particiate in a 9-week program to refine and practice techincal computer science skills and concepts",
+    ],
+    dates: "Aug 2022 - Present",
+    type: "Program",
+    url: "https://diversity.fb.com/initiatives/in-our-communities/",
+    linkedin: "https://www.linkedin.com/company/meta/",
+    headerImage: "https://ik.imagekit.io/feldman/meta_background.jpg",
+    logo: "https://ik.imagekit.io/feldman/meta_logo.jpg",
   },
 ];
 

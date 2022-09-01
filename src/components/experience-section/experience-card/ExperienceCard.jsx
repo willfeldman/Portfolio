@@ -16,6 +16,11 @@ function ExperienceCard(props) {
     });
   };
 
+  function renderPosition() {
+    // renders the correct position name (shows shortened if in the data)
+    return experience.position_nickname ? experience.position_nickname : experience.position;
+  }
+
   return (
     <Card action={openExperienceModal}>
       <div className="header experience">
@@ -24,7 +29,7 @@ function ExperienceCard(props) {
         </div>
         <div className="text-header">
           <div className="position">
-            <h1>{experience.position}</h1>
+            <h1>{renderPosition()}</h1>
           </div>
           <div className="details">
             <span className="company">{experience.company}</span>

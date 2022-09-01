@@ -1,7 +1,8 @@
 // colors
 $card-header-accent: #027AC9;
 $card-border: #707070;
-$icon-color: $card-border;
+$icon-color: black;
+$button-hover-color: #efefee;
 
 // breakpoints
 $small-device: 1240px;
@@ -13,3 +14,4 @@ $card-level2-heading: 15px;
 
 // misc
 $long-text-line-height: 1.25;
+$button-dropshadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;

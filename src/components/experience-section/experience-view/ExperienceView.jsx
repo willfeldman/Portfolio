@@ -18,6 +18,15 @@ function ExperienceView() {
     return <Error />;
   }
 
+  function renderLocation() {
+    // renders the location tag if in the data
+    if (experience.location) {
+      return (
+        <span className="location"><Tag text={experience.location} color="white" background="#0281d4" /></span>
+      );
+    }
+  }
+
   function renderLink() {
     // Adds two buttons if the url is an array
     // Only supports adding up to two buttons
@@ -90,7 +99,7 @@ function ExperienceView() {
               </div>
               <div className="company-location">
                 <span className="company">{experience.company}</span>{" "}
-                <span className="location"><Tag text={experience.location} color="white" background="#0281d4" /></span>
+                {renderLocation()}
               </div>
             </div>
           </div>
