@@ -20,7 +20,10 @@ $hide-button-text-if-enabled-at: 425px;
 
 .buttonComponent .icon {
   padding-top: 2px;
-  padding-right: 3px;
+}
+
+.buttonComponent .button-text {
+  padding-left: 3px;
 }
 
 @media only screen and (max-width: $hide-button-text-if-enabled-at) {

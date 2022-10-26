@@ -17,12 +17,14 @@
 }
 
 .header .contact,
-.header .resume {
+.header .resume,
+.header .github {
   display: flex;
   align-items: center;
 }
 
-.header .contact {
+.header .contact,
+.header .resume {
   margin-left: 5px;
 }
 

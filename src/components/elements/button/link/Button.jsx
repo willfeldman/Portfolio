@@ -7,16 +7,28 @@ export default function Button(props) {
   }
 
   function addTooltip() {
-    if (props.tooltip) {
+    if (typeof props.tooltip === "boolean") {
       return (
         <span className="tooltiptext">{props.link.split("//").pop()}</span>
       );
+    } else if (typeof props.tooltip === "string") {
+      return <span className="tooltiptext">{props.tooltip}</span>;
     }
   }
 
   function addTooltipClass() {
     if (props.tooltip) {
       return "tooltip";
+    }
+  }
+
+  function addButtonText() {
+    if (props.text) {
+      return (
+        <div className={`button-text ${addHideWhenSmallClass()}`}>
+          {props.text}
+        </div>
+      );
     }
   }
 
@@ -32,9 +44,7 @@ export default function Button(props) {
       className={`${props.customClass} buttonComponent ${addTooltipClass()}`}
     >
       <div className="icon">{props.icon}</div>
-      <div className={`button-text ${addHideWhenSmallClass()}`}>
-        {props.text}
-      </div>
+      {addButtonText()}
       {addTooltip()}
     </button>
   );

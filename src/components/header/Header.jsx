@@ -1,6 +1,6 @@
 import Button from "../elements/button/link/Button";
 import { HiOutlineMail } from "react-icons/hi";
-import { IoDocumentOutline } from "react-icons/io5";
+import { IoDocumentOutline, IoLogoGithub } from "react-icons/io5";
 import "./Header.css";
 
 function Header() {
@@ -20,17 +20,24 @@ function Header() {
           </div>
         </div>
         <div className="links">
+        <div className="github">
+            <Button
+              link="https://github.com/willfeldman"
+              tooltip="GitHub"
+              icon={<IoLogoGithub />}
+            />
+          </div>
           <div className="resume">
             <Button
               link="https://drive.google.com/file/d/1WXwhLj-WMyd3fSoN8z3BPParTCEd4t2A/view"
-              text="Resume"
+              tooltip="Resume"
               icon={<IoDocumentOutline />}
             />
           </div>
           <div className="contact">
             <Button
               link="mailto:will@willfeldman.com"
-              text="Email"
+              tooltip="Email"
               icon={<HiOutlineMail />}
             />
           </div>
