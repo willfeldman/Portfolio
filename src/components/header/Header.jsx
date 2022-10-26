@@ -1,18 +1,9 @@
 import Button from "../elements/button/link/Button";
-import { useLocation, useNavigate } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
-import "./Profile.css";
+import { IoDocumentOutline } from "react-icons/io5";
+import "./Header.css";
 
-function Profile() {
-  let location = useLocation();
-  let navigate = useNavigate();
-
-  const openProfileModal = () => {
-    navigate(`/contact`, {
-      state: { backgroundLocation: location },
-    });
-  };
-
+function Header() {
   return (
     <div className="header">
       <div className="container">
@@ -29,10 +20,17 @@ function Profile() {
           </div>
         </div>
         <div className="links">
+          <div className="resume">
+            <Button
+              link="https://drive.google.com/file/d/1WXwhLj-WMyd3fSoN8z3BPParTCEd4t2A/view"
+              text="Resume"
+              icon={<IoDocumentOutline />}
+            />
+          </div>
           <div className="contact">
             <Button
-              text="Contact"
-              action={openProfileModal}
+              link="mailto:will@willfeldman.com"
+              text="Email"
               icon={<HiOutlineMail />}
             />
           </div>
@@ -42,4 +40,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Header;

@@ -16,9 +16,14 @@
   display: flex;
 }
 
-.header .contact {
+.header .contact,
+.header .resume {
   display: flex;
   align-items: center;
+}
+
+.header .contact {
+  margin-left: 5px;
 }
 
 .profile img {

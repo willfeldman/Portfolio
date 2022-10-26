@@ -1,12 +1,12 @@
 import "./EducationCard.scss";
 import Card from "../../elements/card/Card";
 import Tag from "../../elements/tag/Tag";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { educations } from "../../../data/education";
 import { getById } from "../../../data/operations";
 
 function EducationCard(props) {
-  // let location = useLocation();
+  let location = useLocation();
 
   let education = getById(props.id, educations);
 

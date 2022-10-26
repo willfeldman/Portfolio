@@ -1,5 +1,5 @@
 import "./Homepage.scss";
-import Profile from "../profile/Profile";
+import Header from "../header/Header";
 import Experience from "../experience-section/Experience";
 import Project from "../project-section/Project";
 import Organization from "../organization-section/Organization";
@@ -9,7 +9,7 @@ import Award from "../award-section/Award";
 function Homepage() {
   return (
     <div className="homepage">
-      <Profile />
+      <Header />
       <Experience />
       <Organization />
       <Project />

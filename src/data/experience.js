@@ -158,9 +158,9 @@ var experiences = [
     position_nickname: "ABCS Fellow",
     company: "Meta",
     description: [
-      "Selected to participate in a 9-week program to refine and practice technical computer science skills and concepts",
+      "Selected to particiate in a 9-week program to refine and practice techincal computer science skills and concepts",
     ],
-    dates: "Aug. 2022 - Present",
+    dates: "Aug 2022 - Present",
     type: "Program",
     url: "https://diversity.fb.com/initiatives/in-our-communities/",
     linkedin: "https://www.linkedin.com/company/meta/",
