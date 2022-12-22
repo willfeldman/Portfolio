@@ -36,6 +36,10 @@
   padding: 25px 50px;
 }
 
+.experience-contents .position h1 {
+  color: global.$card-header-accent;
+}
+
 .experience-contents .details {
   display: flex;
   justify-content: space-between;

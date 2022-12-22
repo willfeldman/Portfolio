@@ -24,6 +24,7 @@ export default function Card(props) {
     <div
       className={`card ${renderCardExpandableClass()} ${props.customClass}`}
       onClick={props.action}
+      style={{ backgroundColor: props.backgroundColor, color: props.textColor }}
     >
       {renderExpandButton()}
       {props.children}
