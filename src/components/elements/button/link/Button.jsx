@@ -42,6 +42,7 @@ export default function Button(props) {
     <button
       onClick={props.action || openLink}
       className={`${props.customClass} buttonComponent ${addTooltipClass()}`}
+      aria-label={props.text || props.tooltip}
     >
       <div className="icon">{props.icon}</div>
       {addButtonText()}
