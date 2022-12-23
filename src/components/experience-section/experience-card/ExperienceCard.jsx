@@ -24,7 +24,7 @@ function ExperienceCard(props) {
   }
 
   return (
-    <Card action={openExperienceModal} backgroundColor="rgb(199, 219, 255)" textColor="rgb(79, 87, 102)">
+    <Card action={openExperienceModal} backgroundColor="rgb(199, 219, 255)" textColor="rgb(109, 120, 140)">
       <div className="header experience">
         <div className="logo">
           <img src={experience.logo} alt="Experience logo" />

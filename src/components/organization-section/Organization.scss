@@ -25,6 +25,9 @@
 .organization .details .name {
   font-size: global.$card-level1-heading;
   font-weight: 600;
+}
+
+.organization-modal .details .name {
   color: global.$card-header-accent;
 }
 
@@ -34,4 +37,6 @@
 
 .organization .logo img {
   border-radius: 50%;
+  border: 3px solid white;
+  background-color: white;
 }

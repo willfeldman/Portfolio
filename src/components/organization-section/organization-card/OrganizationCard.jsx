@@ -17,7 +17,7 @@ function OrganizationCard(props) {
   };
 
   return (
-    <Card action={openOrganizationModal}>
+    <Card action={openOrganizationModal} backgroundColor="rgb(255, 209, 199)" textColor="rgb(140, 114, 109)">
       <div className="organization">
         <div className="header">
           <div className="logo">
