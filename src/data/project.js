@@ -1,38 +1,38 @@
 var projectTags = [
   {
     name: "React",
-    color: "#82D7F7",
-    background: "#222222",
+    color: "rgb(193, 198, 255)",
+    background: "rgba(75, 77, 99, 0.85)",
   },
   {
     name: "JavaScript",
-    color: "#323330",
-    background: "#ECDC68",
+    color: "rgb(255, 250, 193)",
+    background: "rgba(99, 97, 75, 0.85)",
   },
   {
     name: "Xcode",
-    color: "#212121",
-    background: "#198ee8",
+    color: "rgb(193, 245, 255)",
+    background: "rgba(75, 95, 99, 0.85)",
   },
   {
     name: "Personal project",
-    color: "#ffffff",
-    background: "#004d8f",
+    color: "rgb(232, 193, 255)",
+    background: "rgba(90, 75, 99, 0.85)",
   },
   {
     name: "Java",
-    color: "#ffffff",
-    background: "#5482a1",
+    color: "rgb(255, 193, 196)",
+    background: "rgba(99, 75, 76, 0.85)",
   },
   {
     name: "Adobe XD",
-    color: "#ff61f6",
-    background: "#460034",
+    color: "rgb(250, 193, 255)",
+    background: "rgba(97, 75, 99, 0.85)",
   },
   {
     name: "Final Cut Pro",
-    color: "#dee4ea",
-    background: "#4d535f",
+    color: "rgb(229, 193, 255)",
+    background: "rgba(89, 75, 99, 0.85)",
   },
 ];
 
