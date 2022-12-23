@@ -31,8 +31,8 @@ export default function ProjectCard(props) {
             <Tag
               key={key}
               text={item.name}
-              color={item.color}
-              background={item.background}
+              color="rgb(215, 255, 199)"
+              background="rgb(118, 140, 109)"
             />
           ))}
         </div>
