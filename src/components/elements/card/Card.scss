@@ -16,9 +16,6 @@
 .expandable:hover {
   cursor: pointer;
   transform: scale(0.98);  /* shrink on hover */
-  .logo img {
-    transform: rotate(2deg); /* rotate img on card hover */
-  }
 }
 
 @media only screen and (max-width: global.$small-device) {
