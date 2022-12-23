@@ -10,14 +10,15 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: transform 0.2s ease-in-out;  /* animation duration and easing function */
 }
 
 .expandable:hover {
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  .expandCardButton button {
-    display: flex;
+  transform: scale(0.98);  /* shrink on hover */
+  //box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  .logo img {
+    transform: rotate(2deg); /* rotate img on card hover */
   }
 }
 
