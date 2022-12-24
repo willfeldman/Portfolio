@@ -8,6 +8,10 @@ function OrganizationCard(props) {
   let location = useLocation();
   let navigate = useNavigate();
 
+  // define colors for card
+  let cardBackgroundColor = "rgb(255, 209, 199)";
+  let cardTextColor = "rgb(140, 114, 109)";
+
   let organization = getById(props.id, organizations);
 
   const openOrganizationModal = () => {
@@ -17,7 +21,7 @@ function OrganizationCard(props) {
   };
 
   return (
-    <Card action={openOrganizationModal} backgroundColor="rgb(255, 209, 199)" textColor="rgb(140, 114, 109)">
+    <Card action={openOrganizationModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="organization">
         <div className="header">
           <div className="text-header">

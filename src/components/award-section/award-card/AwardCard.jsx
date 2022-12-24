@@ -8,6 +8,10 @@ export default function AwardCard(props) {
   let location = useLocation();
   let navigate = useNavigate();
 
+  // define colors for card
+  let cardBackgroundColor = "rgb(255, 255, 199)";
+  let cardTextColor = "rgb(140, 140, 109)";
+
   let award = getById(props.id, awards);
 
   const openAwardModal = () => {
@@ -17,7 +21,7 @@ export default function AwardCard(props) {
   };
 
   return (
-    <Card action={openAwardModal} backgroundColor="rgb(255, 255, 199)" textColor="rgb(140, 140, 109)">
+    <Card action={openAwardModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="award">
         <div className="awardTitle">
           <h1>{award.name}</h1>

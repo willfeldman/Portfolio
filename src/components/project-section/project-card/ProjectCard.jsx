@@ -9,6 +9,10 @@ export default function ProjectCard(props) {
   let location = useLocation();
   let navigate = useNavigate();
 
+  // define colors for card
+  let cardBackgroundColor = "rgb(199, 255, 208)";
+  let cardTextColor = "rgb(109, 140, 114)";
+
   let project = getById(props.id, projects);
 
   const openProjectModal = () => {
@@ -18,7 +22,7 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <Card action={openProjectModal} backgroundColor="rgb(199, 255, 208)" textColor="rgb(109, 140, 114)">
+    <Card action={openProjectModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="project">
         <div className="projectTitle">
           <h1>{project.title}</h1>
@@ -31,8 +35,8 @@ export default function ProjectCard(props) {
             <Tag
               key={key}
               text={item.name}
-              color="rgb(199, 255, 208)"
-              background="rgb(109, 140, 114)"
+              color={cardBackgroundColor}
+              background={cardTextColor}
             />
           ))}
         </div>
