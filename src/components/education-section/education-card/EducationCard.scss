@@ -4,12 +4,6 @@
   font-size: 16px;
 }
 
-.education .header .logo img {
-  width: auto;
-  max-height: 60px;
-  margin-right: 10px;
-}
-
 .education .header {
   display: flex;
 }
@@ -23,19 +17,12 @@
 .education .school h1 {
   font-size: global.$card-level1-heading;
   font-weight: 700;
-  color: global.$card-header-accent;
 }
 
 .education .details .subtitle {
   font-size: global.$card-level2-heading;
   font-weight: 600;
   margin-right: 5px;
-}
-
-.education .logo {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .education .details .years {

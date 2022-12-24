@@ -11,11 +11,8 @@ function EducationCard(props) {
   let education = getById(props.id, educations);
 
   return (
-    <Card expandable={false} customClass="educationCard">
+    <Card expandable={false} customClass="educationCard" backgroundColor="rgb(255, 199, 229)" textColor="rgb(140, 109, 125)">
       <div className="header education">
-        <div className="logo">
-          <img src={education.logo} alt="Education logo" />
-        </div>
         <div className="text-header">
           <div className="school">
             <h1>{education.school}</h1>
@@ -28,8 +25,8 @@ function EducationCard(props) {
                   <Tag
                     key={key}
                     text={item}
-                    color="white"
-                    background="#0281d4"
+                    color="rgb(255, 199, 229)"
+                    background="rgb(140, 109, 125)"
                   />
                 </span>
               ))}

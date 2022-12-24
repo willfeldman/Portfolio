@@ -17,7 +17,7 @@ export default function AwardCard(props) {
   };
 
   return (
-    <Card action={openAwardModal}>
+    <Card action={openAwardModal} backgroundColor="rgb(255, 255, 199)" textColor="rgb(140, 140, 109)">
       <div className="award">
         <div className="awardTitle">
           <h1>{award.name}</h1>
