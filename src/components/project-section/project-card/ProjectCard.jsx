@@ -18,7 +18,7 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <Card action={openProjectModal} backgroundColor="rgb(215, 255, 199)" textColor="rgb(118, 140, 109)">
+    <Card action={openProjectModal} backgroundColor="rgb(199, 255, 208)" textColor="rgb(109, 140, 114)">
       <div className="project">
         <div className="projectTitle">
           <h1>{project.title}</h1>
@@ -31,8 +31,8 @@ export default function ProjectCard(props) {
             <Tag
               key={key}
               text={item.name}
-              color="rgb(215, 255, 199)"
-              background="rgb(118, 140, 109)"
+              color="rgb(199, 255, 208)"
+              background="rgb(109, 140, 114)"
             />
           ))}
         </div>

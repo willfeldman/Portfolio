@@ -6,7 +6,6 @@
   right: 10px;
   border: none;
   background-color: white;
-  box-shadow: global.$button-dropshadow;
   color: global.$icon-color;
   border-radius: 50%;
   padding: 0;
@@ -14,6 +13,10 @@
   display: none;
   justify-content: center;
   align-items: center;
+}
+
+.expandShadow button {
+  box-shadow: global.$button-dropshadow;
 }
 
 .expand button svg {

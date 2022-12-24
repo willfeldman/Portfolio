@@ -35,6 +35,7 @@ export default function Carousel(props) {
               <Expand
                 size="30px"
                 onClick={() => navigate("/image", { state: { src: item } })}
+                boxShadow={true}
               />
             </div>
             <img alt="Carousel element" src={item} />
