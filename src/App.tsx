@@ -11,10 +11,14 @@ import OrganizationView from "./components/organization-section/organization-vie
 import AwardView from "./components/award-section/award-view/AwardView";
 
 function App() {
+  // sets mode to either 'night' or 'day' depending on the user's system preferences
+  const mode = (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day');  
+  
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
+  
   return (
-    <div className="app">
+    <div className={`app ${mode}-mode`}>
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Homepage />} />
         <Route path="/index.html" element={<Homepage />} />

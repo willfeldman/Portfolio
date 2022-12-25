@@ -13,6 +13,16 @@
   left: 0;
 }
 
+.day-mode[data-reach-dialog-content] {
+  background-color: white;
+  color: black;
+}
+
+.night-mode[data-reach-dialog-content] {
+  background-color: global.$dark-mode-background;
+  color: global.$dark-mode-text;
+}
+
 [data-reach-dialog-overlay] {
   background: hsla(0, 0%, 0%, 0.5);
 }
