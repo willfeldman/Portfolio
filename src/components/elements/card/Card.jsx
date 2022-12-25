@@ -18,12 +18,12 @@ export default function Card(props) {
 
       // updates iconColor to match card background color if given
       if (props.backgroundColor) {
-        styling.iconColor = props.backgroundColor;
+        styling.iconColor = props.textColor;
       }
 
       // updates backgroundColor to match card text color if given
       if (props.textColor) {
-        styling.backgroundColor = props.textColor;
+        styling.backgroundColor = props.backgroundColor;
       }
 
       return styling;
