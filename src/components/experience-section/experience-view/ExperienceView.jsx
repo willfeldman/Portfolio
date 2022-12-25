@@ -23,7 +23,7 @@ function ExperienceView() {
     if (experience.location) {
       return (
         <span className="location">
-          <Tag text={experience.location} color="white" background="#0281d4" />
+          <Tag text={experience.location} color="rgb(109, 120, 140)" background="rgb(199, 219, 255)" />
         </span>
       );
     }

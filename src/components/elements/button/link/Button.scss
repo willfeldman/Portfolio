@@ -5,17 +5,19 @@ $hide-button-text-if-enabled-at: 425px;
 .buttonComponent {
   display: inline-flex;
   padding: 4px 10px;
-  border-radius: 10px;
+  border-radius: 13px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   background-color: white;
   border: 1px solid global.$card-border;
   color: black;
+  user-select: none;
+  transition: transform 0.2s ease-in-out;
 }
 
 .buttonComponent:hover {
   cursor: pointer;
-  background-color: global.$button-hover-color;
+  transform: scale(0.96);
 }
 
 .buttonComponent .icon {

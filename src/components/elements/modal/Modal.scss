@@ -2,7 +2,7 @@
 
 [data-reach-dialog-content] {
   width: 80%;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 15vh auto;
   padding: 0;
   overflow: scroll;
@@ -11,8 +11,20 @@
   right: 0;
   bottom: 0;
   left: 0;
-  border: 1px solid rgb(112, 112, 112);
-  border: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.day-mode[data-reach-dialog-content] {
+  background-color: white;
+  color: black;
+}
+
+.night-mode[data-reach-dialog-content] {
+  background-color: global.$dark-mode-background;
+  color: global.$dark-mode-text;
+}
+
+[data-reach-dialog-overlay] {
+  background: hsla(0, 0%, 0%, 0.5);
 }
 
 @media only screen and (max-width: global.$small-device) {

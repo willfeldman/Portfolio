@@ -5,6 +5,7 @@
 .header .container {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
 .header .information .text {
@@ -37,7 +38,15 @@
   font-size: 23px;
   font-weight: 700;
   padding-left: 10px;
+  
+}
+
+.day-mode .text .name {
   color: rgb(84, 84, 84);
+}
+
+.night-mode .text .name {
+  color: #d4d4d4;
 }
 
 .text .position {
