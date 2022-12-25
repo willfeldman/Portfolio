@@ -1,8 +1,8 @@
 @use "../../../styles/global";
 
 .card {
-  border: 0.75px solid global.$card-border;
-  border-radius: 5px;
+  // border: 0.75px solid global.$card-border;
+  border-radius: 12px;
   padding: 15px;
   margin: 5px 5px;
   width: 358px;
@@ -10,15 +10,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: transform 0.2s ease-in-out;  /* animation duration and easing function */
 }
 
 .expandable:hover {
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  .expandCardButton button {
-    display: flex;
-  }
+  transform: scale(0.98);  /* shrink on hover */
 }
 
 @media only screen and (max-width: global.$small-device) {

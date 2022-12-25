@@ -11,7 +11,7 @@
 
 .organization-section .title {
   font-size: 25px;
-  color: #004d8f;
+  color: global.$organization-color-accent;
   font-weight: 800;
   margin-bottom: 10px;
   margin-left: 5px;
@@ -25,13 +25,12 @@
 .organization .details .name {
   font-size: global.$card-level1-heading;
   font-weight: 600;
+}
+
+.organization-modal .details .name {
   color: global.$card-header-accent;
 }
 
 .organization .dates {
   font-size: 12px;
-}
-
-.organization .logo img {
-  border-radius: 50%;
 }

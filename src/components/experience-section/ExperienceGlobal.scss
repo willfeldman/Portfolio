@@ -3,7 +3,6 @@
 .experience .position h1 {
   font-size: global.$card-level1-heading;
   font-weight: 700;
-  color: global.$card-header-accent;
 }
 
 .experience .details .company {
@@ -13,8 +12,4 @@
 
 .experience .dates {
   font-size: 12px;
-}
-
-.experience .logo img {
-  border-radius: 3px;
 }

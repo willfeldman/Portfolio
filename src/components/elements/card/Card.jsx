@@ -9,12 +9,33 @@ export default function Card(props) {
     }
   }
 
+  function renderExpandStyling() {
+    // has the expand button styling match card colors
+    if (props.expandable !== false) {
+      // only works if the expand button is requested
+
+      let styling = {};
+
+      // updates iconColor to match card background color if given
+      if (props.backgroundColor) {
+        styling.iconColor = props.textColor;
+      }
+
+      // updates backgroundColor to match card text color if given
+      if (props.textColor) {
+        styling.backgroundColor = props.backgroundColor;
+      }
+
+      return styling;
+    }
+  }
+
   function renderExpandButton() {
     // renders the expand button if it requested in the data
     if (props.expandable !== false) {
       return (
         <div className="expandCardButton">
-          <Expand size="30px" />
+          <Expand size="30px" customColors={renderExpandStyling()} />
         </div>
       );
     }
@@ -24,6 +45,7 @@ export default function Card(props) {
     <div
       className={`card ${renderCardExpandableClass()} ${props.customClass}`}
       onClick={props.action}
+      style={{ backgroundColor: props.backgroundColor, color: props.textColor }}
     >
       {renderExpandButton()}
       {props.children}

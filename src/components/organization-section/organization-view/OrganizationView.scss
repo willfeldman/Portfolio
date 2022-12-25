@@ -17,10 +17,13 @@
   object-fit: cover;
 }
 
-.details .logo img {
+.organization-modal .details .logo img {
   width: 50px;
   height: 50px;
   margin-right: 5px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: white;
 }
 
 .organization .details .logo,

@@ -8,6 +8,10 @@ function ExperienceCard(props) {
   let location = useLocation();
   let navigate = useNavigate();
 
+  // define colors for card
+  let cardBackgroundColor = "rgb(199, 219, 255)";
+  let cardTextColor = "rgb(109, 120, 140)";
+
   let experience = getById(props.id, experiences);
 
   const openExperienceModal = () => {
@@ -24,11 +28,8 @@ function ExperienceCard(props) {
   }
 
   return (
-    <Card action={openExperienceModal}>
+    <Card action={openExperienceModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="header experience">
-        <div className="logo">
-          <img src={experience.logo} alt="Experience logo" />
-        </div>
         <div className="text-header">
           <div className="position">
             <h1>{renderPosition()}</h1>

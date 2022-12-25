@@ -8,14 +8,15 @@ import { getById } from "../../../data/operations";
 function EducationCard(props) {
   let location = useLocation();
 
+  // define colors for card
+  let cardBackgroundColor = "rgb(255, 199, 229)";
+  let cardTextColor = "rgb(140, 109, 125)";
+
   let education = getById(props.id, educations);
 
   return (
-    <Card expandable={false} customClass="educationCard">
+    <Card expandable={false} customClass="educationCard" backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="header education">
-        <div className="logo">
-          <img src={education.logo} alt="Education logo" />
-        </div>
         <div className="text-header">
           <div className="school">
             <h1>{education.school}</h1>
@@ -28,8 +29,8 @@ function EducationCard(props) {
                   <Tag
                     key={key}
                     text={item}
-                    color="white"
-                    background="#0281d4"
+                    color={cardBackgroundColor}
+                    background={cardTextColor}
                   />
                 </span>
               ))}
