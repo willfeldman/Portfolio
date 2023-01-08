@@ -1,3 +1,5 @@
+@use "../../styles/global";
+
 .header .information {
   display: flex;
 }
@@ -52,7 +54,7 @@
 }
 
 // show the text bubble on hover on desktop
-@media screen and (min-width: 465px) {
+@media screen and (min-width: global.$small-device) {
   .profile:hover .text-bubble {
     display: block;
     animation: fade 2.3s forwards;
