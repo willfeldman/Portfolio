@@ -1,23 +1,31 @@
 import Button from "../elements/button/link/Button";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoDocumentOutline, IoLogoGithub } from "react-icons/io5";
-import "./Header.css";
+import "./Header.scss";
 
 function Header() {
   return (
     <div className="header">
       <div className="container">
         <div className="information">
-          <div className="profile">
+        <div className="text">
+            <h1 className="name">Will Feldman</h1>
+          </div>
+          <div className="profile giggle-div">
             <img
+              className="profile-image"
+              draggable="false" 
               src="https://ik.imagekit.io/feldman/will_emoji.png/tr:q-80"
               alt="Profile"
             />
+            <img
+              className="text-bubble"
+              draggable="false" 
+              src="https://ik.imagekit.io/feldman/hi-there.png/tr:q-80"
+              alt="Profile bubble"
+            />
           </div>
-          <div className="text">
-            <h1 className="name">Will Feldman</h1>
-            <h1 className="position">Student at Northeastern University</h1>
-          </div>
+          
         </div>
         <div className="links">
         <div className="github">

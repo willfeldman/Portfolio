@@ -1,0 +1,109 @@
+.header .information {
+  display: flex;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .information .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header .text .name {
+  font-size: 28px;
+}
+
+.header .links {
+  display: flex;
+}
+
+.header .contact,
+.header .resume,
+.header .github {
+  display: flex;
+  align-items: center;
+}
+
+.header .contact,
+.header .resume {
+  margin-left: 5px;
+}
+
+.profile img {
+  height: 53px;
+  width: auto;
+}
+
+.profile .profile-image {
+  height: 53px;
+  &:hover {
+    animation: giggle 0.5s ease-in-out 1;
+  }
+}
+
+.profile .text-bubble {
+  height: 20px;
+  rotate: -15deg;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(-40px);
+  margin-left: 5px;
+  &:hover {
+    transform: translateY(-40px) translateX(5px) scale(1.2);
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .profile .text-bubble {
+    display: none;
+  }
+}
+
+.text .name {
+  font-size: 23px;
+  font-weight: 700;
+  padding-right: 10px;
+  
+}
+
+.day-mode .text .name {
+  color: rgb(84, 84, 84);
+}
+
+.night-mode .text .name {
+  color: #d4d4d4;
+}
+
+// animations for the profile image
+
+//giggle side-to-side
+@keyframes giggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// dissolve in
+@keyframes dissolve {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
