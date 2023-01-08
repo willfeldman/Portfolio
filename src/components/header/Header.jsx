@@ -9,18 +9,19 @@ function Header() {
       <div className="container">
         <div className="information">
           <div className="profile">
+          <img
+              className="text-bubble"
+              draggable="false" 
+              src="https://ik.imagekit.io/feldman/text-bubble.png/tr:q-80"
+              alt="Profile bubble"
+            />
             <img
               className="profile-image"
               draggable="false" 
               src="https://ik.imagekit.io/feldman/will_emoji.png/tr:q-80"
               alt="Profile"
             />
-            <img
-              className="text-bubble"
-              draggable="false" 
-              src="https://ik.imagekit.io/feldman/hi-there.png/tr:q-80"
-              alt="Profile bubble"
-            />
+            
           </div>
           <div className="text">
             <h1 className="name typed-out">Will Feldman</h1>
