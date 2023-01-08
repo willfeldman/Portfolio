@@ -34,6 +34,46 @@ var projectTags = [
     color: "rgb(229, 193, 255)",
     background: "rgba(89, 75, 99, 0.85)",
   },
+  {
+    name: "Class project",
+    color: "rgb(201, 255, 193)",
+    background: "rgba(78, 99, 75, 0.85)",
+  },
+  {
+    name: "PHP",
+    color: "rgb(193, 203, 255)",
+    background: "rgba(75, 79, 99, 0.85)",
+  },
+  {
+    name: "SQL",
+    color: "rgb(255, 219, 193)",
+    background: "rgba(99, 85, 75, 0.85)",
+  },
+  {
+    name: "Jupyter",
+    color: "rgb(255, 234, 193)",
+    background: "rgba(99, 91, 75, 0.85)",
+  },
+  {
+    name: "Python",
+    color: "rgb(252, 255, 193)",
+    background: "rgba(98, 99, 75, 0.85)",
+  },
+  {
+    name: "Altair",
+    color: "rgb(193, 247, 255)",
+    background: "rgba(75, 96, 99, 0.85)",
+  },
+  {
+    name: "Database",
+    color: "rgb(255, 193, 250)",
+    background: "rgba(99, 75, 97, 0.85)",
+  },
+  {
+    name: "iOS",
+    color: "rgb(255, 193, 196)",
+    background: "rgba(99, 75, 76, 0.85)",
+  },
 ];
 
 function getProjectTagByName(name) {
@@ -78,6 +118,7 @@ var projects = [
     url: "https://apps.apple.com/us/app/succulent-emojis/id1400046038",
     tags: [
       getProjectTagByName("Xcode"),
+      getProjectTagByName("iOS"),
       getProjectTagByName("Personal project"),
     ],
     images: [
@@ -110,7 +151,7 @@ var projects = [
     description:
       "Photo filtering app with multiple layers and effects, including Sepia, Blur, Downscale, and Mosaic",
     code: "https://drive.google.com/drive/folders/1Q0BESK_FBM1WfRHPC_vFe9fKuK7bXGbd?usp=sharing",
-    tags: [getProjectTagByName("Java")],
+    tags: [getProjectTagByName("Java"), getProjectTagByName("Class project")],
     images: [
       "https://ik.imagekit.io/feldman/photo_filter_class_diagram_screenshot.png",
       "https://ik.imagekit.io/feldman/photo_filter_structure_screenshot.png",
@@ -133,6 +174,42 @@ var projects = [
       "https://ik.imagekit.io/feldman/portfolio_site_screenshot.png",
       "https://ik.imagekit.io/feldman/portfolio_code_screenshot.png",
       "https://ik.imagekit.io/feldman/portfolio_github_screenshot.png",
+    ],
+  },
+  {
+    id: 6,
+    title: "Food Reviews",
+    description:
+      "A website meant for altering data from a database for a restaurant review app for college students.",
+    github: "https://github.com/willfeldman/FoodReviews",
+    tags: [
+      getProjectTagByName("PHP"),
+      getProjectTagByName("SQL"),
+      getProjectTagByName("Database"),
+      getProjectTagByName("Class project"),
+    ],
+    images: [
+      "https://ik.imagekit.io/feldman/food-review-structure.png",
+      "https://ik.imagekit.io/feldman/food-review-screenshot1.png",
+      "https://ik.imagekit.io/feldman/food-review-screenshot2.png",
+    ],
+  },
+  {
+    id: 7,
+    title: "Bike Traffic Visulization",
+    description:
+      "A website with interactive data visualizations of bike traffic in Boston.",
+    github: "https://github.com/willfeldman/Bike-Traffic-Visulization",
+    tags: [
+      getProjectTagByName("Python"),
+      getProjectTagByName("Jupyter"),
+      getProjectTagByName("Altair"),
+      getProjectTagByName("Class project"),
+    ],
+    images: [
+      "https://ik.imagekit.io/feldman/boston-bike-screenshot.png",
+      "https://ik.imagekit.io/feldman/boston-bike1.png",
+      "https://ik.imagekit.io/feldman/boston-bike2.png",
     ],
   },
 ];
