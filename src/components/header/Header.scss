@@ -36,12 +36,13 @@
 .profile img {
   height: 53px;
   width: auto;
+  user-select: none;
 }
 
 .profile .profile-image {
   height: 53px;
   &:hover {
-    animation: giggle 0.5s ease-in-out 1;
+    animation: giggle 0.7s ease-in-out 1;
   }
 }
 
@@ -52,7 +53,7 @@
   transform: translateY(-40px);
   margin-left: 5px;
   &:hover {
-    transform: translateY(-40px) translateX(5px) scale(1.2);
+    transform: translateY(-40px) translateX(3px) scale(1.1);
   }
 }
 
@@ -65,7 +66,7 @@
 .text .name {
   font-size: 23px;
   font-weight: 700;
-  padding-right: 10px;
+  padding-left: 10px;
   
 }
 
@@ -84,14 +85,20 @@
   0% {
     transform: rotate(0deg);
   }
-  25% {
+  17% {
     transform: rotate(5deg);
   }
-  50% {
+  34% {
     transform: rotate(0deg);
   }
-  75% {
+  50% {
     transform: rotate(-5deg);
+  }
+  67% {
+    transform: rotate(0deg);
+  }
+  84% {
+    transform: rotate(5deg);
   }
   100% {
     transform: rotate(0deg);
@@ -105,5 +112,29 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+// typewriter effect for header text
+@media screen and (min-width: 465px) {
+  .typed-out{
+    overflow: hidden;
+    border-right: .15em solid #0b84ff;
+    white-space: nowrap;
+    animation: typing 1s steps(20, end) forwards, blinking .8s 3, hide-cursor 0s ease-in 2.4s forwards;
+    font-size: 1.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blinking {
+    from { border-color: transparent }
+    to { border-color: #0b84ff; }
+  }
+  @keyframes hide-cursor {
+    from { border-right: .15em solid #0b84ff }
+    to { border-right: none; }
   }
 }

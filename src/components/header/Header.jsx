@@ -8,10 +8,7 @@ function Header() {
     <div className="header">
       <div className="container">
         <div className="information">
-        <div className="text">
-            <h1 className="name">Will Feldman</h1>
-          </div>
-          <div className="profile giggle-div">
+          <div className="profile">
             <img
               className="profile-image"
               draggable="false" 
@@ -24,6 +21,9 @@ function Header() {
               src="https://ik.imagekit.io/feldman/hi-there.png/tr:q-80"
               alt="Profile bubble"
             />
+          </div>
+          <div className="text">
+            <h1 className="name typed-out">Will Feldman</h1>
           </div>
           
         </div>
