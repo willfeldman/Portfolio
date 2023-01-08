@@ -19,7 +19,6 @@
 .organization-modal .details .logo img {
   width: 50px;
   height: 50px;
-  margin-right: 5px;
   border-radius: 50%;
   border: 3px solid white;
   background-color: white;
@@ -32,8 +31,12 @@
   justify-content: center;
 }
 
+.organization .details .logo {
+  margin-bottom: 8px;
+}
+
 .details .left-justified {
-  display: flex;
+  display: inline-block;
 }
 
 .organization-contents {
@@ -60,7 +63,6 @@
 }
 
 .organization .main-details {
-  margin: 0px 8px;
   line-height: 1.2;
 }
 

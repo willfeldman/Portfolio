@@ -23,7 +23,11 @@ function ExperienceView() {
     if (experience.location) {
       return (
         <span className="location">
-          <Tag text={experience.location} color="rgb(109, 120, 140)" background="rgb(199, 219, 255)" />
+          <Tag
+            text={experience.location}
+            color="rgb(109, 120, 140)"
+            background="rgb(199, 219, 255)"
+          />
         </span>
       );
     }
@@ -97,10 +101,10 @@ function ExperienceView() {
       <div className="experience-contents">
         <div className="details">
           <div className="left-justified">
-            <div className="logo">
-              <img src={experience.logo} alt="Experience logo" />
-            </div>
             <div className="main-details">
+              <div className="logo">
+                <img src={experience.logo} alt="Experience logo" />
+              </div>
               <div className="position">
                 <h1 id="label">{experience.position}</h1>
               </div>
