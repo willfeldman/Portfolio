@@ -2,11 +2,9 @@ import { Dialog } from "@reach/dialog";
 import { useNavigate } from "react-router-dom";
 import Close from "../button/close/Close";
 import "./Modal.scss";
+import { mode } from "../../../data/darkmode";
 
 function Modal(props) {
-  // sets mode to either 'night' or 'day' depending on the user's system preferences for modal
-  const mode = (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day'); 
-
   let navigate = useNavigate();
 
   function close() {

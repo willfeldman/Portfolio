@@ -40,6 +40,14 @@
   padding: 15px 50px;
 }
 
+.organization-contents .name h1 {
+  color: global.$organization-color-accent;
+}
+
+.night-mode .organization-contents .name h1 {
+  color: global.$organization-color-main;
+}
+
 .organization-contents .details {
   display: flex;
   justify-content: space-between;

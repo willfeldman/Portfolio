@@ -17,6 +17,10 @@
   margin-left: 5px;
 }
 
+.night-mode .organization-section .title {
+  color: global.$organization-color-main;
+}
+
 .organization .role h1 {
   font-size: global.$card-level2-heading;
   font-weight: 700;
@@ -25,10 +29,6 @@
 .organization .details .name {
   font-size: global.$card-level1-heading;
   font-weight: 600;
-}
-
-.organization-modal .details .name {
-  color: global.$card-header-accent;
 }
 
 .organization .dates {

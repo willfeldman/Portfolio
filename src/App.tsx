@@ -9,11 +9,9 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import OrganizationView from "./components/organization-section/organization-view/OrganizationView";
 import AwardView from "./components/award-section/award-view/AwardView";
+import { mode } from "./data/darkmode";
 
-function App() {
-  // sets mode to either 'night' or 'day' depending on the user's system preferences
-  const mode = (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'day');  
-  
+function App() {  
   let location = useLocation();
   let state = location.state as { backgroundLocation?: Location };
   

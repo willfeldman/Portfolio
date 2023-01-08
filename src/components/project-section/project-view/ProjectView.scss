@@ -19,7 +19,11 @@
 .projectName {
   font-size: 18px;
   font-weight: 700;
-  color: global.$card-header-accent;
+  color: global.$project-color-accent;
+}
+
+.night-mode .projectName {
+  color: global.$project-color-main;
 }
 
 .projectTags {

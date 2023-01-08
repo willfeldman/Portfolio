@@ -15,10 +15,7 @@ export default function AwardView() {
 
   return (
     <div className="awardView">
-      <div
-        className="header-image"
-        style={{ background: "linear-gradient(#047ac9, #004d8f)", height: 200 }}
-      ></div>
+      <div className="header-image"></div>
       <div className="award-contents">
         <div className="top">
           <div className="left-justified">

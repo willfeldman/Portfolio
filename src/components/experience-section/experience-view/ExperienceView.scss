@@ -42,6 +42,10 @@
   color: global.$experience-color-accent;
 }
 
+.night-mode .experience-contents .position h1 {
+  color: global.$experience-color-main;
+}
+
 .experience-contents .details {
   display: flex;
   justify-content: space-between;
