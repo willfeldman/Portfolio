@@ -1,4 +1,5 @@
 import "./Award.scss";
+import CardSection from "../elements/card-section/CardSection";
 import AwardCard from "./award-card/AwardCard";
 import { awards } from "../../data/award";
 import { convertIdToComplement } from "../../data/operations";
@@ -16,10 +17,7 @@ awards.forEach((item, index) => {
 function Award() {
   return (
     <div className="award-section">
-      <div className="title">
-        <h1>Awards</h1>
-      </div>
-      <div className="cards">{awardComponents}</div>
+      <CardSection title="Awards" cards={awardComponents} />
     </div>
   );
 }

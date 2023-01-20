@@ -1,4 +1,5 @@
 import "./Education.scss";
+import CardSection from "../elements/card-section/CardSection";
 import EducationCard from "./education-card/EducationCard";
 import { educations } from "../../data/education";
 import { convertIdToComplement } from "../../data/operations";
@@ -16,10 +17,7 @@ educations.forEach((item, index) => {
 function Education() {
   return (
     <div className="education-section education">
-      <div className="title">
-        <h1>Education</h1>
-      </div>
-      <div className="cards">{educationComponents}</div>
+      <CardSection title="Education" cards={educationComponents} />
     </div>
   );
 }

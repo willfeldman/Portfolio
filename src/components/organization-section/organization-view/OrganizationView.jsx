@@ -43,11 +43,11 @@ function OrganizationView() {
   }
 
   return (
-    <div className="organization-modal organization">
+    <div className="modal-view organization-modal organization">
       <div className="header-image">
         <img src={organization.headerImage} alt="Header" />
       </div>
-      <div className="organization-contents">
+      <div className="organization-contents contents">
         <div className="details">
           <div className="left-justified">
             <div className="logo">

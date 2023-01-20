@@ -94,11 +94,11 @@ function ExperienceView() {
   }
 
   return (
-    <div className="experience-modal experience">
+    <div className="modal-view experience-modal experience">
       <div className="header-image">
         <img src={experience.headerImage} alt="Header" />
       </div>
-      <div className="experience-contents">
+      <div className="experience-contents contents">
         <div className="details">
           <div className="left-justified">
             <div className="main-details">

@@ -1,0 +1,19 @@
+@use "../../../styles/global";
+
+.modal-view .body .presentations .pdf {
+    width: 49.5%;
+}
+
+.modal-view .contents {
+    padding: 25px 50px;
+}
+
+@media only screen and (max-width: global.$small-device) {
+    .modal-view .contents {
+        padding: 25px 30px;
+    }
+
+    .modal-view .body .presentations .pdf {
+        width: 100%;
+    }
+}

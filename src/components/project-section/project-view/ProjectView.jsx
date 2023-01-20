@@ -45,11 +45,11 @@ export default function ProjectView() {
   }
 
   return (
-    <div className="projectView">
+    <div className="modal-view projectView">
       <div className="carousel">
         <Carousel slides={project.images} />
       </div>
-      <div className="project-contents">
+      <div className="project-contents contents">
         <div className="top">
           <div className="left-justified">
             <div className="projectName">

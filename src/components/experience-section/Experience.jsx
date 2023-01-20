@@ -1,4 +1,5 @@
 import "./Experience.scss";
+import CardSection from "../elements/card-section/CardSection";
 import ExperienceCard from "./experience-card/ExperienceCard";
 import { experiences } from "../../data/experience";
 import { convertIdToComplement } from "../../data/operations";
@@ -16,10 +17,7 @@ experiences.forEach((item, index) => {
 function Experience() {
   return (
     <div className="experience-section experience">
-      <div className="title">
-        <h1>Experiences</h1>
-      </div>
-      <div className="cards">{experienceComponents}</div>
+      <CardSection title="Experiences" cards={experienceComponents} />
     </div>
   );
 }

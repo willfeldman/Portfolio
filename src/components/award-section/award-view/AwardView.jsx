@@ -14,9 +14,9 @@ export default function AwardView() {
   }
 
   return (
-    <div className="awardView">
+    <div className="modal-view awardView">
       <div className="header-image"></div>
-      <div className="award-contents">
+      <div className="award-contents contents">
         <div className="top">
           <div className="left-justified">
             <div className="awardName">

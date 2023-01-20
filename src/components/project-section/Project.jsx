@@ -1,4 +1,5 @@
 import "./Project.scss";
+import CardSection from "../elements/card-section/CardSection";
 import ProjectCard from "./project-card/ProjectCard";
 import { projects } from "../../data/project";
 import { convertIdToComplement } from "../../data/operations";
@@ -16,10 +17,7 @@ projects.forEach((item, index) => {
 function Project() {
   return (
     <div className="project-section">
-      <div className="title">
-        <h1>Projects</h1>
-      </div>
-      <div className="cards">{projectComponents}</div>
+      <CardSection title="Projects" cards={projectComponents} />
     </div>
   );
 }
