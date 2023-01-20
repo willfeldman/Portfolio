@@ -1,20 +1,7 @@
 @use "../../styles/global";
 
-.project-section {
-  margin-top: 40px;
-}
-
-.project-section .cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .project-section .title {
-  font-size: 25px;
   color: global.$project-color-accent;
-  font-weight: 800;
-  margin-bottom: 10px;
-  margin-left: 5px;
 }
 
 .night-mode .project-section .title {

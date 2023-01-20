@@ -1,20 +1,7 @@
 @use "../../styles/global";
 
-.organization-section {
-  margin-top: 40px;
-}
-
-.organization-section .cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .organization-section .title {
-  font-size: 25px;
   color: global.$organization-color-accent;
-  font-weight: 800;
-  margin-bottom: 10px;
-  margin-left: 5px;
 }
 
 .night-mode .organization-section .title {

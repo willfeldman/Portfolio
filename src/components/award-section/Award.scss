@@ -1,20 +1,7 @@
 @use "../../styles/global";
 
-.award-section {
-  margin-top: 40px;
-}
-
-.award-section .cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .award-section .title {
-  font-size: 25px;
   color: global.$award-color-accent;
-  font-weight: 800;
-  margin-bottom: 10px;
-  margin-left: 5px;
 }
 
 .night-mode .award-section .title {

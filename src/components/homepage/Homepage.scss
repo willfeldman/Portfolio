@@ -5,3 +5,20 @@
   padding-bottom: 55px;
   padding-top: 55px;
 }
+
+.card-section {
+  margin-top: 40px;
+}
+
+.card-section .cards {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+
+.card-section .title {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
