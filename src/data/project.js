@@ -85,7 +85,7 @@ var projects = [
     id: 0,
     title: "YouTube Vlogs",
     description:
-      "Fun, light-hearted original adventure video edited on Final Cut Pro",
+      "Fun, light-hearted original adventure video edited on Final Cut Pro.",
     url: "https://www.youtube.com/channel/UCQOig6CGyGK7sli6MuEaf_g/videos",
     tags: [getProjectTagByName("Final Cut Pro")],
     images: [
@@ -98,7 +98,7 @@ var projects = [
     id: 1,
     title: "Grade Calculator",
     description:
-      "Simple high school semester-based grade calculator made in JavaScript",
+      "Simple high school semester-based grade calculator made in JavaScript.",
     github: "https://github.com/willfeldman/GradeCalculator",
     tags: [
       getProjectTagByName("JavaScript"),
@@ -114,7 +114,7 @@ var projects = [
     id: 2,
     title: "Succulent Emojis",
     description:
-      "Send friends succulent stickers, available on the Apple App Store",
+      "Send friends succulent stickers, available on the Apple App Store.",
     url: "https://apps.apple.com/us/app/succulent-emojis/id1400046038",
     tags: [
       getProjectTagByName("Xcode"),
@@ -131,7 +131,7 @@ var projects = [
     id: 3,
     title: "Chrome Commands",
     description:
-      "A curated list of the best chrome URL commands, built in React",
+      "A curated list of the best chrome URL commands, built in React.",
     github: "https://github.com/willfeldman/Chrome-Commands",
     tags: [
       getProjectTagByName("React"),
@@ -149,7 +149,7 @@ var projects = [
     id: 4,
     title: "Photo Filtering Application",
     description:
-      "Photo filtering app with multiple layers and effects, including Sepia, Blur, Downscale, and Mosaic",
+      "Photo filtering app with multiple layers and effects, including Sepia, Blur, Downscale, and Mosaic.",
     code: "https://drive.google.com/drive/folders/1Q0BESK_FBM1WfRHPC_vFe9fKuK7bXGbd?usp=sharing",
     tags: [getProjectTagByName("Java"), getProjectTagByName("Class project")],
     images: [
@@ -210,6 +210,24 @@ var projects = [
       "https://ik.imagekit.io/feldman/boston-bike-screenshot.png",
       "https://ik.imagekit.io/feldman/boston-bike1.png",
       "https://ik.imagekit.io/feldman/boston-bike2.png",
+    ],
+  },
+  {
+    id: 8,
+    title: "Mental Health App Concept",
+    description:
+      "A concept mental health check-in and therapy app.",
+    url: "https://drive.google.com/file/d/1Pd7SpvMnEzfzILYKXJCBWZpP_pPxt6VD/view",
+    tags: [
+      getProjectTagByName("Final Cut Pro"),
+      getProjectTagByName("Class project"),
+    ],
+    images: [
+      "https://ik.imagekit.io/feldman/mentis-1.png",
+      "https://ik.imagekit.io/feldman/mentis-2.png",
+      "https://ik.imagekit.io/feldman/mentis-3.png",
+      "https://ik.imagekit.io/feldman/mentis-4.png",
+      "https://ik.imagekit.io/feldman/mentis-5.png",
     ],
   },
 ];
