@@ -154,19 +154,38 @@ var experiences = [
   },
   {
     id: 6,
-    position: "Above and Beyond Computer Science (ABCS) Fellow",
-    position_nickname: "ABCS Fellow",
-    company: "Meta",
+    position: "Web Strategy Co-op",
+    company: "Toast",
+    summary: "Assisted in scoping, planning, and delivering web projects to increase Ecommerce sales and go-lives",
     description: [
-      "Selected to particiate in a 9-week program to refine and practice techincal computer science skills and concepts",
+      "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics",
+      "Demonstrated strong written and verbal communication skills, attention to detail, and the ability to work collaboratively with members inside and outside the organization across all levels",
+      "Collaborated with developers and designers during project exploration, demonstrated consistent follow-through, and successfully kicked off new projects and initiatives"
     ],
-    dates: "Aug 2022 - Present",
-    type: "Program",
-    url: "https://diversity.fb.com/initiatives/in-our-communities/",
-    linkedin: "https://www.linkedin.com/company/meta/",
-    headerImage: "https://ik.imagekit.io/feldman/meta_background.jpg",
-    logo: "https://ik.imagekit.io/feldman/meta_logo.jpg",
+    dates: "Jan. 2023 - Present",
+    type: "Full-time",
+    url: "https://pos.toasttab.com",
+    linkedin: "https://www.linkedin.com/company/toast-inc/",
+    headerImage: "https://ik.imagekit.io/feldman/toast_background.jpeg",
+    logo: "https://ik.imagekit.io/feldman/toast_logo.jpeg",
   },
 ];
 
 export { experiences };
+
+
+/* {
+  id: 6,
+  position: "Above and Beyond Computer Science (ABCS) Fellow",
+  position_nickname: "ABCS Fellow",
+  company: "Meta",
+  description: [
+    "Selected to particiate in a 9-week program to refine and practice techincal computer science skills and concepts",
+  ],
+  dates: "Aug 2022 - Present",
+  type: "Program",
+  url: "https://diversity.fb.com/initiatives/in-our-communities/",
+  linkedin: "https://www.linkedin.com/company/meta/",
+  headerImage: "https://ik.imagekit.io/feldman/meta_background.jpg",
+  logo: "https://ik.imagekit.io/feldman/meta_logo.jpg",
+} */
