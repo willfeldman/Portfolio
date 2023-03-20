@@ -15,14 +15,32 @@ export default function ProjectCard(props) {
 
   let project = getById(props.id, projects);
 
-  const openProjectModal = () => {
+  const sendProjectClickEvent = () => {
+    // sends an event to google analytics
+    const eventName = `Project Click`;
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        event_category: "ProjectCard",
+        event_label: project.title,
+      });
+    }
+  };
+
+  const handleAction = () => {
+    // sends an event to google analytics
+    sendProjectClickEvent();
+    // opens the project modal
     navigate(`/project/${project.id}`, {
       state: { backgroundLocation: location },
     });
   };
 
   return (
-    <Card action={openProjectModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
+    <Card
+      action={handleAction}
+      backgroundColor={cardBackgroundColor}
+      textColor={cardTextColor}
+    >
       <div className="project">
         <div className="projectTitle">
           <h1>{project.title}</h1>

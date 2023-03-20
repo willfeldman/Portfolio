@@ -2,8 +2,20 @@ import "./Button.scss";
 import "../../../../styles/tooltip.scss";
 
 export default function Button(props) {
-  function openLink(url) {
+  function openLink() {
+    sendLinkClickEvent();
     window.open(props.link, "_blank", "noreferrer");
+  }
+
+  function sendLinkClickEvent() {
+    // sends an event to google analytics
+    const eventName = `Link Click`;
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        event_category: "Button",
+        event_label: props.link,
+      });
+    }
   }
 
   function addTooltip() {

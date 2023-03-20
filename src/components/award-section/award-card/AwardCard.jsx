@@ -14,14 +14,28 @@ export default function AwardCard(props) {
 
   let award = getById(props.id, awards);
 
-  const openAwardModal = () => {
+  const sendAwardClickEvent = () => {
+    // sends an event to google analytics
+    const eventName = `Award Click`;
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        event_category: "AwardCard",
+        event_label: award.name,
+      });
+    }
+  }
+
+  const handleAction = () => {
+    // sends an event to google analytics
+    sendAwardClickEvent();
+    // opens the award modal
     navigate(`/award/${award.id}`, {
       state: { backgroundLocation: location },
     });
   };
 
   return (
-    <Card action={openAwardModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
+    <Card action={handleAction} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="award">
         <div className="awardTitle">
           <h1>{award.name}</h1>

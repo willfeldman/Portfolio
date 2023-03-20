@@ -14,7 +14,21 @@ function ExperienceCard(props) {
 
   let experience = getById(props.id, experiences);
 
-  const openExperienceModal = () => {
+  const sendExperienceClickEvent = () => {
+    // sends an event to google analytics
+    const eventName = `Experience Click`;
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        event_category: "ExperienceCard",
+        event_label: experience.company,
+      });
+    }
+  };
+
+  const handleAction = () => {
+    // sends an event to google analytics
+    sendExperienceClickEvent();
+    // opens the experience modal
     navigate(`/experience/${experience.id}`, {
       state: { backgroundLocation: location },
     });
@@ -25,10 +39,14 @@ function ExperienceCard(props) {
     return experience.position_nickname
       ? experience.position_nickname
       : experience.position;
-  }
+  };
 
   return (
-    <Card action={openExperienceModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
+    <Card
+      action={handleAction}
+      backgroundColor={cardBackgroundColor}
+      textColor={cardTextColor}
+    >
       <div className="header experience">
         <div className="text-header">
           <div className="position">

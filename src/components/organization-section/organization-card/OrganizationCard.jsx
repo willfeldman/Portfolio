@@ -14,14 +14,28 @@ function OrganizationCard(props) {
 
   let organization = getById(props.id, organizations);
 
-  const openOrganizationModal = () => {
+  const sendOrganizationClickEvent = () => {
+    // sends an event to google analytics
+    const eventName = `Organization Click`;
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", eventName, {
+        event_category: "OrganizationCard",
+        event_label: organization.name,
+      });
+    }
+  };
+
+  const handleAction = () => {
+    // sends an event to google analytics
+    sendOrganizationClickEvent();
+    // opens the organization modal
     navigate(`/organization/${organization.id}`, {
       state: { backgroundLocation: location },
     });
   };
 
   return (
-    <Card action={openOrganizationModal} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
+    <Card action={handleAction} backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
       <div className="organization">
         <div className="header">
           <div className="text-header">
