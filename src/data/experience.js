@@ -156,14 +156,32 @@ var experiences = [
     id: 6,
     position: "Web Strategy Co-op",
     company: "Toast",
+    location: "Boston, MA",
     summary: "Assisted in scoping, planning, and delivering web projects to increase Ecommerce sales and go-lives",
     description: [
       "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics",
-      "Demonstrated strong written and verbal communication skills, attention to detail, and the ability to work collaboratively with members inside and outside the organization across all levels",
-      "Collaborated with developers and designers during project exploration, demonstrated consistent follow-through, and successfully kicked off new projects and initiatives"
+      "Managed over 500 order modifications in Salesforce, streamlining tasks such as rush cases, address changes, and product swaps. ",
+      "Implemented multiple automation initiatives that effectively streamlined manual procedures, ultimately saving approximately 40 employee hours weekly."
     ],
-    dates: "Jan. 2023 - Present",
+    dates: "Jan. 2023 - May 2023",
     type: "Full-time",
+    url: "https://pos.toasttab.com",
+    linkedin: "https://www.linkedin.com/company/toast-inc/",
+    headerImage: "https://ik.imagekit.io/feldman/toast_background.jpeg",
+    logo: "https://ik.imagekit.io/feldman/toast_logo.jpeg",
+  },
+  {
+    id: 7,
+    position: "Solutions Architect",
+    company: "Toast",
+    location: "Boston, MA",
+    summary: "Assisted in scoping, planning, and delivering web projects to increase Ecommerce sales and go-lives",
+    description: [
+      "Automated Ecommerce order tracking and reporting, utilizing Salesforce, JavaScript, and Zapier.",
+      "Spearheaded the development of an automated Drift chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates."
+    ],
+    dates: "June 2023 - Present",
+    type: "Part-time",
     url: "https://pos.toasttab.com",
     linkedin: "https://www.linkedin.com/company/toast-inc/",
     headerImage: "https://ik.imagekit.io/feldman/toast_background.jpeg",
