@@ -1,9 +1,9 @@
 {
-  // These tasks will run in order when initializing your CodeSandbox project.
+  // These tasks run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install"
+      "command": "npm install --legacy-peer-deps" // have to have the --legacy-peer-deps until resolving the @reach/dialog version issue
     }
   ],
 
