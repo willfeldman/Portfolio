@@ -1,13 +1,10 @@
 import "./EducationCard.scss";
 import Card from "../../elements/card/Card";
 import Tag from "../../elements/tag/Tag";
-import { useLocation } from "react-router-dom";
 import { educations } from "../../../data/education";
 import { getById } from "../../../data/operations";
 
 function EducationCard(props) {
-  let location = useLocation();
-
   // define colors for card
   let cardBackgroundColor = "rgb(255, 199, 229)";
   let cardTextColor = "rgb(140, 109, 125)";
@@ -15,7 +12,12 @@ function EducationCard(props) {
   let education = getById(props.id, educations);
 
   return (
-    <Card expandable={false} customClass="educationCard" backgroundColor={cardBackgroundColor} textColor={cardTextColor}>
+    <Card
+      expandable={false}
+      customClass="educationCard"
+      backgroundColor={cardBackgroundColor}
+      textColor={cardTextColor}
+    >
       <div className="header education">
         <div className="text-header">
           <div className="school">
