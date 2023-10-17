@@ -8,6 +8,7 @@ function Header() {
     <div className="header">
       <div className="container">
         <div className="information">
+          {/*
           <div className="profile">
           <img
               className="text-bubble"
@@ -23,6 +24,7 @@ function Header() {
             />
             
           </div>
+          */}
           <div className="text">
             <h1 className="name typed-out">Will Feldman</h1>
           </div>
