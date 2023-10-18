@@ -12,13 +12,13 @@ function Header() {
           <img
               className="text-bubble"
               draggable="false" 
-              src="https://ik.imagekit.io/feldman/text-bubble.png/tr:q-80"
+              src="https://chromecommands.com/src/text-bubble.png"
               alt="Profile bubble"
             />
             <img
               className="profile-image"
               draggable="false" 
-              src="https://ik.imagekit.io/feldman/will_emoji.png/tr:q-80"
+              src="https://chromecommands.com/src/will_emoji.png"
               alt="Profile"
             />
             
