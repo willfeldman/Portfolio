@@ -79,6 +79,11 @@ var projectTags = [
     color: "rgb(193, 198, 255)",
     background: "rgba(75, 77, 99, 0.85)",
   },
+  {
+    name: "Hackathon",
+    color: "rgb(255, 193, 196)",
+    background: "rgba(99, 75, 76, 0.85)",
+  },
 ];
 
 function getProjectTagByName(name) {
@@ -251,6 +256,23 @@ var projects = [
       "/src/classmate-2.png",
       "/src/classmate-3.png",
       "/src/classmate-4.png",
+    ],
+  },
+  {
+    id: 10,
+    title: "ReadU",
+    description:
+      "An AI reading comprehension tool for middle schoolers based on individual skills and interests.",
+    github: "https://github.com/tedai-hackathon/groundbreakinglabs",
+    tags: [
+      getProjectTagByName("Artificial Intelligence"),
+      getProjectTagByName("Hackathon"),
+      getProjectTagByName("Personal project"),
+    ],
+    images: [
+      "/src/readu-1.png",
+      "/src/readu-2.png",
+      "/src/readu-3.png",
     ],
   }
 ];
