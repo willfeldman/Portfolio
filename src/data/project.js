@@ -74,6 +74,11 @@ var projectTags = [
     color: "rgb(255, 193, 196)",
     background: "rgba(99, 75, 76, 0.85)",
   },
+  {
+    name: "Artificial Intelligence",
+    color: "rgb(193, 198, 255)",
+    background: "rgba(75, 77, 99, 0.85)",
+  },
 ];
 
 function getProjectTagByName(name) {
@@ -89,9 +94,9 @@ var projects = [
     url: "https://www.youtube.com/channel/UCQOig6CGyGK7sli6MuEaf_g/videos",
     tags: [getProjectTagByName("Final Cut Pro")],
     images: [
-      "https://chromecommands.com/src/vlogs_fcp_screenshot.png",
-      "https://chromecommands.com/src/vlogs_youtube_screenshot.png",
-      "https://chromecommands.com/src/vlogs_video_screenshot.png",
+      "/src/vlogs_fcp_screenshot.png",
+      "/src/vlogs_youtube_screenshot.png",
+      "/src/vlogs_video_screenshot.png",
     ],
   },
   {
@@ -105,9 +110,9 @@ var projects = [
       getProjectTagByName("Personal project"),
     ],
     images: [
-      "https://chromecommands.com/src/grade_calculator_top_screenshot.png",
-      "https://chromecommands.com/src/grade_calculator_bottom_screenshot.png",
-      "https://chromecommands.com/src/grade_calculator_github_screenshot.png",
+      "/src/grade_calculator_top_screenshot.png",
+      "/src/grade_calculator_bottom_screenshot.png",
+      "/src/grade_calculator_github_screenshot.png",
     ],
   },
   {
@@ -122,9 +127,9 @@ var projects = [
       getProjectTagByName("Personal project"),
     ],
     images: [
-      "https://chromecommands.com/src/succulent_xcode_screenshot.png",
-      "https://chromecommands.com/src/succulent_asc_screenshot.png",
-      "https://chromecommands.com/src/succulent_iphone_screenshot.png",
+      "/src/succulent_xcode_screenshot.png",
+      "/src/succulent_asc_screenshot.png",
+      "/src/succulent_iphone_screenshot.png",
     ],
   },
   {
@@ -138,11 +143,11 @@ var projects = [
       getProjectTagByName("Personal project"),
     ],
     images: [
-      "https://chromecommands.com/src/chrome_commands_screenshot.png",
-      "https://chromecommands.com/src/chrome_commands_vsc_screenshot.png",
-      "https://chromecommands.com/src/chrome_commands_github_screenshot.png",
-      "https://chromecommands.com/src/chrome_commands_product_hunt_screenshot.png",
-      "https://chromecommands.com/src/chrome_commands_background.png",
+      "/src/chrome_commands_screenshot.png",
+      "/src/chrome_commands_vsc_screenshot.png",
+      "/src/chrome_commands_github_screenshot.png",
+      "/src/chrome_commands_product_hunt_screenshot.png",
+      "/src/chrome_commands_background.png",
     ],
   },
   {
@@ -153,10 +158,10 @@ var projects = [
     code: "https://drive.google.com/drive/folders/1Q0BESK_FBM1WfRHPC_vFe9fKuK7bXGbd?usp=sharing",
     tags: [getProjectTagByName("Java"), getProjectTagByName("Class project")],
     images: [
-      "https://chromecommands.com/src/photo_filter_class_diagram_screenshot.png",
-      "https://chromecommands.com/src/photo_filter_structure_screenshot.png",
-      "https://chromecommands.com/src/photo_filter_interface_screenshot.png",
-      "https://chromecommands.com/src/photo_filter_demo.gif",
+      "/src/photo_filter_class_diagram_screenshot.png",
+      "/src/photo_filter_structure_screenshot.png",
+      "/src/photo_filter_interface_screenshot.png",
+      "/src/photo_filter_demo.gif",
     ],
   },
   {
@@ -167,13 +172,13 @@ var projects = [
     github: "https://github.com/willfeldman/Portfolio",
     tags: [
       getProjectTagByName("React"),
-      getProjectTagByName("Personal project"),
       getProjectTagByName("Adobe XD"),
+      getProjectTagByName("Personal project"),
     ],
     images: [
-      "https://chromecommands.com/src/portfolio_site_screenshot.png",
-      "https://chromecommands.com/src/portfolio_code_screenshot.png",
-      "https://chromecommands.com/src/portfolio_github_screenshot.png",
+      "/src/portfolio_site_screenshot.png",
+      "/src/portfolio_code_screenshot.png",
+      "/src/portfolio_github_screenshot.png",
     ],
   },
   {
@@ -189,14 +194,14 @@ var projects = [
       getProjectTagByName("Class project"),
     ],
     images: [
-      "https://chromecommands.com/src/food-review-structure.png",
-      "https://chromecommands.com/src/food-review-screenshot1.png",
-      "https://chromecommands.com/src/food-review-screenshot2.png",
+      "/src/food-review-structure.png",
+      "/src/food-review-screenshot1.png",
+      "/src/food-review-screenshot2.png",
     ],
   },
   {
     id: 7,
-    title: "Bike Traffic Visulization",
+    title: "Bike Traffic Visualizer",
     description:
       "A website with interactive data visualizations of bike traffic in Boston.",
     github: "https://github.com/willfeldman/Bike-Traffic-Visulization",
@@ -207,14 +212,14 @@ var projects = [
       getProjectTagByName("Class project"),
     ],
     images: [
-      "https://chromecommands.com/src/boston-bike-screenshot.png",
-      "https://chromecommands.com/src/boston-bike1.png",
-      "https://chromecommands.com/src/boston-bike2.png",
+      "/src/boston-bike-screenshot.png",
+      "/src/boston-bike1.png",
+      "/src/boston-bike2.png",
     ],
   },
   {
     id: 8,
-    title: "Mental Health App Concept",
+    title: "Mentis",
     description:
       "A concept mental health check-in and therapy app.",
     url: "https://drive.google.com/file/d/1Pd7SpvMnEzfzILYKXJCBWZpP_pPxt6VD/view",
@@ -223,13 +228,31 @@ var projects = [
       getProjectTagByName("Class project"),
     ],
     images: [
-      "https://chromecommands.com/src/mentis-1.png",
-      "https://chromecommands.com/src/mentis-2.png",
-      "https://chromecommands.com/src/mentis-3.png",
-      "https://chromecommands.com/src/mentis-4.png",
-      "https://chromecommands.com/src/mentis-5.png",
+      "/src/mentis-1.png",
+      "/src/mentis-2.png",
+      "/src/mentis-3.png",
+      "/src/mentis-4.png",
+      "/src/mentis-5.png",
     ],
   },
+  {
+    id: 9,
+    title: "Classmate",
+    description:
+      "A streamlined, intuitive class and assignment tracking app.",
+    url: "https://drive.google.com/file/d/1b05NkqELtTbR-YZE8eeH2Ap7Cl-CHLhb/view?usp=sharing",
+    tags: [
+      getProjectTagByName("Xcode"),
+      getProjectTagByName("iOS"),
+      getProjectTagByName("Personal project"),
+    ],
+    images: [
+      "/src/classmate-1.png",
+      "/src/classmate-2.png",
+      "/src/classmate-3.png",
+      "/src/classmate-4.png",
+    ],
+  }
 ];
 
 export { projects };
