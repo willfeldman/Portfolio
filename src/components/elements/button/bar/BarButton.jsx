@@ -12,7 +12,7 @@ const StyledButton = styled.button`
 export default function BarButton(props) {
         
     return (
-        <div className="barButton">
+        <div className={`barButton ${props.className}`}>
             <StyledButton onClick={props.onClick} color={props.color} imgHoverColor={props.imgHoverColor}>
                 <div className="barButtonImg">
                     {props.children}

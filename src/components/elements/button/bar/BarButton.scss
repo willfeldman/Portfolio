@@ -7,15 +7,16 @@
     padding: 0;
     width: 15px;
     height: 15px;
-    position: absolute;
-    left: 11.5px;
-    top: 11.5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: global.$icon-color;
     box-shadow: global.$button-dropshadow;
+}
+
+.button-bar > .barButton:last-child button {
+    margin-right: 0;
 }
 
 .barButtonImg {
@@ -27,8 +28,14 @@
 }
 
 .barButton button svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+
+.barButton-small-img button svg {
+    width: 12px;
+    height: 12px;
     opacity: 0;
 }
 

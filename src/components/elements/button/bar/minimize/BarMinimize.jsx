@@ -1,11 +1,11 @@
 import React from "react";
-import { TbMinus } from "react-icons/tb";
+import { FaMinus } from "react-icons/fa6";
 import BarButton from "../BarButton";
 
-export default function BarClose(props) {
+export default function BarMinimize(props) {
   return (
-    <BarButton onClick={props.onClick} color="#FFBD44" imgHoverColor="#996926">
-      <TbMinus />
+    <BarButton className="barButton-small-img" onClick={props.onClick} color="#FFBD44" imgHoverColor="#996926">
+      <FaMinus />
     </BarButton>
   );
 }

@@ -1,5 +1,57 @@
 @use "../../../styles/global";
 
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToBottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.comeIn {
+  animation: scaleUp 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards; /* easeOutQuad */
+}
+
+.comeOut {
+  animation: scaleDown 0.2s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards; /* easeInOutCubic */
+}
+
 [data-reach-dialog-content] {
   width: 80%;
   border-radius: 9px;
@@ -35,17 +87,28 @@
   background: hsla(0, 0%, 0%, 0.5);
 }
 
-.button-bar {
-  z-index: 25;
-  width: 100%;
-  height: 38px;
-}
-
 .mobile-close {
   display: none;
 }
 
+.button-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 10px;
+  height: 38px;
+}
+
 @media only screen and (max-width: global.$small-device) {
+  .comeIn {
+    animation: slideInFromBottom 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards; /* easeOutQuad */
+  }
+  
+  .comeOut {
+    animation: slideOutToBottom 0.2s cubic-bezier(0.455, 0.030, 0.515, 0.955) forwards; /* easeInOutCubic */
+  }
+
   [data-reach-dialog-content] {
     width: 100%;
     height: 100%;
