@@ -1,0 +1,46 @@
+@use "../../../../styles/global";
+
+.barButton button {
+    z-index: 2;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: global.$icon-color;
+    box-shadow: global.$button-dropshadow;
+}
+
+.button-bar > .barButton:last-child button {
+    margin-right: 0;
+}
+
+.barButtonImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barButton button svg {
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+
+.barButton-small-img button svg {
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+}
+
+.barButton button:hover {
+    .barButtonImg svg {
+        opacity: 1;
+    }
+}
