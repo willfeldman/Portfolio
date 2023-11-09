@@ -30,6 +30,24 @@
   margin-top: 5px;
 }
 
+.additional-details {
+  margin-top: 10px;
+
+  p {
+    margin-top: 10px;
+    line-height: 1.2;
+  }
+
+  b {
+    font-weight: 800;
+  }
+}
+
+.mainHeading {
+  font-size: 17px;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: global.$small-device) {
   .project-contents {
     padding: 25px 30px;

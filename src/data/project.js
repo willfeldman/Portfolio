@@ -225,8 +225,7 @@ var projects = [
   {
     id: 8,
     title: "Mentis",
-    description:
-      "A concept mental health check-in and therapy app.",
+    description: "A concept mental health check-in and therapy app.",
     url: "https://drive.google.com/file/d/1Pd7SpvMnEzfzILYKXJCBWZpP_pPxt6VD/view",
     tags: [
       getProjectTagByName("Final Cut Pro"),
@@ -243,8 +242,7 @@ var projects = [
   {
     id: 9,
     title: "Classmate",
-    description:
-      "A streamlined, intuitive class and assignment tracking app.",
+    description: "A streamlined, intuitive class and assignment tracking app.",
     url: "https://drive.google.com/file/d/1b05NkqELtTbR-YZE8eeH2Ap7Cl-CHLhb/view?usp=sharing",
     tags: [
       getProjectTagByName("Xcode"),
@@ -269,12 +267,40 @@ var projects = [
       getProjectTagByName("Hackathon"),
       getProjectTagByName("Personal project"),
     ],
-    images: [
-      "/src/readu-1.png",
-      "/src/readu-2.png",
-      "/src/readu-3.png",
-    ],
-  }
+    images: ["/src/readu-1.png", "/src/readu-2.png", "/src/readu-3.png"],
+    additionalInformation: (
+      <div>
+        <p>
+          ReadU is an innovative reading comprehension platform designed to
+          engage and improve the literacy skills of middle school-aged children.
+          Conceived as part of the TED AI For Good Hackathon, ReadU stands out
+          for its personalized approach to learning. 
+        </p>
+        <p>
+          The platform kick-starts
+          the student’s journey with an initial baseline reading that gauges the
+          current level of comprehension. From there, it tailors reading
+          passages that align not only with the student's skill level but also
+          with their personal interests, fostering a more engaging and effective
+          reading experience.
+        </p>
+        <p>
+          As students interact with ReadU, the platform dynamically adjusts the
+          complexity of the text and the focus of comprehension questions to
+          target areas where the student may need more practice. This adaptive
+          learning model ensures that as the student's abilities grow, so too
+          does the challenge of the material, maintaining an optimal learning
+          gradient. 
+        </p>
+        <p>
+          The project's commitment to education through
+          personalization and its potential to make a positive impact on young
+          learners’ development <b>earned ReadU a place as a finalist in the
+          hackathon</b>, signaling its promise as a tool for educational enrichment.
+        </p>
+      </div>
+    ),
+  },
 ];
 
 export { projects };
