@@ -44,6 +44,18 @@ export default function ProjectView() {
     }
   }
 
+  function renderAdditionalDetails() {
+    // renders the additional details section if it is in the data
+    if (project.additionalInformation) {
+      return (
+        <div className="additional-details">
+          <h4 className="mainHeading">Details</h4>
+          {project.additionalInformation}
+        </div>
+      );
+    }
+  }
+
   return (
     <div className="modal-view projectView">
       <div className="carousel">
@@ -72,7 +84,12 @@ export default function ProjectView() {
             {renderLink()}
           </div>
         </div>
-        <div className="text">{project.description}</div>
+        <div className="text">
+          {project.description}
+          <div>
+            {renderAdditionalDetails()}
+          </div>
+        </div>
       </div>
     </div>
   );
