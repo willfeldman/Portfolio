@@ -11,9 +11,9 @@ var organizations = [
     ],
     summary: "Elected to represent students to school administration",
     description: ["Effectively communicated with a large group of students"],
-    logo: "https://chromecommands.com/src/student_council_logo.jpeg",
+    logo: "https://willfeldman.com/src/student_council_logo.jpeg",
     headerImage:
-      "https://chromecommands.com/src/student_council_background.jpeg",
+      "https://willfeldman.com/src/student_council_background.jpeg",
   },
   {
     id: 1,
@@ -34,8 +34,8 @@ var organizations = [
       "Spearheaded all decisions and organization for the yearbook program",
       "Led daily meetings, delegated tasks, and planned assignments for the group",
     ],
-    logo: "https://chromecommands.com/src/bexleo_logo.png",
-    headerImage: "https://chromecommands.com/src/bexleo_background.png",
+    logo: "https://willfeldman.com/src/bexleo_logo.png",
+    headerImage: "https://willfeldman.com/src/bexleo_background.png",
   },
   {
     id: 2,
@@ -57,8 +57,8 @@ var organizations = [
       "Led a group of Bexley High School students in bi-weekly meetings",
       "In charge of executive decisions and leading the local executive board",
     ],
-    logo: "https://chromecommands.com/src/key_club_logo.png",
-    headerImage: "https://chromecommands.com/src/key_club_background.png",
+    logo: "https://willfeldman.com/src/key_club_logo.png",
+    headerImage: "https://willfeldman.com/src/key_club_background.png",
   },
   {
     id: 3,
@@ -78,8 +78,8 @@ var organizations = [
     description: [
       "Maintained social media to inform and promote local events, using Adobe Photoshop and Illustrator to make announcements for Instagram, Twitter, and Facebook",
     ],
-    logo: "https://chromecommands.com/src/cisv_logo.png",
-    headerImage: "https://chromecommands.com/src/cisv_background.png",
+    logo: "https://willfeldman.com/src/cisv_logo.png",
+    headerImage: "https://willfeldman.com/src/cisv_background.png",
   },
   {
     id: 4,
@@ -100,8 +100,8 @@ var organizations = [
     description: [
       "Photographed events and attended board meetings to plan events for Entrepreneurs Club - the largest club at Northeastern University",
     ],
-    logo: "https://chromecommands.com/src/eclub_logo.png",
-    headerImage: "https://chromecommands.com/src/eclub_background.png",
+    logo: "https://willfeldman.com/src/eclub_logo.png",
+    headerImage: "https://willfeldman.com/src/eclub_background.png",
   },
 ];
 

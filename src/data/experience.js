@@ -13,8 +13,8 @@ var experiences = [
     type: "Internship",
     url: "https://statapile.com/",
     linkedin: "https://www.linkedin.com/search/results/all/?keywords=StataPile",
-    headerImage: "https://chromecommands.com/src/statapile_background.png",
-    logo: "https://chromecommands.com/src/statapile_logo.png",
+    headerImage: "https://willfeldman.com/src/statapile_background.png",
+    logo: "https://willfeldman.com/src/statapile_logo.png",
   },
   {
     id: 1,
@@ -31,8 +31,8 @@ var experiences = [
     dates: "April 2017 - Aug. 2020",
     type: "Part-time",
     url: ["https://mattryandj.com", "https://audiopromobiledj.com"],
-    headerImage: "https://chromecommands.com/src/matt_ryan_background.png",
-    logo: "https://chromecommands.com/src/matt_ryan_logo.jpeg",
+    headerImage: "https://willfeldman.com/src/matt_ryan_background.png",
+    logo: "https://willfeldman.com/src/matt_ryan_logo.jpeg",
   },
   {
     id: 2,
@@ -47,8 +47,8 @@ var experiences = [
     type: "Part-time",
     url: "https://www.pausecircleplay.com/",
     linkedin: "https://www.linkedin.com/company/pausecircleplay/",
-    headerImage: "https://chromecommands.com/src/pcp_background.png",
-    logo: "https://chromecommands.com/src/pcp_logo.jpeg",
+    headerImage: "https://willfeldman.com/src/pcp_background.png",
+    logo: "https://willfeldman.com/src/pcp_logo.jpeg",
   },
   {
     id: 3,
@@ -68,8 +68,8 @@ var experiences = [
     url: "https://its.northeastern.edu",
     linkedin:
       "https://www.linkedin.com/company/northeastern-university-information-technology-services/",
-    headerImage: "https://chromecommands.com/src/its_background.jpeg",
-    logo: "https://chromecommands.com/src/its_logo.jpeg",
+    headerImage: "https://willfeldman.com/src/its_background.jpeg",
+    logo: "https://willfeldman.com/src/its_logo.jpeg",
   },
   {
     id: 4,
@@ -84,8 +84,8 @@ var experiences = [
     type: "Internship",
     url: "https://www.wasserstrom.com/restaurant-supplies-equipment/n-wasserstrom-and-sons",
     linkedin: "https://www.linkedin.com/company/n-wasserstrom-sons/",
-    headerImage: "https://chromecommands.com/src/wasserstrom_hq_header.jpg",
-    logo: "https://chromecommands.com/src/wasserstrom_logo.png",
+    headerImage: "https://willfeldman.com/src/wasserstrom_hq_header.jpg",
+    logo: "https://willfeldman.com/src/wasserstrom_logo.png",
   },
   {
     id: 5,
@@ -132,7 +132,7 @@ var experiences = [
             <h3 className="documentTitle">Core Web Vitals Project</h3>
             <iframe
               title="Blueport Core Web Vitals Project"
-              src="https://drive.google.com/viewerng/viewer?url=https://chromecommands.com/src/documents/core-web-vitals.pdf&embedded=true"
+              src="https://drive.google.com/viewerng/viewer?url=https://willfeldman.com/src/documents/core-web-vitals.pdf&embedded=true"
               frameBorder="0"
             ></iframe>
           </div>
@@ -140,7 +140,7 @@ var experiences = [
             <h3 className="documentTitle">Final Presentation</h3>
             <iframe
               title="Blueport Final Presentation"
-              src="https://drive.google.com/viewerng/viewer?url=https://chromecommands.com/src/documents/coop-final-presentation.pdf&embedded=true"
+              src="https://drive.google.com/viewerng/viewer?url=https://willfeldman.com/src/documents/coop-final-presentation.pdf&embedded=true"
               frameBorder="0"
             ></iframe>
           </div>
@@ -149,8 +149,8 @@ var experiences = [
     `,
     url: "https://www.blueport.com",
     linkedin: "https://www.linkedin.com/company/blueport-commerce/",
-    headerImage: "https://chromecommands.com/src/blueport_header.png",
-    logo: "https://chromecommands.com/src/blueport_logo.jpeg",
+    headerImage: "https://willfeldman.com/src/blueport_header.png",
+    logo: "https://willfeldman.com/src/blueport_logo.jpeg",
   },
   {
     id: 6,
@@ -167,8 +167,8 @@ var experiences = [
     type: "Full-time",
     url: "https://pos.toasttab.com",
     linkedin: "https://www.linkedin.com/company/toast-inc/",
-    headerImage: "https://chromecommands.com/src/toast_background.jpeg",
-    logo: "https://chromecommands.com/src/toast_logo.jpeg",
+    headerImage: "https://willfeldman.com/src/toast_background.jpeg",
+    logo: "https://willfeldman.com/src/toast_logo.jpeg",
   },
   {
     id: 7,
@@ -184,8 +184,8 @@ var experiences = [
     type: "Part-time",
     url: "https://pos.toasttab.com",
     linkedin: "https://www.linkedin.com/company/toast-inc/",
-    headerImage: "https://chromecommands.com/src/toast_background.jpeg",
-    logo: "https://chromecommands.com/src/toast_logo.jpeg",
+    headerImage: "https://willfeldman.com/src/toast_background.jpeg",
+    logo: "https://willfeldman.com/src/toast_logo.jpeg",
   },
 ];
 
