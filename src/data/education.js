@@ -17,4 +17,4 @@ var educations = [
   },
 ];
 
-export { educations };
+module.exports = { educations };

@@ -255,7 +255,7 @@ var projects = [
       "/src/classmate-3.png",
       "/src/classmate-4.png",
     ],
-    additionalInformation: (
+    additionalInformation: `
       <div>
         <p>
           Classmate is an iOS app designed to simplify academic organization for
@@ -281,7 +281,7 @@ var projects = [
           educational pursuits organized and on track.
         </p>
       </div>
-    ),
+    `,
   },
   {
     id: 10,
@@ -295,7 +295,7 @@ var projects = [
       getProjectTagByName("Personal project"),
     ],
     images: ["/src/readu-1.png", "/src/readu-2.png", "/src/readu-3.png"],
-    additionalInformation: (
+    additionalInformation: `
       <div>
         <p>
           ReadU is an innovative reading comprehension platform designed to
@@ -320,13 +320,13 @@ var projects = [
         </p>
         <p>
           The project's commitment to education through personalization and its
-          potential to make a positive impact on young learners’ development{" "}
+          potential to make a positive impact on young learners’ development
           <b>earned ReadU a place as a finalist in the hackathon</b>, signaling
           its promise as a tool for educational enrichment.
         </p>
       </div>
-    ),
+      `,
   },
 ];
 
-export { projects };
+module.exports = { projects };

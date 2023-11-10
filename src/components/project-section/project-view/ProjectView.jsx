@@ -50,7 +50,7 @@ export default function ProjectView() {
       return (
         <div className="additional-details">
           <h4 className="mainHeading">Details</h4>
-          {project.additionalInformation}
+          <div className="description" dangerouslySetInnerHTML={{ __html: project.additionalInformation }}></div>
         </div>
       );
     }
