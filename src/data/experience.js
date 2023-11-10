@@ -101,7 +101,7 @@ var experiences = [
     ],
     dates: "Jan. 2022 - July 2022",
     type: "Full-time",
-    additionalInformation: (
+    additionalInformation: `
       <div>
         <p>
           Northeastern has a well-established co-op program. Students often
@@ -146,7 +146,7 @@ var experiences = [
           </div>
         </div>
       </div>
-    ),
+    `,
     url: "https://www.blueport.com",
     linkedin: "https://www.linkedin.com/company/blueport-commerce/",
     headerImage: "https://chromecommands.com/src/blueport_header.png",
@@ -189,21 +189,4 @@ var experiences = [
   },
 ];
 
-export { experiences };
-
-
-/* {
-  id: 6,
-  position: "Above and Beyond Computer Science (ABCS) Fellow",
-  position_nickname: "ABCS Fellow",
-  company: "Meta",
-  description: [
-    "Selected to particiate in a 9-week program to refine and practice techincal computer science skills and concepts",
-  ],
-  dates: "Aug 2022 - Present",
-  type: "Program",
-  url: "https://diversity.fb.com/initiatives/in-our-communities/",
-  linkedin: "https://www.linkedin.com/company/meta/",
-  headerImage: "https://chromecommands.com/src/meta_background.jpg",
-  logo: "https://chromecommands.com/src/meta_logo.jpg",
-} */
+module.exports = { experiences };

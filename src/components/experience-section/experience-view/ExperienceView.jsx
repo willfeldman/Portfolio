@@ -87,7 +87,7 @@ function ExperienceView() {
       return (
         <div className="additional-details">
           <h4 className="mainHeading">Details</h4>
-          {experience.additionalInformation}
+          <div className="description" dangerouslySetInnerHTML={{ __html: experience.additionalInformation }}></div>
         </div>
       );
     }
