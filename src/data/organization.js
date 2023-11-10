@@ -105,4 +105,4 @@ var organizations = [
   },
 ];
 
-export { organizations };
+module.exports = { organizations };
