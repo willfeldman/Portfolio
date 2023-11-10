@@ -25,7 +25,7 @@ export default function AwardView() {
           </div>
         </div>
         <div className="text">{award.issuer}</div>
-        <div className="description">{award.description}</div>
+        <div className="description" dangerouslySetInnerHTML={{ __html: award.description }}></div>
       </div>
     </div>
   );
