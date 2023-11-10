@@ -1,4 +1,3 @@
-// api/educations.js
 const { educations } = require('../src/data/education');
 
 module.exports = (req, res) => {
