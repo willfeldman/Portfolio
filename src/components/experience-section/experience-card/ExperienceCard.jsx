@@ -53,11 +53,11 @@ function ExperienceCard(props) {
     >
       <div className="header experience">
         <div className="text-header">
+        <div className="details">
+            <span className="company">{experience.company}</span>
+          </div>
           <div className="position">
             <h1>{renderPosition()}</h1>
-          </div>
-          <div className="details">
-            <span className="company">{experience.company}</span>
           </div>
         </div>
       </div>

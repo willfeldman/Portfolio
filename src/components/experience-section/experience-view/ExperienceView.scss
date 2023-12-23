@@ -27,15 +27,13 @@
 }
 
 .location {
-  margin-left: 3px;
-}
-
-.company-location {
-  margin-bottom: 10px;
+  margin-left: 4px;
 }
 
 .experience-contents .position h1 {
   color: global.$experience-color-accent;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .night-mode .experience-contents .position h1 {

@@ -105,12 +105,12 @@ function ExperienceView() {
               <div className="logo">
                 <img src={experience.logo} alt="Experience logo" />
               </div>
-              <div className="position">
-                <h1 id="label">{experience.position}</h1>
-              </div>
               <div className="company-location">
                 <span className="company">{experience.company}</span>{" "}
                 {renderLocation()}
+              </div>
+              <div className="position">
+                <h1 id="label">{experience.positions[0].title}</h1>
               </div>
             </div>
           </div>
@@ -120,8 +120,8 @@ function ExperienceView() {
               {renderLinkedIn()}
             </div>
             <div className="dates-type">
-              {experience.dates} |{" "}
-              <span className="no-wrap">{experience.type}</span>
+              {experience.positions[0].dates} |{" "}
+              <span className="no-wrap">{experience.positions[0].type}</span>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ function ExperienceView() {
           <div className="summary">
             <h4 className="mainHeading">Summary</h4>
             <ul>
-              {experience.description.map((item, key) => (
+              {experience.positions[0].description.map((item, key) => (
                 <li key={key}>{item}</li>
               ))}
             </ul>

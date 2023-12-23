@@ -1,12 +1,12 @@
 @use "../../styles/global";
 
 .experience .position h1 {
-  font-size: global.$card-level1-heading;
+  font-size: global.$card-level2-heading;
   font-weight: 700;
 }
 
 .experience .details .company {
-  font-size: global.$card-level2-heading;
+  font-size: global.$card-level1-heading;
   font-weight: 600;
 }
 
