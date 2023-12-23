@@ -99,21 +99,21 @@ function ExperienceView() {
   }
 
   function renderPositions() {
-    // renders the position sections
+    const positionsInOrder = experience.positions.slice().reverse();
     return (
       <div className="positions">
-        {experience.positions.map((position, key) => (
-          <div className="position">
+        {positionsInOrder.map((position, key) => (
+          <div className="position" key={key}>
             <div className="details">
-              <h1 key={key}>{position.title}</h1>
+              <h1>{position.title}</h1>
               <div class="dates-type">
                 {position.dates} | <span class="no-wrap">{position.type}</span>
               </div>
             </div>
             <div className="summary">
               <ul>
-                {position.description.map((item, key) => (
-                  <li key={key}>{item}</li>
+                {position.description.map((item, itemKey) => (
+                  <li key={itemKey}>{item}</li>
                 ))}
               </ul>
             </div>

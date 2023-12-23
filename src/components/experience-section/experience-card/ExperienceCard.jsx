@@ -66,7 +66,7 @@ function ExperienceCard(props) {
           <p>{experience.positions[numOfPositions - 1].summary || experience.positions[numOfPositions - 1].description[0]}...</p>
         </div>
         <div className="dates">
-          <p>{experience.positions[numOfPositions - 1].dates}</p>
+          <p>{experience.fullDates || experience.positions[numOfPositions - 1].dates}</p>
         </div>
       </div>
     </Card>
