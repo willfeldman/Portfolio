@@ -49,7 +49,7 @@ export default function ProjectView() {
     if (project.additionalInformation) {
       return (
         <div className="additional-details">
-          <h4 className="mainHeading">Details</h4>
+          <h4 className="mainHeading">Additional Details</h4>
           <div className="description" dangerouslySetInnerHTML={{ __html: project.additionalInformation }}></div>
         </div>
       );

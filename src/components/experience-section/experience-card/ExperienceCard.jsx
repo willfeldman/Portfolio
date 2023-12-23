@@ -14,6 +14,10 @@ function ExperienceCard(props) {
 
   let experience = getById(props.id, experiences);
 
+  // figure out how many positions there are
+  let positions = experience.positions;
+  let numOfPositions = positions.length;
+
   const sendExperienceClickEvent = () => {
     // sends an event to google analytics
     const eventName = `Experience Click`;
@@ -36,9 +40,9 @@ function ExperienceCard(props) {
 
   function renderPosition() {
     // renders the correct position name (shows shortened if in the data)
-    return experience.position_nickname
-      ? experience.position_nickname
-      : experience.position;
+    return experience.positions[numOfPositions - 1].title_nickname
+      ? experience.positions[numOfPositions - 1].title_nickname
+      : experience.positions[numOfPositions - 1].title;
   };
 
   return (
@@ -49,20 +53,20 @@ function ExperienceCard(props) {
     >
       <div className="header experience">
         <div className="text-header">
+        <div className="details">
+            <span className="company">{experience.company}</span>
+          </div>
           <div className="position">
             <h1>{renderPosition()}</h1>
-          </div>
-          <div className="details">
-            <span className="company">{experience.company}</span>
           </div>
         </div>
       </div>
       <div className="description">
         <div className="text">
-          <p>{experience.summary || experience.description[0]}...</p>
+          <p>{experience.positions[numOfPositions - 1].summary || experience.positions[numOfPositions - 1].description[0]}...</p>
         </div>
         <div className="dates">
-          <p>{experience.dates}</p>
+          <p>{experience.fullDates || experience.positions[numOfPositions - 1].dates}</p>
         </div>
       </div>
     </Card>

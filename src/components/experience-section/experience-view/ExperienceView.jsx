@@ -86,11 +86,41 @@ function ExperienceView() {
     if (experience.additionalInformation) {
       return (
         <div className="additional-details">
-          <h4 className="mainHeading">Details</h4>
-          <div className="description" dangerouslySetInnerHTML={{ __html: experience.additionalInformation }}></div>
+          <h4 className="mainHeading">Additional Details</h4>
+          <div
+            className="description"
+            dangerouslySetInnerHTML={{
+              __html: experience.additionalInformation,
+            }}
+          ></div>
         </div>
       );
     }
+  }
+
+  function renderPositions() {
+    const positionsInOrder = experience.positions.slice().reverse();
+    return (
+      <div className="positions">
+        {positionsInOrder.map((position, key) => (
+          <div className="position" key={key}>
+            <div className="details">
+              <h1>{position.title}</h1>
+              <div class="dates-type">
+                {position.dates} | <span class="no-wrap">{position.type}</span>
+              </div>
+            </div>
+            <div className="summary">
+              <ul>
+                {position.description.map((item, itemKey) => (
+                  <li key={itemKey}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   return (
@@ -105,9 +135,6 @@ function ExperienceView() {
               <div className="logo">
                 <img src={experience.logo} alt="Experience logo" />
               </div>
-              <div className="position">
-                <h1 id="label">{experience.position}</h1>
-              </div>
               <div className="company-location">
                 <span className="company">{experience.company}</span>{" "}
                 {renderLocation()}
@@ -119,21 +146,10 @@ function ExperienceView() {
               {renderLink()}
               {renderLinkedIn()}
             </div>
-            <div className="dates-type">
-              {experience.dates} |{" "}
-              <span className="no-wrap">{experience.type}</span>
-            </div>
           </div>
         </div>
         <div className="body">
-          <div className="summary">
-            <h4 className="mainHeading">Summary</h4>
-            <ul>
-              {experience.description.map((item, key) => (
-                <li key={key}>{item}</li>
-              ))}
-            </ul>
-          </div>
+          {renderPositions()}
           {renderAdditionalDetails()}
         </div>
       </div>
