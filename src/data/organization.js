@@ -87,8 +87,12 @@ var organizations = [
     yearsActive: "Sept. 2020 - Present",
     role: [
       {
+        title: "Director of Technology",
+        years: "May 2023 - Present",
+      },
+      {
         title: "Associate Director of Technology",
-        years: "Dec. 2022 - Present",
+        years: "Dec. 2022 - May 2023",
       },
       {
         title: "Photographer",
