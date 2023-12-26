@@ -73,6 +73,37 @@ var experiences = [
     url: ["https://mattryandj.com", "https://audiopromobiledj.com"],
     headerImage: "https://willfeldman.com/src/matt_ryan_background.png",
     logo: "https://willfeldman.com/src/matt_ryan_logo.jpeg",
+    additionalInformation: `
+    <div>
+      <p>
+        At the start of high school, I did part-time work as a freelance web
+        developer, catering to local businesses in Columbus. My first significant
+        project was for Matt Ryan Mobile DJ Entertainment, one of the most popular
+        DJs in central Ohio. This opportunity emerged from the curiosity that drove
+        me to self-learn coding during middle school, utilizing YouTube videos,
+        online tutorials, and books. My passion for web development was evident
+        through my social media, particularly on Twitter, where the owner of the DJ
+        company noticed my work and reached out to me about whether I offered
+        freelance services.
+      </p>
+      <p>
+        The project involved many meetings and back-and-forth discussions. This task
+        not only tested my technical skills but also honed my ability to understand
+        and translate client needs into a functional and aesthetically pleasing
+        online presence. The success of this project led to a referral to another
+        prominent DJ in Columbus, for whom I also created a website.
+      </p>
+      <p>
+        Beyond these two major projects, I undertook several smaller assignments,
+        including developing landing pages and websites for various Columbus
+        companies. I continued to maintain and update these sites over the years,
+        ensuring their relevance and effectiveness. This experience was foundational
+        in my development as a web developer, combining self-taught skills with
+        real-world application, client interaction, and the ability to adapt to
+        business needs.
+      </p>
+    </div>
+    `,
   },
   {
     id: 2,
@@ -93,6 +124,46 @@ var experiences = [
     linkedin: "https://www.linkedin.com/company/pausecircleplay/",
     headerImage: "https://willfeldman.com/src/pcp_background.png",
     logo: "https://willfeldman.com/src/pcp_logo.jpeg",
+    additionalInformation: `
+    <div>
+      <p>
+        In my senior year of high school, I founded pausecircleplay, a lifestyle and
+        streetwear clothing brand. This venture began with an investment of just $30
+        in screen printing materials. I self-taught myself the process by utilizing
+        videos online.
+      </p>
+      <p>
+        pausecircleplay encapsulated a philosophy I resonated with: 'pause' to take
+        a deep breath, 'circle' to reflect, and 'play' to live your best life. This
+        motto, conceived during the summer prior, became the cornerstone of the
+        brand's identity. For the initial launch, I enlisted friends for help with
+        photo shoots, then leveraged the content on my website and social media.
+        This grassroots marketing strategy paid off, as the brand gained traction
+        within my high school, spreading rapidly through word-of-mouth.
+      </p>
+      <p>
+        Following the initial success, I reinvested the profits to purchase a vinyl
+        cutting machine, expanding the product line to include sweatshirts and
+        crewnecks with iron-on vinyl designs. My hands-on approach, from screen
+        printing to website development and photography, including studio shoots,
+        was critical in maintaining the brand's authenticity and appeal.
+      </p>
+      <p>
+        The defining moment for pausecircleplay came with a feature on a nightly
+        special by Columbus' local news station. This exposure catapulted the brand,
+        leading to sales from across the country, fueling sales that soared to
+        $7,000 in revenue. 10% of all proceeds were donated to charities.
+      </p>
+      <p>
+        With the transition to college life, I made the tough decision to end the
+        business. The brand's essence, rooted in personally designed and handcrafted
+        products, was something I was unwilling to let go of, and I did not have the
+        space or time to continue in college. This journey through pausecircleplay
+        was a valuable learning experience in entrepreneurship, marketing, and the
+        value of a personal touch in business.
+      </p>
+    </div>
+    `,
   },
   {
     id: 3,
@@ -118,6 +189,44 @@ var experiences = [
       "https://www.linkedin.com/company/northeastern-university-information-technology-services/",
     headerImage: "https://willfeldman.com/src/its_background.jpeg",
     logo: "https://willfeldman.com/src/its_logo.jpeg",
+    additionalInformation: `
+    <div>
+      <p>
+        During my time at Northeastern University's Information Technology Services
+        (ITS) department, I played a significant role in the campus-wide transition
+        from traditional landlines to a Voice over Internet Protocol (VoIP)
+        communication system. This part-time position, which I did while in classes,
+        provided a unique opportunity to blend theoretical learning with practical,
+        hands-on experience.
+      </p>
+      <p>
+        My primary responsibility entailed the installation of hundreds of Microsoft
+        Teams-enabled VoIP phones across various university facilities, including
+        offices, classrooms, and labs. This task required learning technical
+        telecommunication skills and how to approach addressing the needs of
+        professors and administrative staff. The project was significant in its
+        scale and impact, modernizing the university's communication infrastructure
+        and enhancing connectivity across the campus.
+      </p>
+      <p>
+        Apart from the installations, I contributed to the smooth transition by
+        producing and filming 10 professional instructional guides. These guides
+        played a helpful role in familiarizing the university community with the new
+        system, ensuring a seamless adaptation to the VoIP technology.
+      </p>
+      <p>
+        An integral part of this project also involved the removal of outdated
+        landline phones and their associated wiring. This task involved the use of
+        specialized telecommunication equipment to identify and safely remove
+        obsolete wires. The experience was further enriched by the mentorship of a
+        veteran telecommunications expert, a former early Verizon employee who
+        worked at the company for almost 30 years, hired to oversee much of
+        Northeastern’s technology. Under his guidance, I gained invaluable insights
+        into corporate transformations and the evolution of telecommunications,
+        enhancing my practical knowledge and technical skills.
+      </p>
+    </div>
+    `,
   },
   {
     id: 4,
@@ -138,6 +247,35 @@ var experiences = [
     linkedin: "https://www.linkedin.com/company/n-wasserstrom-sons/",
     headerImage: "https://willfeldman.com/src/wasserstrom_hq_header.jpg",
     logo: "https://willfeldman.com/src/wasserstrom_logo.png",
+    additionalInformation: `
+    <div>
+      <p>
+        At Wasserstrom, a leading engineering and manufacturing provider in the food
+        service equipment industry, my role as an ERP intern involved enhancing the
+        efficiency and accuracy of project planning. Wasserstrom, known for working
+        with a vast array of clients from the largest national restaurant chains to
+        independent establishments, often encounters the challenge of pricing custom
+        equipment orders.
+      </p>
+      <p>
+        My primary contribution was to improve the Enterprise Resource Planning
+        (ERP) system, which plays a crucial role in generating accurate quotes for
+        custom orders. Throughout my internship, I spent more than 30 hours
+        measuring the time required to construct specific parts of equipment. This
+        involved learning many parts of the manufacturing process. I then organized
+        and analyzed the raw observations and measurements into insights that will
+        be used in future project quoting.
+      </p>
+      <p>
+        Additionally, I facilitated effective collaboration between the engineering
+        and manufacturing teams. I acted as a bridge, ensuring both teams on-site
+        had the necessary resources to start designing and building parts. This
+        coordination helped streamline the production process and contributed to
+        Wasserstrom's capacity to deliver high-quality, custom equipment in a timely
+        and cost-effective manner.
+      </p>
+    </div>
+    `,
   },
   {
     id: 5,
