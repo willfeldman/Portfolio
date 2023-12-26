@@ -10,6 +10,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import OrganizationView from "./components/organization-section/organization-view/OrganizationView";
 import AwardView from "./components/award-section/award-view/AwardView";
 import { mode } from "./data/darkmode";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {  
   let location = useLocation();
@@ -20,7 +21,7 @@ function App() {
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Homepage />} />
         <Route path="/index.html" element={<Homepage />} />
-        <Route path="/experience/:id" element={<ExperienceView />} />
+        <Route path="/experience/:id" element={<Navigation><ExperienceView /></Navigation>} />
         <Route path="/project/:id" element={<ProjectView />} />
         <Route path="/organization/:id" element={<OrganizationView />} />
         <Route path="/award/:id" element={<AwardView />} />

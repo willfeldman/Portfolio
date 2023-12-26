@@ -1,0 +1,40 @@
+@use "../../styles/global";
+
+.navigation-bar {
+    height: 40px;
+    background-color: alpha($color: #ffffff);
+    color: global.$day-mode-main-text;
+    display: flex;
+    align-items: center;
+
+    // mobile
+    @media only screen and (max-width: global.$small-device) {
+        height: 50px;
+    }
+}
+
+.night-mode .navigation-bar {
+    color: global.$dark-mode-main-text;
+}
+
+.backIcon {
+    height: 15px;
+    width: 15px;
+}
+
+.backButton {
+    display: flex;
+    gap: 8px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+}
+
+.backButton:hover {
+    cursor: pointer;
+}
+
+.backText {
+    font-weight: bold;
+}
