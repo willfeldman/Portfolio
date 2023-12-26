@@ -15,6 +15,7 @@ function ExperienceView() {
   let experience = getById(Number(id), experiences);
 
   if (!experience) {
+    console.log("Experience not found");
     return <Error />;
   }
 
