@@ -1,5 +1,4 @@
 import "./Navigation.scss";
-import { LiaWindowMinimize } from "react-icons/lia";
 import { Link } from "react-router-dom";
 
 function Navigation(props) {

@@ -5,10 +5,11 @@
             "NPM_FLAGS": "--legacy-peer-deps"
         }
     },
-    "rewrites": [
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/"
+            "src": "/(.*)",
+            "dest": "/index.html",
+            "continue": false
         }
     ]
 }
