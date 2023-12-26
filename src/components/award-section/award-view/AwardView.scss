@@ -5,6 +5,14 @@
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
+.award-contents {
+  color: global.$day-mode-main-text;
+}
+
+.night-mode .award-contents {
+  color: global.$dark-mode-main-text;
+}
+
 .award-contents .top {
   display: flex;
   justify-content: space-between;

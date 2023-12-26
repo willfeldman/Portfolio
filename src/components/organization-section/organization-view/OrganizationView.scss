@@ -6,6 +6,14 @@
   line-height: 1.3;
 }
 
+.organization-contents {
+  color: global.$day-mode-main-text;
+}
+
+.night-mode .organization-contents {
+  color: global.$dark-mode-main-text;
+}
+
 .organization-modal .body {
   padding-top: 10px;
 }
