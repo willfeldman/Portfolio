@@ -2,15 +2,23 @@
     "rewrites": [
         {
             "source": "/static/(.*)",
-            "destination": "/static/$1"
+            "destination": "/build/static/$1"
         },
         {
-            "source": "/icons/(.*)",
-            "destination": "/icons/$1"
+            "source": "/favicon.ico",
+            "destination": "/build/favicon.ico"
+        },
+        {
+            "source": "/manifest.json",
+            "destination": "/build/manifest.json"
+        },
+        {
+            "source": "/robots.txt",
+            "destination": "/build/robots.txt"
         },
         {
             "source": "/(.*)",
-            "destination": "/index.html"
+            "destination": "/build/index.html"
         }
     ],
     "build": {
