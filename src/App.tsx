@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Homepage from "./components/homepage/Homepage";
 import ExperienceView from "./components/experience-section/experience-view/ExperienceView";
 import ProjectView from "./components/project-section/project-view/ProjectView";
@@ -6,7 +7,6 @@ import ImageView from "./components/image-view/ImageView";
 import Error from "./components/error/Error";
 import Modal from "./components/elements/modal/Modal";
 import "./App.css";
-import { Routes, Route, useLocation } from "react-router-dom";
 import OrganizationView from "./components/organization-section/organization-view/OrganizationView";
 import AwardView from "./components/award-section/award-view/AwardView";
 import { mode } from "./data/darkmode";
