@@ -1,24 +1,28 @@
 {
     "rewrites": [
         {
-            "source": "/static/(.*)",
-            "destination": "/build/static/$1"
+            "source": "/static/css/(.*)",
+            "destination": "/static/css/$1"
         },
         {
-            "source": "/favicon.ico",
-            "destination": "/build/favicon.ico"
-        },
-        {
-            "source": "/manifest.json",
-            "destination": "/build/manifest.json"
+            "source": "/static/js/(.*)",
+            "destination": "/static/js/$1"
         },
         {
             "source": "/robots.txt",
-            "destination": "/build/robots.txt"
+            "destination": "/robots.txt"
+        },
+        {
+            "source": "/favicon.ico",
+            "destination": "/favicon.ico"
+        },
+        {
+            "source": "/manifest.json",
+            "destination": "/manifest.json"
         },
         {
             "source": "/(.*)",
-            "destination": "/build/index.html"
+            "destination": "/index.html"
         }
     ],
     "build": {
