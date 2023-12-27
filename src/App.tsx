@@ -14,11 +14,10 @@ import Navigation from "./components/navigation/Navigation";
 
 function App() {  
   let location = useLocation();
-  let state = location.state as { backgroundLocation?: Location };
   
   return (
     <div className={`app ${mode}-mode`}>
-      <Routes location={state?.backgroundLocation || location}>
+      <Routes location={location}>
         <Route path="/" element={<Homepage />} />
         <Route path="/index.html" element={<Homepage />} />
         <Route path="/experience/:id" element={<Modal><ExperienceView /></Modal>} />
