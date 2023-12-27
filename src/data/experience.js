@@ -374,20 +374,20 @@ var experiences = [
       {
         title: "Web Strategy Co-op",
         description: [
-          "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics",
-          "Managed over 500 order modifications in Salesforce, streamlining tasks such as rush cases, address changes, and product swaps.",
+          "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics.",
+          "Streamlined the order modification processes such as rush cases, address changes, and product swaps to speed up the response time of nearly 600 order modifications to under 30 hours.",
           "Implemented multiple automation initiatives that effectively streamlined manual procedures, ultimately saving approximately 40 employee hours weekly.",
         ],
         summary:
           "Assisted in scoping, planning, and delivering web projects to increase Ecommerce sales and go-lives",
-        dates: "Jan. 2023 - May 2023",
+        dates: "Jan. 2023 - June 2023",
         type: "Full-time",
       },
       {
         title: "Solutions Architect",
         description: [
-          "Automated Ecommerce order tracking and reporting, utilizing Salesforce, JavaScript, and Zapier.",
-          "Spearheaded the development of an automated Drift chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates.",
+          "Automated Ecommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier.",
+          "Spearheaded the development of an automated chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates.",
         ],
         dates: "June 2023 - Present",
         type: "Part-time",
