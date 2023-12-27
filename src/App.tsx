@@ -21,7 +21,7 @@ function App() {
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Homepage />} />
         <Route path="/index.html" element={<Homepage />} />
-        <Route path="/experience/:id" element={<Navigation><ExperienceView /></Navigation>} />
+        <Route path="/experience/:id" element={<Modal><ExperienceView /></Modal>} />
         <Route path="/project/:id" element={<Navigation><ProjectView /></Navigation>} />
         <Route path="/organization/:id" element={<Navigation><OrganizationView /></Navigation>} />
         <Route path="/award/:id" element={<Navigation><AwardView /></Navigation>} />
