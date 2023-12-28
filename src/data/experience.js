@@ -285,7 +285,7 @@ var experiences = [
         description: [
           "Led a web performance-focused 4-person scrum team that improved client performance by an average of 80.2%",
           "Improved an admin tool clients use to control hundreds of settings and content on websites",
-          "Directed a $60,000 purchasing decision for a tool that speeds up the process of making internal tooling",
+          "Directed a $60,000 purchasing decision for software that speeds up the process of making internal tooling",
           "Created dozens of product briefs detailing the scope and direction of products",
           "Regularly met and communicated with several internal and external stakeholders of projects for collaboration",
         ],
@@ -375,7 +375,7 @@ var experiences = [
         title: "Web Strategy Co-op",
         description: [
           "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics.",
-          "Streamlined the order modification processes such as rush cases, address changes, and product swaps to speed up the response time of nearly 600 order modifications to under 30 hours.",
+          "Streamlined the order modification processes for rush cases, address changes, and product swaps to speed up the response time of nearly 600 order modifications to under 30 hours.",
           "Implemented multiple automation initiatives that effectively streamlined manual procedures, ultimately saving approximately 40 employee hours weekly.",
         ],
         summary:
