@@ -3,14 +3,14 @@ import Button from "../../elements/button/link/Button";
 import Tag from "../../elements/tag/Tag";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FiLink } from "react-icons/fi";
-import { useParams } from "react-router-dom";
 import { experiences } from "../../../data/experience";
 import { getById } from "../../../data/operations";
 import "@reach/dialog/styles.css";
 import "./ExperienceView.scss";
 
 function ExperienceView() {
-  let { id } = useParams();
+  const pathSegments = window.location.pathname.split('/');
+  const id = pathSegments[pathSegments.length - 1];
 
   let experience = getById(Number(id), experiences);
 
