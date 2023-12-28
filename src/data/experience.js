@@ -58,12 +58,12 @@ var experiences = [
       {
         title: "Web Developer",
         description: [
-          "Designed and programmed websites for two local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, using HTML, CSS, JavaScript, PHP, and jQuery",
+          "Designed and programmed websites for two local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, as well as several smaller companies using HTML, CSS, JavaScript, PHP, and jQuery",
           "Communicated and met frequently with clients to display progress and make adjustments",
           "Maintained the sites and updated site information on an as-needed basis",
         ],
         summary:
-          "Designed and coded websites for local DJ companies using HTML, CSS, JavaScript, PHP, and jQuery",
+          "Designed and programmed 5 websites for local businesses using HTML, CSS, JavaScript, PHP, and jQuery",
         dates: "Apr. 2017 - Aug. 2020",
         type: "Part-time",
       },
