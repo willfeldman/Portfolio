@@ -235,7 +235,7 @@ var experiences = [
         title: "Project Intern",
         description: [
           "Improved estimate accuracy in ERP system by conducting over 30 hours of manufacturing time studies",
-          "Organized thousands of drawings from the engineering team to those manufacturing the equipment",
+          "Coordinated the distribution of 3,000+ drawings from the engineering team to the manufacturing team",
         ],
         dates: "June 2021 - Aug. 2021",
         type: "Internship",
@@ -374,9 +374,9 @@ var experiences = [
       {
         title: "Web Strategy Co-op",
         description: [
-          "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics.",
-          "Streamlined the order modification processes for rush cases, address changes, and product swaps to speed up the response time of nearly 600 order modifications to under 30 hours.",
-          "Implemented multiple automation initiatives that effectively streamlined manual procedures, ultimately saving approximately 40 employee hours weekly.",
+          "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics",
+          "Streamlined the order modification processes for rush cases, address changes, and product swaps to speed up the response time of 600 order modifications by nearly 70%",
+          "Implemented multiple automation initiatives that effectively streamlined manual procedures, ultimately saving approximately 40 employee hours weekly",
         ],
         summary:
           "Assisted in scoping, planning, and delivering web projects to increase Ecommerce sales and go-lives",
@@ -386,8 +386,8 @@ var experiences = [
       {
         title: "Solutions Architect",
         description: [
-          "Automated Ecommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier.",
-          "Spearheaded the development of an automated chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates.",
+          "Automated Ecommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier",
+          "Spearheaded the development of an automated chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates",
         ],
         dates: "June 2023 - Present",
         type: "Part-time",
