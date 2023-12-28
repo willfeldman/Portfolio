@@ -3,7 +3,7 @@ var experiences = [
     id: 0,
     positions: [
       {
-        title: "Intern",
+        title: "AI Intern",
         description: [
           "Formulated advanced spreadsheets weekly to analyze the accuracy of custom AI models built using consumer data",
           "Redesigned the website backend using WordPress",
@@ -232,7 +232,7 @@ var experiences = [
     id: 4,
     positions: [
       {
-        title: "ERP Project Intern",
+        title: "Project Intern",
         description: [
           "Improved estimate accuracy in ERP system by conducting over 30 hours of manufacturing time studies",
           "Organized thousands of drawings from the engineering team to those manufacturing the equipment",
@@ -251,7 +251,7 @@ var experiences = [
     <div>
       <p>
         At Wasserstrom, a leading engineering and manufacturing provider in the food
-        service equipment industry, my role as an ERP intern involved enhancing the
+        service equipment industry, my role as an intern involved enhancing the
         efficiency and accuracy of project planning. Wasserstrom, known for working
         with a vast array of clients from the largest national restaurant chains to
         independent establishments, often encounters the challenge of pricing custom
