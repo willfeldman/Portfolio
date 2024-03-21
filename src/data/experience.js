@@ -389,8 +389,17 @@ var experiences = [
           "Automated Ecommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier",
           "Spearheaded the development of an automated chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates",
         ],
-        dates: "June 2023 - Present",
+        dates: "June 2023 - Jan. 2024",
         type: "Part-time",
+      },
+      {
+        title: "Associate Product Manager",
+        description: [
+          "Spearhead the management and continual development of the eCommerce prospect flow to ensure a seamless and efficient online purchasing experience",
+          "Collaborate closely with the sales team to streamline strategies and optimize customer conversion rates through tailored online sales tactics",
+        ],
+        dates: "Jan. 2024 - Present",
+        type: "Full-time",
       },
     ],
     company: "Toast",
