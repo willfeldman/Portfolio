@@ -11,7 +11,7 @@ function Homepage() {
     <div className="homepage">
       <Header />
       <Experience />
-      <Organization />
+      {/* <Organization /> */}
       <Project />
       <Education />
       <Award />

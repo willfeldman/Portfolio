@@ -37,7 +37,6 @@ function EducationCard(props) {
                 </span>
               ))}
             </span>
-            <div className="years">{education.years}</div>
           </div>
         </div>
       </div>

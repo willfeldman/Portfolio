@@ -11,8 +11,8 @@ var educations = [
     id: 1,
     school: "Northeastern University",
     logo: "https://willfeldman.com/src/northeastern_logo.jpg",
-    subtitle: "Bachelor’s Degree in Computer Science and Business",
-    tags: ["Honors"],
+    subtitle: "BS in Computer Science and Business Administration",
+    tags: ["Summa Cum Laude", "Honors Program"],
     years: "Sept. 2020 - expected May 2025",
   },
 ];
