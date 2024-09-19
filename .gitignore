@@ -27,3 +27,5 @@ yarn-error.log*
 
 #todo
 TODO.md
+.vercel/builders/package.json
+.env

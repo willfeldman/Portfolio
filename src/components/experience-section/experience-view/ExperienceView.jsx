@@ -108,7 +108,7 @@ function ExperienceView() {
             <div className="details">
               <h1>{position.title}</h1>
               <div class="dates-type">
-                {position.dates} | <span class="no-wrap">{position.type}</span>
+                {position.dates}
               </div>
             </div>
             <div className="summary">

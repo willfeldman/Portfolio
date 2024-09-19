@@ -5,9 +5,8 @@ var experiences = [
       {
         title: "AI Intern",
         description: [
-          "Formulated advanced spreadsheets weekly to analyze the accuracy of custom AI models built using consumer data",
-          "Redesigned the website backend using WordPress",
-          "Conducted and presented research on business-to-business (B2B) growth plans",
+          "Formulated automated spreadsheets to analyze the accuracy of custom AI models built using consumer data",
+          "Conducted and presented research on business-to-business (B2B) growth plans to senior executives",
         ],
         dates: "June 2018 - Aug. 2018",
         type: "Internship",
@@ -22,18 +21,18 @@ var experiences = [
     additionalInformation: `
     <div>
       <p>
-        During my summer internship at StataPile, an AI firm that focuses on
+        During my internship at StataPile, an AI firm that focuses on
         analyzing call center recordings for quality assurance and process
-        optimizations, I embarked on an enriching journey in the rapidly growing
-        field of artificial intelligence. As a high school intern, this experience
+        optimizations, I worked on the rapidly growing
+        field of artificial intelligence. This experience
         provided valuable early exposure to the AI industry. My primary
-        responsibility involved creating sophisticated spreadsheets weekly, allowing
+        responsibility involved creating sophisticated spreadsheets, allowing
         for a detailed analysis of the AI model's accuracy in interpreting consumer
-        data. This task not only honed my analytical skills but also deepened my
+        data. This task honed my analytical skills and deepened my
         understanding of how AI works and its applications in real-world scenarios.
       </p>
       <p>
-        In addition to my model analysis duties, I took the initiative to revamp the
+        In addition to model analysis, I took the initiative to revamp the
         company's website backend. This redesign significantly enhanced the user
         experience for employees, streamlining their interaction with our systems
         and improving overall efficiency.
@@ -41,13 +40,8 @@ var experiences = [
       <p>
         My role also extended to conducting in-depth research on
         business-to-business (B2B) growth strategies. The culmination of this
-        project was a presentation of my findings to the team, offering insights
-        that could potentially shape the company's future growth trajectory.
-      </p>
-      <p>
-        This internship at StataPile was a pivotal step in my early career, blending
-        hands-on experience with significant contributions to the company's
-        operations.
+        project was a presentation of my findings to the executive team, offering insights
+        that shaped the company's future growth plans.
       </p>
     </div>
     `,
@@ -58,7 +52,7 @@ var experiences = [
       {
         title: "Web Developer",
         description: [
-          "Designed and programmed websites for two local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, as well as several smaller companies using HTML, CSS, JavaScript, PHP, and jQuery",
+          "Designed and programmed websites for two local DJ companies, Matt Ryan Mobile DJ Entertainment and AUDiO-PRO Mobile DJ Entertainment, as well as several smaller companies",
           "Communicated and met frequently with clients to display progress and make adjustments",
           "Maintained the sites and updated site information on an as-needed basis",
         ],
@@ -76,14 +70,12 @@ var experiences = [
     additionalInformation: `
     <div>
       <p>
-        At the start of high school, I did part-time work as a freelance web
+        I did part-time work as a freelance web
         developer, catering to local businesses in Columbus. My first significant
-        project was for Matt Ryan Mobile DJ Entertainment, one of the most popular
-        DJs in central Ohio. This opportunity emerged from the curiosity that drove
-        me to self-learn coding during middle school, utilizing YouTube videos,
-        online tutorials, and books. My passion for web development was evident
-        through my social media, particularly on Twitter, where the owner of the DJ
-        company noticed my work and reached out to me about whether I offered
+        project was for Matt Ryan Mobile DJ Entertainment, one of the premier event
+        DJs in central Ohio. I self-learned coding during middle school, utilizing YouTube videos,
+        online tutorials, and books. The owner of the DJ
+        company noticed my work and reached out to me regarding
         freelance services.
       </p>
       <p>
@@ -127,7 +119,7 @@ var experiences = [
     additionalInformation: `
     <div>
       <p>
-        In my senior year of high school, I founded pausecircleplay, a lifestyle and
+        I founded pausecircleplay, a lifestyle and
         streetwear clothing brand. This venture began with an investment of just $30
         in screen printing materials. I self-taught myself the process by utilizing
         videos online.
@@ -135,7 +127,7 @@ var experiences = [
       <p>
         pausecircleplay encapsulated a philosophy I resonated with: 'pause' to take
         a deep breath, 'circle' to reflect, and 'play' to live your best life. This
-        motto, conceived during the summer prior, became the cornerstone of the
+        motto became the cornerstone of the
         brand's identity. For the initial launch, I enlisted friends for help with
         photo shoots, then leveraged the content on my website and social media.
         This grassroots marketing strategy paid off, as the brand gained traction
@@ -169,15 +161,13 @@ var experiences = [
     id: 3,
     positions: [
       {
-        title: "Unified Communications & Microsoft Teams Calls Assistant",
-        title_nickname: "UC & Teams Calls Assistant",
+        title: "Unified Communications & Technology Specialist",
         description: [
-          "Installed hundreds of touchscreen Microsoft Teams-enabled VoIP phones across the campus",
-          "Produced 10 professional-quality video guides that explain equipment operations for the university staff members",
-          "Removed old landlines and cleaned up associated wire closets using telecommunication equipment",
+          "Installed and configured hundreds of touchscreen VoIP phones with integrated video conferencing capabilities across the campus, enhancing communication infrastructure",
+          "Produced 10 high-quality instructional videos to guide university staff in operating new communication equipment to improve user adoption and reduce support requests",
         ],
         summary:
-          "Installed hundreds of Microsoft Teams enabled VoIP phones across Northeastern's Boston campus",
+          "Enhanced communication infrastructure through the installation & enablement of hundreds of VoIP phones...",
         dates: "Jan. 2021 - May 2021",
         type: "Part-time",
       },
@@ -372,32 +362,33 @@ var experiences = [
     id: 6,
     positions: [
       {
-        title: "Web Strategy Co-op",
+        title: "Web Strategist",
         description: [
           "Assisted in scoping, planning, and delivering web projects by partnering with project stakeholders, building development schedules, and tracking progress against key metrics",
           "Streamlined the order modification processes for rush cases, address changes, and product swaps to speed up the response time of 600 order modifications by nearly 70%",
           "Implemented multiple automation initiatives that effectively streamlined manual procedures, ultimately saving approximately 40 employee hours weekly",
         ],
         summary:
-          "Assisted in scoping, planning, and delivering web projects to increase Ecommerce sales and go-lives",
+          "Assisted in scoping, planning, and delivering web projects to increase eCommerce sales and go-lives",
         dates: "Jan. 2023 - June 2023",
         type: "Full-time",
       },
       {
         title: "Solutions Architect",
         description: [
-          "Automated Ecommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier",
+          "Automated eCommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier",
           "Spearheaded the development of an automated chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates",
         ],
         dates: "June 2023 - Jan. 2024",
         type: "Part-time",
       },
       {
-        title: "Associate Product Manager",
+        title: "Product Manager",
         description: [
           "Spearhead the management and continual development of the eCommerce prospect flow to ensure a seamless and efficient online purchasing experience",
           "Collaborate closely with the sales team to streamline strategies and optimize customer conversion rates through tailored online sales tactics",
         ],
+        summary: "Spearhead the management of the eCommerce prospect flow to ensure a seamless online purchasing experience",
         dates: "Jan. 2024 - Present",
         type: "Full-time",
       },
@@ -413,11 +404,11 @@ var experiences = [
     <div>
       <p>
         In my roles at Toast, my contributions range from automating complex processes to 
-        leading AI-driven initiatives, continually transforming how the Ecommerce team conducts 
+        leading AI-driven initiatives, continually transforming how the eCommerce team conducts 
         business and interacts with customers.
       </p>
       <p>
-        A key achievement is the overhaul of the Ecommerce reporting system. Addressing the 
+        A key achievement is the overhaul of the eCommerce reporting system. Addressing the 
         challenges of manual tracking amidst a surge in deals, I lead the development of an automated 
         tracking and reporting system. Utilizing Salesforce, Google App Scripts, JavaScript, Zapier, and 
         Salesforce Connector, this new tool streamlines data management, significantly reduces errors, and 
@@ -432,12 +423,12 @@ var experiences = [
       <p>
         Another ongoing project is the development of a customer chatbot, instrumental in increasing the 
         customer contract task completion rate by 8%. This tool, capable of handling 45 common queries and 
-        integrated with an automated follow-up system, engages 11% of Ecommerce customers, ensuring timely support and 
+        integrated with an automated follow-up system, engages 11% of eCommerce customers, ensuring timely support and 
         boosting task completion rates.
       </p>
       <p>
         I regularly present my projects to cross-functional teams, fostering a culture of transparency and collaboration. 
-        My presentations in Web Team Standup and Ecomm Leads Meetings are critical in aligning strategies and sharing insights.
+        My presentations in Web Team Standup and eComm Leads Meetings are critical in aligning strategies and sharing insights.
       </p>
       <p>
         My active involvement in AI-driven projects is a highlight of my role. I have contributed to a customer-centric prototype 
