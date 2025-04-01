@@ -374,22 +374,26 @@ var experiences = [
         type: "Full-time",
       },
       {
-        title: "Solutions Architect",
+        title: "Associate Product Manager",
         description: [
-          "Automated eCommerce order tracking and reporting, utilizing JavaScript, Salesforce, and Zapier",
-          "Spearheaded the development of an automated chatbot to assist in customer onboarding, contributing to an 8% increase in contract task completion rates",
+          "Oversaw management for New Business eCommerce initiatives, driving enhancements in online sales processes, improving customer experience, and enabling cross-functional teams to achieve strategic business goals",
+          "Drove $120,000 ARR growth by introducing add-on terminal options and SaaS charges for eCommerce customers, expanding product upsell opportunities",
+          "Managed the pilot and discovery of Quote Builder, aimed at automating quote creation for thousands of sales reps and projected to bring significant ARR growth, targeting a full launch in 2025",
         ],
-        dates: "June 2023 - Jan. 2024",
-        type: "Part-time",
+        summary:
+          "Spearhead the management of the eCommerce prospect flow to ensure a seamless online purchasing experience",
+        dates: "June 2023 - Apr. 2025",
+        type: "Full-time",
       },
       {
         title: "Product Manager",
         description: [
-          "Spearhead the management and continual development of the eCommerce prospect flow to ensure a seamless and efficient online purchasing experience",
-          "Collaborate closely with the sales team to streamline strategies and optimize customer conversion rates through tailored online sales tactics",
+          "Overseeing internal tooling and digital signing experiences, including Cart Builder, an internal upsell tool that has processed over 10k deals and driven $2.7M ARR, serving various teams from sales to customer care",
+          "Developed and launched Quote Builder from initial pilot to full-scale rollout, streamlining prospect sales quoting through automated pricing, configuration, and Salesforce integration, reducing manual effort and accelerating the sales cycle for over 1k new business deals",
         ],
-        summary: "Spearhead the management of the eCommerce prospect flow to ensure a seamless online purchasing experience",
-        dates: "Jan. 2024 - Present",
+        summary:
+          "Driving the strategy and execution of internal sales tools and digital signing experiences at scale",
+        dates: "Apr. 2025 - Present",
         type: "Full-time",
       },
     ],
