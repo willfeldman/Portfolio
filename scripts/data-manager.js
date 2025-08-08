@@ -3,6 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const { execSync } = require('child_process');
+const os = require('os');
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -75,15 +77,17 @@ class DataManager {
 
   async showMainMenu() {
     console.clear();
-    console.log('🚀 Portfolio Data Manager');
-    console.log('========================');
-    console.log('1. View Data');
-    console.log('2. Add New Entry');
-    console.log('3. Edit Entry');
-    console.log('4. Delete Entry');
-    console.log('5. Validate Data');
-    console.log('6. Export Data');
-    console.log('7. Exit');
+    console.log('🚀 Portfolio Data Manager v2.0');
+    console.log('===============================');
+    console.log('1. 📊 Browse & View Data (Enhanced)');
+    console.log('2. ➕ Add New Entry');
+    console.log('3. ✏️  Edit Entry');
+    console.log('4. 🗑️  Delete Entry');
+    console.log('5. 🔍 Validate Data');
+    console.log('6. 📤 Export Data');
+    console.log('7. 🚪 Exit');
+    console.log('');
+    console.log('💡 Enhanced features: Detailed viewing, HTML formatting, advanced editing');
     console.log('');
 
     const choice = await this.prompt('Select an option (1-7): ');
@@ -137,16 +141,16 @@ class DataManager {
     
     switch (choice.trim()) {
       case '1':
-        await this.displayData('experiences');
+        await this.browseData('experiences');
         break;
       case '2':
-        await this.displayData('projects');
+        await this.browseData('projects');
         break;
       case '3':
-        await this.displayData('organizations');
+        await this.browseData('organizations');
         break;
       case '4':
-        await this.displayData('awards');
+        await this.browseData('awards');
         break;
       case '5':
         await this.displaySummary();
@@ -165,49 +169,291 @@ class DataManager {
     await this.viewDataMenu();
   }
 
-  displayData(type) {
-    console.clear();
-    const data = this.currentData[type];
-    const title = type.charAt(0).toUpperCase() + type.slice(1);
-    
-    console.log(`📋 ${title}`);
-    console.log('='.repeat(title.length + 3));
-    console.log(`Total entries: ${data.length}\n`);
+  async browseData(type) {
+    while (true) {
+      console.clear();
+      const data = this.currentData[type];
+      const title = type.charAt(0).toUpperCase() + type.slice(1);
+      
+      console.log(`📋 Browse ${title}`);
+      console.log('='.repeat(title.length + 9));
+      console.log(`Total entries: ${data.length}\n`);
 
-    if (data.length === 0) {
-      console.log('No entries found.');
+      if (data.length === 0) {
+        console.log('No entries found.');
+        return;
+      }
+
+      data.forEach((item, index) => {
+        console.log(`${index + 1}. ${this.getItemTitle(item, type)} (ID: ${item.id})`);
+      });
+      
+      console.log(`${data.length + 1}. Back to View Menu`);
+      console.log('');
+
+      const choice = await this.prompt(`Select entry to view in detail (1-${data.length + 1}): `);
+      const index = parseInt(choice) - 1;
+
+      if (index === data.length) {
+        return; // Back to view menu
+      }
+
+      if (index >= 0 && index < data.length) {
+        await this.displayDetailedEntry(type, index);
+      } else {
+        console.log('Invalid selection. Please try again.');
+        await this.pause();
+      }
+    }
+  }
+
+  async displayDetailedEntry(type, index) {
+    const entry = this.currentData[type][index];
+    const title = this.getItemTitle(entry, type);
+    
+    console.clear();
+    console.log(`🔍 Detailed View: ${title}`);
+    console.log('='.repeat(50));
+    console.log('');
+
+    await this.formatAndDisplayEntry(entry, type);
+
+    console.log('\n' + '='.repeat(50));
+    console.log('Options:');
+    console.log('1. Edit this entry');
+    console.log('2. Delete this entry');
+    console.log('3. Back to list');
+    console.log('');
+
+    const choice = await this.prompt('Select action (1-3): ');
+    
+    switch (choice.trim()) {
+      case '1':
+        await this.editEntry(type, index);
+        break;
+      case '2':
+        await this.confirmDeleteEntry(type, index);
+        break;
+      case '3':
+      default:
+        return;
+    }
+  }
+
+  async formatAndDisplayEntry(entry, type) {
+    // Display basic information
+    console.log(`📋 Basic Information`);
+    console.log(`ID: ${entry.id}`);
+    
+    if (type === 'experiences') {
+      console.log(`Company: ${entry.company}`);
+      console.log(`Location: ${entry.location}`);
+      if (entry.fullDates) {
+        console.log(`Full Duration: ${entry.fullDates}`);
+      }
+      if (entry.url) {
+        if (Array.isArray(entry.url)) {
+          console.log(`URLs: ${entry.url.join(', ')}`);
+        } else {
+          console.log(`URL: ${entry.url}`);
+        }
+      }
+      if (entry.linkedin) {
+        console.log(`LinkedIn: ${entry.linkedin}`);
+      }
+      
+      console.log('\n📍 Positions:');
+      entry.positions.forEach((position, idx) => {
+        console.log(`\n  Position ${idx + 1}:`);
+        console.log(`    Title: ${position.title}`);
+        console.log(`    Type: ${position.type}`);
+        console.log(`    Dates: ${position.dates}`);
+        if (position.summary) {
+          console.log(`    Summary: ${position.summary}`);
+        }
+        if (position.description && position.description.length > 0) {
+          console.log(`    Description:`);
+          position.description.forEach(desc => {
+            console.log(`      • ${desc}`);
+          });
+        }
+      });
+      
+    } else if (type === 'projects') {
+      console.log(`Title: ${entry.title}`);
+      console.log(`Description: ${entry.description}`);
+      
+      if (entry.github) {
+        console.log(`GitHub: ${entry.github}`);
+      }
+      if (entry.url) {
+        console.log(`URL: ${entry.url}`);
+      }
+      if (entry.code) {
+        console.log(`Code: ${entry.code}`);
+      }
+      
+      if (entry.tags && entry.tags.length > 0) {
+        console.log('\n🏷️  Tags:');
+        entry.tags.forEach(tag => {
+          console.log(`    • ${tag.name} (${tag.color})`);
+        });
+      }
+      
+      if (entry.images && entry.images.length > 0) {
+        console.log('\n🖼️  Images:');
+        entry.images.forEach((image, idx) => {
+          console.log(`    ${idx + 1}. ${image}`);
+        });
+      }
+      
+    } else if (type === 'organizations') {
+      console.log(`Name: ${entry.name}`);
+      console.log(`Years Active: ${entry.yearsActive}`);
+      
+      if (entry.summary) {
+        console.log(`Summary: ${entry.summary}`);
+      }
+      
+      if (entry.role && entry.role.length > 0) {
+        console.log('\n👥 Roles:');
+        entry.role.forEach((role, idx) => {
+          console.log(`  ${idx + 1}. ${role.title} (${role.years})`);
+        });
+      }
+      
+      if (entry.description && entry.description.length > 0) {
+        console.log('\n📝 Description:');
+        entry.description.forEach(desc => {
+          console.log(`  • ${desc}`);
+        });
+      }
+      
+    } else if (type === 'awards') {
+      console.log(`Name: ${entry.name}`);
+      console.log(`Issuer: ${entry.issuer}`);
+      console.log(`Date: ${entry.date}`);
+    }
+    
+    // Display images info
+    if (entry.headerImage) {
+      console.log(`\n🖼️  Header Image: ${entry.headerImage}`);
+    }
+    if (entry.logo) {
+      console.log(`🏢 Logo: ${entry.logo}`);
+    }
+    
+    // Display additional information with HTML formatting
+    if (entry.additionalInformation) {
+      console.log('\n📄 Additional Information:');
+      console.log('-'.repeat(30));
+      await this.displayFormattedHTML(entry.additionalInformation);
+    }
+
+    // Display description for awards
+    if (type === 'awards' && entry.description) {
+      console.log('\n📄 Description:');
+      console.log('-'.repeat(30));
+      await this.displayFormattedHTML(entry.description);
+    }
+  }
+
+  async displayFormattedHTML(htmlContent) {
+    if (!htmlContent) {
+      console.log('(No content)');
       return;
     }
 
-    data.forEach((item, index) => {
-      console.log(`${index + 1}. ${this.getItemTitle(item, type)}`);
-      console.log(`   ID: ${item.id}`);
-      
-      if (type === 'experiences') {
-        console.log(`   Company: ${item.company}`);
-        console.log(`   Positions: ${item.positions.length}`);
-        if (item.fullDates) {
-          console.log(`   Duration: ${item.fullDates}`);
-        } else if (item.positions[0]) {
-          console.log(`   Duration: ${item.positions[0].dates}`);
+    try {
+      // Convert HTML to readable text with basic formatting
+      let formatted = htmlContent
+        // Remove extra whitespace and normalize line breaks
+        .replace(/\s+/g, ' ')
+        .replace(/\n\s*/g, '\n')
+        // Convert common HTML tags to readable format
+        .replace(/<div[^>]*>/gi, '\n')
+        .replace(/<\/div>/gi, '\n')
+        .replace(/<p[^>]*>/gi, '\n')
+        .replace(/<\/p>/gi, '\n')
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<h[1-6][^>]*>/gi, '\n\n=== ')
+        .replace(/<\/h[1-6]>/gi, ' ===\n')
+        .replace(/<b[^>]*>/gi, '**')
+        .replace(/<\/b>/gi, '**')
+        .replace(/<strong[^>]*>/gi, '**')
+        .replace(/<\/strong>/gi, '**')
+        .replace(/<i[^>]*>/gi, '*')
+        .replace(/<\/i>/gi, '*')
+        .replace(/<em[^>]*>/gi, '*')
+        .replace(/<\/em>/gi, '*')
+        .replace(/<ul[^>]*>/gi, '\n')
+        .replace(/<\/ul>/gi, '\n')
+        .replace(/<ol[^>]*>/gi, '\n')
+        .replace(/<\/ol>/gi, '\n')
+        .replace(/<li[^>]*>/gi, '  • ')
+        .replace(/<\/li>/gi, '\n')
+        .replace(/<a[^>]*href=["']([^"']*)["'][^>]*>/gi, '[')
+        .replace(/<\/a>/gi, ']')
+        // Remove any remaining HTML tags
+        .replace(/<[^>]+>/g, '')
+        // Clean up extra whitespace
+        .replace(/\n\s*\n\s*\n/g, '\n\n')
+        .replace(/^\s+|\s+$/g, '')
+        .trim();
+
+      // Split into lines and format nicely
+      const lines = formatted.split('\n');
+      lines.forEach(line => {
+        if (line.trim()) {
+          // Wrap long lines
+          if (line.length > 80) {
+            const words = line.split(' ');
+            let currentLine = '';
+            for (const word of words) {
+              if (currentLine.length + word.length + 1 <= 80) {
+                currentLine += (currentLine ? ' ' : '') + word;
+              } else {
+                if (currentLine) {
+                  console.log(currentLine);
+                  currentLine = word;
+                } else {
+                  console.log(word);
+                }
+              }
+            }
+            if (currentLine) {
+              console.log(currentLine);
+            }
+          } else {
+            console.log(line);
+          }
+        } else {
+          console.log('');
         }
-      } else if (type === 'projects') {
-        console.log(`   Description: ${item.description.substring(0, 80)}${item.description.length > 80 ? '...' : ''}`);
-        if (item.tags) {
-          console.log(`   Tags: ${item.tags.map(tag => tag.name).join(', ')}`);
-        }
-      } else if (type === 'organizations') {
-        console.log(`   Duration: ${item.yearsActive}`);
-        if (item.role && item.role.length > 0) {
-          console.log(`   Latest Role: ${item.role[0].title}`);
-        }
-      } else if (type === 'awards') {
-        console.log(`   Issuer: ${item.issuer}`);
-        console.log(`   Date: ${item.date}`);
-      }
-      
-      console.log('');
-    });
+      });
+    } catch (error) {
+      console.log('Error formatting HTML content:');
+      console.log(htmlContent);
+    }
+  }
+
+  async confirmDeleteEntry(type, index) {
+    const entry = this.currentData[type][index];
+    const title = this.getItemTitle(entry, type);
+    
+    console.log(`\n⚠️  You are about to delete: ${title}`);
+    console.log('This action cannot be undone!');
+    
+    const confirm = await this.prompt('\nAre you sure? Type "DELETE" to confirm: ');
+    if (confirm === 'DELETE') {
+      this.currentData[type].splice(index, 1);
+      await this.saveData(type);
+      console.log('✅ Entry deleted successfully!');
+      await this.pause();
+    } else {
+      console.log('❌ Deletion cancelled.');
+      await this.pause();
+    }
   }
 
   displaySummary() {
@@ -411,6 +657,141 @@ class DataManager {
     return roles;
   }
 
+  async editTagsDetailed(tags) {
+    console.log('Current tags:');
+    if (tags.length === 0) {
+      console.log('  (No tags)');
+    } else {
+      tags.forEach((tag, idx) => {
+        console.log(`  ${idx + 1}. ${tag.name}`);
+      });
+    }
+    
+    const editChoice = await this.prompt('\n1. Replace all tags\n2. Keep current tags\nChoice: ');
+    
+    if (editChoice === '1') {
+      const tagsInput = await this.prompt('Enter tag names (comma-separated): ');
+      if (tagsInput.trim()) {
+        return await this.processTags(tagsInput);
+      }
+    }
+    
+    return tags;
+  }
+  
+  async editHTMLContent(content) {
+    console.log('Current HTML content:');
+    console.log('-'.repeat(40));
+    await this.displayFormattedHTML(content);
+    console.log('-'.repeat(40));
+    
+    const editChoice = await this.prompt('\n1. Edit in external editor\n2. Replace with new content\n3. Keep current\nChoice: ');
+    
+    if (editChoice === '1') {
+      return await this.editInExternalEditor(content, 'html');
+    } else if (editChoice === '2') {
+      console.log('\nEnter new HTML content (type "END" on a new line to finish):');
+      return await this.collectMultilineInput();
+    }
+    
+    return content;
+  }
+  
+  async editArrayField(array, fieldName) {
+    while (true) {
+      console.clear();
+      console.log(`✏️  Edit ${fieldName}`);
+      console.log('='.repeat(20));
+      
+      if (array.length === 0) {
+        console.log(`No ${fieldName} found.`);
+      } else {
+        array.forEach((item, idx) => {
+          const preview = typeof item === 'string' && item.length > 50 
+            ? item.substring(0, 50) + '...' 
+            : item;
+          console.log(`${idx + 1}. ${preview}`);
+        });
+      }
+      
+      console.log(`\n${array.length + 1}. Add new item`);
+      console.log(`${array.length + 2}. Done editing`);
+      if (array.length > 0) {
+        console.log(`${array.length + 3}. Remove an item`);
+      }
+      console.log('');
+      
+      const maxChoice = array.length > 0 ? array.length + 3 : array.length + 2;
+      const choice = await this.prompt(`Select option (1-${maxChoice}): `);
+      const choiceNum = parseInt(choice) - 1;
+      
+      if (choiceNum >= 0 && choiceNum < array.length) {
+        const newValue = await this.prompt(`Edit item ${choiceNum + 1} [${array[choiceNum]}]: `);
+        if (newValue.trim()) {
+          array[choiceNum] = newValue;
+        }
+      } else if (choiceNum === array.length) {
+        const newItem = await this.prompt('New item: ');
+        if (newItem.trim()) {
+          array.push(newItem.trim());
+        }
+      } else if (choiceNum === array.length + 1) {
+        break;
+      } else if (choiceNum === array.length + 2 && array.length > 0) {
+        const removeIdx = await this.prompt(`Remove item number (1-${array.length}): `);
+        const removeIndex = parseInt(removeIdx) - 1;
+        if (removeIndex >= 0 && removeIndex < array.length) {
+          array.splice(removeIndex, 1);
+        }
+      } else {
+        console.log('Invalid option.');
+        await this.pause();
+      }
+    }
+    
+    return array;
+  }
+  
+  async editSimpleField(currentValue, fieldName) {
+    console.log(`Current ${fieldName}: ${currentValue || '[not set]'}`);
+    const newValue = await this.prompt(`New ${fieldName}: `);
+    return newValue.trim() || currentValue;
+  }
+  
+  async editInExternalEditor(content, fileType = 'txt') {
+    const tempFile = path.join(os.tmpdir(), `portfolio-edit-${Date.now()}.${fileType}`);
+    
+    try {
+      fs.writeFileSync(tempFile, content || '');
+      
+      console.log(`\nOpening ${tempFile} in external editor...`);
+      console.log('Save and close the file when done editing.');
+      
+      const editor = process.env.EDITOR || 'nano';
+      execSync(`${editor} "${tempFile}"`, { stdio: 'inherit' });
+      
+      const editedContent = fs.readFileSync(tempFile, 'utf8');
+      fs.unlinkSync(tempFile);
+      
+      return editedContent;
+    } catch (error) {
+      console.log('Error with external editor:', error.message);
+      console.log('Falling back to manual input.');
+      return await this.collectMultilineInput();
+    }
+  }
+  
+  async collectMultilineInput() {
+    const lines = [];
+    let line;
+    
+    while ((line = await this.prompt('> ')) !== 'END') {
+      lines.push(line);
+    }
+    
+    return lines.join('\n');
+  }
+  
   async processTags(tagsInput) {
     // This would ideally integrate with the existing tag system from project.js
     // For now, we'll create basic tag objects
@@ -498,91 +879,274 @@ class DataManager {
   }
 
   async editEntry(type, index) {
-    console.clear();
     const entry = this.currentData[type][index];
-    const schema = SCHEMAS[type];
+    const title = this.getItemTitle(entry, type);
     
-    console.log(`✏️  Editing: ${this.getItemTitle(entry, type)}`);
-    console.log('='.repeat(40));
-    console.log('Current values shown in [brackets]. Press Enter to keep current value.\n');
-
-    const allFields = [...schema.required, ...schema.optional];
-    
-    for (const field of allFields) {
-      if (field === 'id') continue; // Skip ID editing
+    while (true) {
+      console.clear();
+      console.log(`✏️  Editing: ${title}`);
+      console.log('='.repeat(50));
+      console.log('Select field to edit:\n');
       
-      const currentValue = entry[field];
-      let displayValue = '';
+      const schema = SCHEMAS[type];
+      const allFields = [...schema.required, ...schema.optional].filter(f => f !== 'id');
       
-      if (Array.isArray(currentValue)) {
-        if (field === 'positions' || field === 'role') {
-          displayValue = `${currentValue.length} items`;
-        } else {
-          displayValue = currentValue.join(', ');
-        }
-      } else if (typeof currentValue === 'object' && currentValue !== null) {
-        displayValue = 'complex object';
+      allFields.forEach((field, idx) => {
+        const currentValue = entry[field];
+        let preview = this.getFieldPreview(currentValue, field, type);
+        console.log(`${idx + 1}. ${field}: ${preview}`);
+      });
+      
+      console.log(`${allFields.length + 1}. Preview entire entry`);
+      console.log(`${allFields.length + 2}. Save changes`);
+      console.log(`${allFields.length + 3}. Cancel and return`);
+      console.log('');
+      
+      const choice = await this.prompt(`Select option (1-${allFields.length + 3}): `);
+      const choiceNum = parseInt(choice) - 1;
+      
+      if (choiceNum >= 0 && choiceNum < allFields.length) {
+        const field = allFields[choiceNum];
+        await this.editField(entry, field, type);
+      } else if (choiceNum === allFields.length) {
+        await this.previewEntry(entry, type);
+      } else if (choiceNum === allFields.length + 1) {
+        // Save changes
+        await this.saveData(type);
+        console.log('✅ Changes saved successfully!');
+        await this.pause();
+        return;
+      } else if (choiceNum === allFields.length + 2) {
+        // Cancel
+        console.log('❌ Changes cancelled.');
+        this.loadAllData(); // Reload original data
+        await this.pause();
+        return;
       } else {
-        displayValue = currentValue || 'not set';
-      }
-
-      console.log(`${field} [${displayValue}]:`);
-      
-      if (field === 'positions' && type === 'experiences') {
-        const editPositions = await this.prompt('Edit positions? (y/n): ');
-        if (editPositions.toLowerCase().startsWith('y')) {
-          entry[field] = await this.editPositions(currentValue || []);
-        }
-      } else if (field === 'role' && type === 'organizations') {
-        const editRoles = await this.prompt('Edit roles? (y/n): ');
-        if (editRoles.toLowerCase().startsWith('y')) {
-          entry[field] = await this.editRoles(currentValue || []);
-        }
-      } else if (field === 'tags' && type === 'projects') {
-        const editTags = await this.prompt('Edit tags? (y/n): ');
-        if (editTags.toLowerCase().startsWith('y')) {
-          const tagsInput = await this.prompt('Enter tag names (comma-separated): ');
-          if (tagsInput.trim()) {
-            entry[field] = await this.processTags(tagsInput);
-          }
-        }
-      } else {
-        const newValue = await this.prompt('> ');
-        if (newValue.trim()) {
-          if (Array.isArray(currentValue)) {
-            entry[field] = newValue.split(',').map(v => v.trim()).filter(v => v);
-          } else {
-            entry[field] = newValue;
-          }
-        }
+        console.log('Invalid option. Please try again.');
+        await this.pause();
       }
     }
-
-    console.log('\n📋 Updated Entry:');
-    console.log(JSON.stringify(entry, null, 2));
+  }
+  
+  getFieldPreview(value, field, type) {
+    if (!value) return '[not set]';
     
-    const confirm = await this.prompt('\nSave changes? (y/n): ');
-    if (confirm.toLowerCase().startsWith('y')) {
-      await this.saveData(type);
-      console.log('✅ Changes saved successfully!');
-    } else {
-      console.log('❌ Changes cancelled.');
-      this.loadAllData(); // Reload original data
+    if (field === 'additionalInformation' || field === 'description') {
+      if (typeof value === 'string' && value.includes('<')) {
+        const textOnly = value.replace(/<[^>]+>/g, '').trim();
+        return `[HTML: ${textOnly.substring(0, 50)}${textOnly.length > 50 ? '...' : ''}]`;
+      }
     }
-
+    
+    if (Array.isArray(value)) {
+      if (field === 'positions' || field === 'role') {
+        return `[${value.length} items]`;
+      } else if (field === 'tags') {
+        return `[${value.map(t => t.name || t).join(', ')}]`;
+      } else {
+        return `[${value.join(', ')}]`;
+      }
+    }
+    
+    if (typeof value === 'string' && value.length > 60) {
+      return `[${value.substring(0, 60)}...]`;
+    }
+    
+    return `[${value}]`;
+  }
+  
+  async previewEntry(entry, type) {
+    console.clear();
+    console.log('🔍 Entry Preview');
+    console.log('='.repeat(20));
+    await this.formatAndDisplayEntry(entry, type);
     await this.pause();
-    await this.showMainMenu();
+  }
+  
+  async editField(entry, field, type) {
+    console.clear();
+    console.log(`✏️  Editing Field: ${field}`);
+    console.log('='.repeat(30));
+    
+    const currentValue = entry[field];
+    
+    if (field === 'positions' && type === 'experiences') {
+      entry[field] = await this.editPositionsDetailed(currentValue || []);
+    } else if (field === 'role' && type === 'organizations') {
+      entry[field] = await this.editRolesDetailed(currentValue || []);
+    } else if (field === 'tags' && type === 'projects') {
+      entry[field] = await this.editTagsDetailed(currentValue || []);
+    } else if (field === 'additionalInformation' || (field === 'description' && typeof currentValue === 'string' && currentValue.includes('<'))) {
+      entry[field] = await this.editHTMLContent(currentValue || '');
+    } else if (Array.isArray(currentValue)) {
+      entry[field] = await this.editArrayField(currentValue || [], field);
+    } else {
+      entry[field] = await this.editSimpleField(currentValue, field);
+    }
   }
 
-  async editPositions(positions) {
-    // Implementation for editing positions array
-    console.log('Position editing - simplified for now');
+  async editPositionsDetailed(positions) {
+    while (true) {
+      console.clear();
+      console.log('✏️  Edit Positions');
+      console.log('='.repeat(20));
+      
+      if (positions.length === 0) {
+        console.log('No positions found.');
+      } else {
+        positions.forEach((pos, idx) => {
+          console.log(`${idx + 1}. ${pos.title} (${pos.dates})`);
+        });
+      }
+      
+      console.log(`\n${positions.length + 1}. Add new position`);
+      console.log(`${positions.length + 2}. Done editing positions`);
+      console.log('');
+      
+      const choice = await this.prompt(`Select option (1-${positions.length + 2}): `);
+      const choiceNum = parseInt(choice) - 1;
+      
+      if (choiceNum >= 0 && choiceNum < positions.length) {
+        positions[choiceNum] = await this.editSinglePosition(positions[choiceNum]);
+      } else if (choiceNum === positions.length) {
+        const newPosition = await this.createNewPosition();
+        if (newPosition) {
+          positions.push(newPosition);
+        }
+      } else if (choiceNum === positions.length + 1) {
+        break;
+      } else {
+        console.log('Invalid option.');
+        await this.pause();
+      }
+    }
+    
     return positions;
   }
-
-  async editRoles(roles) {
-    // Implementation for editing roles array
-    console.log('Role editing - simplified for now');
+  
+  async editSinglePosition(position) {
+    console.clear();
+    console.log('✏️  Edit Position');
+    console.log('='.repeat(20));
+    
+    console.log('Current values shown in [brackets]. Press Enter to keep current value.\n');
+    
+    const newTitle = await this.prompt(`Title [${position.title}]: `);
+    if (newTitle.trim()) position.title = newTitle;
+    
+    const newDates = await this.prompt(`Dates [${position.dates}]: `);
+    if (newDates.trim()) position.dates = newDates;
+    
+    const newType = await this.prompt(`Type [${position.type}]: `);
+    if (newType.trim()) position.type = newType;
+    
+    const newSummary = await this.prompt(`Summary [${position.summary || 'not set'}]: `);
+    if (newSummary.trim()) {
+      position.summary = newSummary;
+    } else if (newSummary === '' && position.summary) {
+      delete position.summary;
+    }
+    
+    console.log('\nCurrent description:');
+    if (position.description && position.description.length > 0) {
+      position.description.forEach((desc, idx) => {
+        console.log(`  ${idx + 1}. ${desc}`);
+      });
+    } else {
+      console.log('  (No description items)');
+    }
+    
+    const editDesc = await this.prompt('\nEdit description items? (y/n): ');
+    if (editDesc.toLowerCase().startsWith('y')) {
+      position.description = await this.editArrayField(position.description || [], 'description items');
+    }
+    
+    return position;
+  }
+  
+  async createNewPosition() {
+    console.clear();
+    console.log('➕ Add New Position');
+    console.log('='.repeat(20));
+    
+    const position = {};
+    
+    position.title = await this.prompt('Title: ');
+    if (!position.title.trim()) {
+      console.log('Title is required.');
+      await this.pause();
+      return null;
+    }
+    
+    position.dates = await this.prompt('Dates: ');
+    if (!position.dates.trim()) {
+      console.log('Dates are required.');
+      await this.pause();
+      return null;
+    }
+    
+    position.type = await this.prompt('Type (Full-time/Part-time/Internship): ');
+    if (!position.type.trim()) {
+      console.log('Type is required.');
+      await this.pause();
+      return null;
+    }
+    
+    const summary = await this.prompt('Summary (optional): ');
+    if (summary.trim()) {
+      position.summary = summary;
+    }
+    
+    const addDesc = await this.prompt('Add description items? (y/n): ');
+    if (addDesc.toLowerCase().startsWith('y')) {
+      position.description = await this.editArrayField([], 'description items');
+    }
+    
+    return position;
+  }
+  
+  async editRolesDetailed(roles) {
+    while (true) {
+      console.clear();
+      console.log('✏️  Edit Roles');
+      console.log('='.repeat(15));
+      
+      if (roles.length === 0) {
+        console.log('No roles found.');
+      } else {
+        roles.forEach((role, idx) => {
+          console.log(`${idx + 1}. ${role.title} (${role.years})`);
+        });
+      }
+      
+      console.log(`\n${roles.length + 1}. Add new role`);
+      console.log(`${roles.length + 2}. Done editing roles`);
+      console.log('');
+      
+      const choice = await this.prompt(`Select option (1-${roles.length + 2}): `);
+      const choiceNum = parseInt(choice) - 1;
+      
+      if (choiceNum >= 0 && choiceNum < roles.length) {
+        const newTitle = await this.prompt(`Title [${roles[choiceNum].title}]: `);
+        if (newTitle.trim()) roles[choiceNum].title = newTitle;
+        
+        const newYears = await this.prompt(`Years [${roles[choiceNum].years}]: `);
+        if (newYears.trim()) roles[choiceNum].years = newYears;
+      } else if (choiceNum === roles.length) {
+        const title = await this.prompt('New role title: ');
+        const years = await this.prompt('Years: ');
+        if (title.trim() && years.trim()) {
+          roles.push({ title: title.trim(), years: years.trim() });
+        }
+      } else if (choiceNum === roles.length + 1) {
+        break;
+      } else {
+        console.log('Invalid option.');
+        await this.pause();
+      }
+    }
+    
     return roles;
   }
 
