@@ -452,6 +452,35 @@ var experiences = [
 
     `,
   },
+  {
+    id: 7,
+    positions: [
+      {
+        title: "Co-Founder & Head of Product",
+        description: [
+          "Shipped core product modules for RFP Projects, Search, and Knowledge Library using AI + vector search.",
+          "Helped secure several enterprise-level clients within the first year.",
+          "Drove product adoption through iterative user feedback loops and integrations.",
+          "Collaborate with a 4-founder team on GTM, UX, and technical prioritization to accelerate product-market fit.",
+        ],
+        dates: "Dec. 2023 - Present",
+        type: "Full-time",
+      },
+    ],
+    company: "Settle",
+    location: "San Francisco, CA",
+    url: "https://www.settle.co",
+    headerImage: "https://willfeldman.com/src/photo_coming_soon.png",
+    logo: "https://willfeldman.com/src/photo_coming_soon.png",
+    additionalInformation: `
+    <div>
+      <p>
+        Built and scaled an AI Proposal Manager that automates RFP, RFI, and RFQ response workflows for B2B teams.
+        Lead product strategy, design, and growth across early customer deployments.
+      </p>
+    </div>
+    `,
+  },
 ];
 
 module.exports = { experiences };
