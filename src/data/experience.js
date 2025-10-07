@@ -469,14 +469,15 @@ var experiences = [
     ],
     company: "Settle",
     location: "San Francisco, CA",
-    url: "https://www.settle.co",
-    headerImage: "https://willfeldman.com/src/photo_coming_soon.png",
-    logo: "https://willfeldman.com/src/photo_coming_soon.png",
+    url: "https://www.usesettle.com",
+    linkedin: "https://www.linkedin.com/company/usesettle/",
+    headerImage: "https://willfeldman.com/src/settle_background.png",
+    logo: "https://willfeldman.com/src/settle_logo.png",
     additionalInformation: `
     <div>
       <p>
-        Built and scaled an AI Proposal Manager that automates RFP, RFI, and RFQ response workflows for B2B teams.
-        Lead product strategy, design, and growth across early customer deployments.
+        Building an AI Proposal Manager that automates RFP, RFI, and RFQ response workflows for B2B teams.
+        Leading product strategy, design, and growth across early customer deployments.
       </p>
     </div>
     `,
