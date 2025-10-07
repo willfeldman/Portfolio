@@ -452,6 +452,38 @@ var experiences = [
 
     `,
   },
+  {
+    id: 7,
+    positions: [
+      {
+        title: "Co-Founder & Head of Product",
+        description: [
+          "Shipped core product platform for RFP Projects, Search, and knowledge Library using AI + vector search.",
+          "Helped secure several enterprise clients within the first year.",
+          "Drove product adoption through iterative user feedback loops and integrations.",
+          "Collaborate with a 4-founder team on GTM, UX, and technical prioritization to accelerate product-market fit.",
+        ],
+        summary:
+          "Building an AI Proposal Manager that automates proposal response workflows for B2B teams",
+        dates: "Dec. 2023 - Present",
+        type: "Full-time",
+      },
+    ],
+    company: "Settle",
+    location: "San Francisco, CA",
+    url: "https://www.usesettle.com",
+    linkedin: "https://www.linkedin.com/company/usesettle/",
+    headerImage: "https://willfeldman.com/src/settle_background.png",
+    logo: "https://willfeldman.com/src/settle_logo.png",
+    additionalInformation: `
+    <div>
+      <p>
+        Building an AI Proposal Manager that automates proposal response workflows for B2B teams.
+        Leading product strategy, design, and growth across early customer deployments.
+      </p>
+    </div>
+    `,
+  },
 ];
 
 module.exports = { experiences };
