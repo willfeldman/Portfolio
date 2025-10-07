@@ -458,11 +458,13 @@ var experiences = [
       {
         title: "Co-Founder & Head of Product",
         description: [
-          "Shipped core product modules for RFP Projects, Search, and Knowledge Library using AI + vector search.",
-          "Helped secure several enterprise-level clients within the first year.",
+          "Shipped core product platform for RFP Projects, Search, and knowledge Library using AI + vector search.",
+          "Helped secure several enterprise clients within the first year.",
           "Drove product adoption through iterative user feedback loops and integrations.",
           "Collaborate with a 4-founder team on GTM, UX, and technical prioritization to accelerate product-market fit.",
         ],
+        summary:
+          "Building an AI Proposal Manager that automates proposal response workflows for B2B teams",
         dates: "Dec. 2023 - Present",
         type: "Full-time",
       },
@@ -476,7 +478,7 @@ var experiences = [
     additionalInformation: `
     <div>
       <p>
-        Building an AI Proposal Manager that automates RFP, RFI, and RFQ response workflows for B2B teams.
+        Building an AI Proposal Manager that automates proposal response workflows for B2B teams.
         Leading product strategy, design, and growth across early customer deployments.
       </p>
     </div>
