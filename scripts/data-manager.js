@@ -6,10 +6,7 @@ const readline = require('readline');
 const { execSync } = require('child_process');
 const os = require('os');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+let rl;
 
 const DATA_FILES = {
   experiences: './src/data/experience.js',
@@ -550,7 +547,19 @@ class DataManager {
 
     // Get next ID
     const existingIds = this.currentData[type].map(item => item.id);
-    const nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 0;
+    if (existingIds.some(id => !Number.isSafeInteger(id) || id < 0)) {
+      console.log('Cannot add an entry: existing IDs must be non-negative safe integers. Repair the data first.');
+      await this.pause();
+      await this.showMainMenu();
+      return;
+    }
+    const nextId = existingIds.reduce((next, id) => Math.max(next, id + 1), 0);
+    if (!Number.isSafeInteger(nextId)) {
+      console.log('Cannot add an entry: no safe integer ID remains.');
+      await this.pause();
+      await this.showMainMenu();
+      return;
+    }
     newEntry.id = nextId;
     console.log(`ID: ${nextId} (auto-assigned)\n`);
 
@@ -767,7 +776,7 @@ class DataManager {
       console.log(`\nOpening ${tempFile} in external editor...`);
       console.log('Save and close the file when done editing.');
       
-      const editor = process.env.EDITOR || 'nano';
+      const editor = process.env.EDITOR || (process.platform === 'win32' ? 'notepad' : 'nano');
       execSync(`${editor} "${tempFile}"`, { stdio: 'inherit' });
       
       const editedContent = fs.readFileSync(tempFile, 'utf8');
@@ -795,8 +804,7 @@ class DataManager {
   async processTags(tagsInput) {
     // This would ideally integrate with the existing tag system from project.js
     // For now, we'll create basic tag objects
-    return tagsInput.split(',').map(tagName => {
-      const name = tagName.trim();
+    return tagsInput.split(',').map(tagName => tagName.trim()).filter(Boolean).map(name => {
       return {
         name,
         color: "rgb(193, 198, 255)", // Default color
@@ -1283,6 +1291,9 @@ class DataManager {
 
     // Validate each entry
     data.forEach((item, index) => {
+      if (!Number.isSafeInteger(item.id) || item.id < 0) {
+        issues.push(`Entry ${index}: ID must be a non-negative safe integer`);
+      }
       // Check required fields
       schema.required.forEach(field => {
         if (!item.hasOwnProperty(field) || item[field] === undefined || item[field] === '') {
@@ -1306,7 +1317,7 @@ class DataManager {
       // Type-specific validations
       if (type === 'experiences' && item.url && Array.isArray(item.url)) {
         item.url.forEach((url, urlIndex) => {
-          if (url && !url.startsWith('http')) {
+          if (typeof url !== 'string' || !/^https?:\/\//i.test(url)) {
             issues.push(`Entry ${index} (ID: ${item.id}): url[${urlIndex}] should start with http/https`);
           }
         });
@@ -1412,19 +1423,18 @@ class DataManager {
     let content = `var ${varName} = ${JSON.stringify(data, null, 2)};\n\n`;
     content += `module.exports = { ${varName} };\n`;
 
-    // Special handling for projects to include projectTags
-    if (type === 'projects') {
-      // Read existing file to preserve projectTags
-      const existingContent = fs.readFileSync(filePath, 'utf8');
-      const projectTagsMatch = existingContent.match(/var projectTags = \[[\s\S]*?\];/);
-      const getProjectTagMatch = existingContent.match(/function getProjectTagByName[\s\S]*?^}/m);
-      
-      if (projectTagsMatch && getProjectTagMatch) {
-        content = projectTagsMatch[0] + '\n\n' + getProjectTagMatch[0] + '\n\n' + content;
-      }
-    }
-
     try {
+      // Refuse the save if the original cannot be read; silently skipping this
+      // step could discard the existing project tag definitions.
+      if (type === 'projects') {
+        const existingContent = fs.readFileSync(filePath, 'utf8');
+        const projectTagsMatch = existingContent.match(/var projectTags = \[[\s\S]*?\];/);
+        const getProjectTagMatch = existingContent.match(/function getProjectTagByName[\s\S]*?^}/m);
+
+        if (projectTagsMatch && getProjectTagMatch) {
+          content = projectTagsMatch[0] + '\n\n' + getProjectTagMatch[0] + '\n\n' + content;
+        }
+      }
       fs.writeFileSync(filePath, content);
       console.log(`✅ ${type} saved to ${filePath}`);
     } catch (error) {
@@ -1478,6 +1488,7 @@ class DataManager {
   }
 
   prompt(question) {
+    rl ??= readline.createInterface({ input: process.stdin, output: process.stdout });
     return new Promise((resolve) => {
       rl.question(question, (answer) => {
         resolve(answer);
@@ -1502,7 +1513,7 @@ async function main() {
     console.error('An error occurred:', error);
     process.exit(1);
   } finally {
-    rl.close();
+    rl?.close();
   }
 }
 
