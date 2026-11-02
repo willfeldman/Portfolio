@@ -1,10 +1,14 @@
 import { streamText } from "ai";
+import { checkBotId } from "botid/server";
 import { allowQuestion, askStatus } from "@/lib/ask-budget";
 import { llmsFull } from "@/lib/markdown";
 
 export const maxDuration = 30;
 
-const MODEL = process.env.ASK_MODEL ?? "anthropic/claude-haiku-5.5";
+// A small model the gateway's free monthly credits cover (they don't cover Claude), with two
+// more as fallbacks if it is ever refused or down.
+const MODEL = process.env.ASK_MODEL ?? "google/gemini-2.5-flash-lite";
+const FALLBACK_MODELS = ["openai/gpt-5-nano", "deepseek/deepseek-v4-flash"];
 const MAX_QUESTION = 280;
 
 const system = `You answer visitors' questions about Will Feldman on his personal website, willfeldman.com.
@@ -20,7 +24,27 @@ Site content:
 
 ${llmsFull()}`;
 
+// Questions only come from this site's own pages: browsers send Sec-Fetch-Site and Origin, so a
+// script posting from elsewhere is turned away before BotID or the model are reached.
+function fromThisSite(req: Request) {
+  const fetchSite = req.headers.get("sec-fetch-site");
+  if (fetchSite && fetchSite !== "same-origin") return false;
+  const origin = req.headers.get("origin");
+  if (!origin) return false;
+  try {
+    return new URL(origin).host === new URL(req.url).host;
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(req: Request) {
+  if (!fromThisSite(req) || !req.headers.get("content-type")?.includes("application/json")) {
+    return Response.json({ error: "forbidden" }, { status: 403 });
+  }
+  const { isBot } = await checkBotId();
+  if (isBot) return Response.json({ error: "forbidden" }, { status: 403 });
+
   let question = "";
   try {
     const body = await req.json();
@@ -43,6 +67,7 @@ export async function POST(req: Request) {
     maxOutputTokens: 300,
     temperature: 0.3,
     abortSignal: req.signal,
+    providerOptions: { gateway: { models: FALLBACK_MODELS } },
     onError: ({ error }) => console.error("ask: model error", error),
   });
 
@@ -64,10 +89,14 @@ export async function POST(req: Request) {
     start(controller) {
       controller.enqueue(encoder.encode(first));
     },
+    // Skip non-text parts (step and finish events) until there is text to send or the answer ends;
+    // a pull that enqueues nothing would leave the reader waiting forever.
     async pull(controller) {
-      const next = await parts.next();
-      if (next.done || next.value.type === "error") return controller.close();
-      if (next.value.type === "text-delta") controller.enqueue(encoder.encode(next.value.text));
+      for (;;) {
+        const next = await parts.next();
+        if (next.done || next.value.type === "error") return controller.close();
+        if (next.value.type === "text-delta") return controller.enqueue(encoder.encode(next.value.text));
+      }
     },
     cancel() {
       parts.return?.();

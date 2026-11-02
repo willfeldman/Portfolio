@@ -28,7 +28,8 @@ export const privacyCopy = {
     {
       title: "Ask about Will",
       body: [
-        "The suggested questions on the home page are answered in your browser and send nothing. A question you type is sent through the Vercel AI Gateway to an AI model (Claude, by Anthropic) to write the answer from this site’s pages. The site does not store your questions or the answers, and it keeps your IP address only briefly in memory to limit how many questions each visitor can ask.",
+        "The suggested questions on the home page are answered in your browser and send nothing. A question you type is sent through the Vercel AI Gateway to a small AI model (Gemini 2.5 Flash-Lite by Google, or one from OpenAI or DeepSeek as a fallback) to write the answer from this site’s pages. The site does not store your questions or the answers, and it keeps your IP address only briefly in memory to limit how many questions each visitor can ask.",
+        "To keep bots from flooding it, the question box uses Vercel BotID, which runs an invisible check in your browser when you send a question.",
         "Please don’t type personal or sensitive information into the question box.",
       ],
     },

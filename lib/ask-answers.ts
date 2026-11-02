@@ -41,6 +41,20 @@ export const cannedAnswers: CannedAnswer[] = [
   },
 ];
 
+// When the model leaves out its [[sources: …]] line, pick pages from what the question and
+// answer mention: a company or project by name, or the topic of a page.
+export function guessSources(text: string): Source[] {
+  const t = text.toLowerCase();
+  const paths: string[] = [];
+  for (const e of experiences) if (t.includes(e.company.split(":")[0].toLowerCase())) paths.push(`/work/${e.slug}`);
+  for (const p of projects) if (t.includes(p.title.toLowerCase())) paths.push(p.page ? p.href : "/projects");
+  if (/college|university|northeastern|school|graduat|degree|award|club|organization/.test(t)) paths.push("/about");
+  if (/email|contact|reach|linkedin|github/.test(t)) paths.push("/contact");
+  if (/project|built|made|app\b/.test(t)) paths.push("/projects");
+  if (/job|role|work|career|experience/.test(t)) paths.push("/work");
+  return [...new Set(paths)].slice(0, 3).map((p) => sourceFor(p)!).filter(Boolean);
+}
+
 // Pages the model may cite, and how their chips look.
 export function sourceFor(path: string): Source | null {
   const clean = path.trim().replace(/^https?:\/\/(www\.)?willfeldman\.com/, "").replace(/\.md$/, "") || "/";

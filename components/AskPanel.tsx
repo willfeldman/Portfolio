@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { cannedAnswers, sourceFor, type Source } from "@/lib/ask-answers";
+import { cannedAnswers, guessSources, sourceFor, type Source } from "@/lib/ask-answers";
 import { Icon } from "./Icon";
 
 const loopLines = ["ho-l1", "ho-l2", "ho-l3"];
@@ -72,7 +72,7 @@ export function AskPanel({ onUnavailable }: { onUnavailable: () => void }) {
         body: JSON.stringify({ question }),
         signal: controller.signal,
       });
-      if (res.status === 429 || res.status === 503) return onUnavailable();
+      if (res.status === 403 || res.status === 429 || res.status === 503) return onUnavailable();
       if (!res.ok || !res.body) throw new Error(String(res.status));
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -85,7 +85,8 @@ export function AskPanel({ onUnavailable }: { onUnavailable: () => void }) {
         setLive((l) => l && { ...l, answer: text, status: text ? "streaming" : "thinking" });
       }
       const { text, sources } = splitAnswer(raw);
-      setLive((l) => l && { ...l, answer: text || "I couldn’t find that on the site.", sources, status: "done" });
+      const cited = sources.length ? sources : text ? guessSources(`${question} ${text}`) : [];
+      setLive((l) => l && { ...l, answer: text || "I couldn’t find that on the site.", sources: cited, status: "done" });
     } catch (err) {
       if (controller.signal.aborted) return;
       setLive((l) => l && { ...l, answer: "That didn’t go through. Try again in a moment.", status: "done" });
