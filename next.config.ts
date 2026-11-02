@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withBotId } from "botid/next/config";
 
 const nextConfig: NextConfig = {
   // Every page has a Markdown twin at the same path plus .md (see app/md and proxy.ts).
@@ -32,4 +33,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// withBotId adds the rewrites for Vercel BotID, which screens Ask about Will for bots.
+export default withBotId(nextConfig);

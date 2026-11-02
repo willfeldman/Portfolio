@@ -72,7 +72,7 @@ export function AskPanel({ onUnavailable }: { onUnavailable: () => void }) {
         body: JSON.stringify({ question }),
         signal: controller.signal,
       });
-      if (res.status === 429 || res.status === 503) return onUnavailable();
+      if (res.status === 403 || res.status === 429 || res.status === 503) return onUnavailable();
       if (!res.ok || !res.body) throw new Error(String(res.status));
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
