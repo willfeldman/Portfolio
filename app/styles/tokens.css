@@ -1,0 +1,131 @@
+/* Graphite design tokens. Dark values apply when the visitor's system prefers dark, or when
+   data-theme="dark" is set on an ancestor. */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #ffffff;
+  --bg-secondary: #fcfcfc;
+  --bg-tertiary: #f3f3f3;
+  --bg-hover: #0000000d;
+  --bg-overlay: #00000080;
+  --text-primary: #0d0d0d;
+  --text-secondary: #5d5d5d;
+  --text-tertiary: #8f8f8f;
+  --text-inverse: #ffffff;
+  --fill-primary: #0d0d0d;
+  --border-default: #0000001a;
+  --border-strong: #00000033;
+  --accent: #3566f0;
+  --accent-strong: #2451da;
+  --accent-subtle: #edf3fe;
+  --success: #027c6a;
+  --success-subtle: #cafdf0;
+  --warning: #9f5c14;
+  --warning-subtle: #fff5db;
+  --danger: #ba2623;
+  --danger-subtle: #ffe1e0;
+  --editorial-orange: #ee7c37;
+  --editorial-purple: #8952ee;
+  --editorial-green: #53b559;
+  --editorial-blue: #3a83f7;
+  --editorial-yellow: #f6c543;
+  --tint-50: #eaf1fe;
+  --tint-100: #cedffe;
+  --tint-200: #bacefb;
+  --tint-300: #a3befa;
+  --rule: #e4e4e4;
+  --shadow-composer: 0 4px 12px 0 #0000000a, 0 0 1px 0 #00000066;
+  --shadow-popover: 0 8px 24px 0 #00000014, 0 0 1px 0 #00000066;
+  --shadow-hero: 0 0 0 1px #0000000f, 0 30px 60px -12px #32325d40, 0 18px 36px -18px #0000004d;
+  --shadow-satellite: 0 0 0 1px #0000000a, 0 14px 32px -8px #32325d3d, 0 4px 10px -4px #0000001a;
+
+  --font-sans: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  --control-height: 36px;
+  --control-height-lg: 44px;
+  --thread-width: 768px;
+  --sidebar-width: 260px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-primary: #212121;
+  --bg-secondary: #000000;
+  --bg-tertiary: #303030;
+  --bg-hover: #ffffff1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cdcdcd;
+  --text-tertiary: #afafaf;
+  --text-inverse: #0d0d0d;
+  --fill-primary: #ffffff;
+  --border-default: #ffffff26;
+  --border-strong: #ffffff33;
+  --accent: #81a6f9;
+  --accent-strong: #b0c9fe;
+  --accent-subtle: #020562;
+  --success: #04bb9f;
+  --success-subtle: #032a23;
+  --warning: #ffcc38;
+  --warning-subtle: #5c2605;
+  --danger: #ff6764;
+  --danger-subtle: #4d100e;
+  --tint-50: #151d33;
+  --tint-100: #1e2a4a;
+  --tint-200: #293a66;
+  --tint-300: #3a5196;
+  --rule: #3a3a3a;
+  --shadow-composer: none;
+  --shadow-popover: 0 8px 24px 0 #00000080, 0 0 0 1px #ffffff1a;
+  --shadow-hero: 0 0 0 1px #ffffff14, 0 30px 60px -12px #00000099;
+  --shadow-satellite: 0 0 0 1px #ffffff1a, 0 14px 32px -8px #000000b3, 0 4px 10px -4px #00000080;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg-primary: #212121;
+    --bg-secondary: #000000;
+    --bg-tertiary: #303030;
+    --bg-hover: #ffffff1a;
+    --text-primary: #ffffff;
+    --text-secondary: #cdcdcd;
+    --text-tertiary: #afafaf;
+    --text-inverse: #0d0d0d;
+    --fill-primary: #ffffff;
+    --border-default: #ffffff26;
+    --border-strong: #ffffff33;
+    --accent: #81a6f9;
+    --accent-strong: #b0c9fe;
+    --accent-subtle: #020562;
+    --success: #04bb9f;
+    --success-subtle: #032a23;
+    --warning: #ffcc38;
+    --warning-subtle: #5c2605;
+    --danger: #ff6764;
+    --danger-subtle: #4d100e;
+    --tint-50: #151d33;
+    --tint-100: #1e2a4a;
+    --tint-200: #293a66;
+    --tint-300: #3a5196;
+    --rule: #3a3a3a;
+    --shadow-composer: none;
+    --shadow-popover: 0 8px 24px 0 #00000080, 0 0 0 1px #ffffff1a;
+    --shadow-hero: 0 0 0 1px #ffffff14, 0 30px 60px -12px #00000099;
+    --shadow-satellite: 0 0 0 1px #ffffff1a, 0 14px 32px -8px #000000b3, 0 4px 10px -4px #00000080;
+  }
+}

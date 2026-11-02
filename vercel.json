@@ -1,10 +1,4 @@
 {
-    "build": {
-        "env": {
-            "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
-            "NPM_FLAGS": "--legacy-peer-deps"
-        }
-    },
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
-
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs"
 }
