@@ -18,7 +18,7 @@ The Ask about Will panel needs AI Gateway credentials. On Vercel they come from 
 - `app/` has one folder per page. Pages are pre-rendered HTML; the home page re-checks AI credit every few minutes.
 - `app/styles/` has the Graphite tokens (light and dark, following the visitor's system setting), Graphite's component CSS, the motion rules and the site's own layout styles.
 - `lib/markdown.ts` writes a Markdown copy of every page from the same content. Agents get it by sending `Accept: text/markdown` (handled in `proxy.ts`) or by adding `.md` to a path. `/llms.txt` and `/llms-full.txt` come from the same place.
-- `app/api/ask/route.ts` answers typed questions with `anthropic/claude-haiku-5.5` through the Vercel AI Gateway, falling back to Gemini 2.5 Flash-Lite, GPT-5 nano and DeepSeek V4 Flash (the gateway's free credits don't cover Claude), using the site's Markdown as its only source. The three suggested questions are answered in the browser from `lib/ask-answers.ts` and cost nothing.
+- `app/api/ask/route.ts` answers typed questions with `google/gemini-2.5-flash-lite` through the Vercel AI Gateway (covered by its free monthly credits, which don't cover Claude), falling back to GPT-5 nano and DeepSeek V4 Flash, using the site's Markdown as its only source. The three suggested questions are answered in the browser from `lib/ask-answers.ts` and cost nothing.
 
 ## Ask about Will limits
 

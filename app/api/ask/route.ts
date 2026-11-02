@@ -5,10 +5,10 @@ import { llmsFull } from "@/lib/markdown";
 
 export const maxDuration = 30;
 
-const MODEL = process.env.ASK_MODEL ?? "anthropic/claude-haiku-5.5";
-// The gateway's free credits don't cover every model (Claude included), so it falls back to
-// these small models in order when the first is refused.
-const FALLBACK_MODELS = ["google/gemini-2.5-flash-lite", "openai/gpt-5-nano", "deepseek/deepseek-v4-flash"];
+// A small model the gateway's free monthly credits cover (they don't cover Claude), with two
+// more as fallbacks if it is ever refused or down.
+const MODEL = process.env.ASK_MODEL ?? "google/gemini-2.5-flash-lite";
+const FALLBACK_MODELS = ["openai/gpt-5-nano", "deepseek/deepseek-v4-flash"];
 const MAX_QUESTION = 280;
 
 const system = `You answer visitors' questions about Will Feldman on his personal website, willfeldman.com.
@@ -89,10 +89,14 @@ export async function POST(req: Request) {
     start(controller) {
       controller.enqueue(encoder.encode(first));
     },
+    // Skip non-text parts (step and finish events) until there is text to send or the answer ends;
+    // a pull that enqueues nothing would leave the reader waiting forever.
     async pull(controller) {
-      const next = await parts.next();
-      if (next.done || next.value.type === "error") return controller.close();
-      if (next.value.type === "text-delta") controller.enqueue(encoder.encode(next.value.text));
+      for (;;) {
+        const next = await parts.next();
+        if (next.done || next.value.type === "error") return controller.close();
+        if (next.value.type === "text-delta") return controller.enqueue(encoder.encode(next.value.text));
+      }
     },
     cancel() {
       parts.return?.();
