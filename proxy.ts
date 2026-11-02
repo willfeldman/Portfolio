@@ -18,11 +18,7 @@ function weight(accept: string, type: string) {
 export function proxy(req: NextRequest) {
   const accept = req.headers.get("accept") ?? "";
   const md = weight(accept, "text/markdown");
-  if (md === 0 || md < weight(accept, "text/html")) {
-    const res = NextResponse.next();
-    res.headers.set("Vary", "Accept, rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch");
-    return res;
-  }
+  if (md === 0 || md < weight(accept, "text/html")) return;
   const body = markdownFor(req.nextUrl.pathname);
   return new NextResponse((body ?? notFoundMarkdown) + "\n", {
     status: body ? 200 : 404,
